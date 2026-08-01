@@ -11,3 +11,66 @@
 2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
 2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
 2026-08-01 01:15:24 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 04:21:54 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 04:22:12 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 04:22:12 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 04:22:12 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 04:22:12 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 04:22:12 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 04:22:12 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 04:22:12 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 05:00:17 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:00:17 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:00:17 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:00:17 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:01:19 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:01:19 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:01:20 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:01:20 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:01:20 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:01:20 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 05:01:20 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:01:20 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 05:01:20 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:01:20 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 05:01:20 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 05:20:16 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:20:17 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:20:17 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:20:17 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:22:55 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:22:55 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:22:55 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:22:55 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:23:21 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:23:21 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:23:21 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 05:23:21 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 05:23:21 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:23:21 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:23:21 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 05:23:21 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 05:23:21 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:23:21 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 05:23:21 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:23:21 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 05:23:21 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 05:23:21 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 05:23:21 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 06:36:41 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-01 06:37:07 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 06:37:07 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 06:37:07 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 06:37:07 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 06:37:07 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-01 06:37:07 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 06:37:07 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 06:37:07 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 06:37:07 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 06:37:07 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 06:37:07 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 06:37:07 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 06:37:07 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 06:37:07 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 06:37:07 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 06:37:07 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')

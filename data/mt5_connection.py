@@ -12,6 +12,7 @@ Responsibilities:
     - Shutdown MetaTrader 5.
     - Report connection status.
     - Expose MT5 connection errors.
+    - Read MT5 configuration.
 
 This module NEVER:
     - Executes trades.
@@ -19,6 +20,7 @@ This module NEVER:
     - Reads account information.
     - Calculates indicators.
     - Performs risk management.
+    - Searches for MetaTrader terminals.
 ===============================================================================
 """
 
@@ -26,6 +28,7 @@ from __future__ import annotations
 
 import MetaTrader5 as mt5
 
+from config.mt5 import mt5_config
 from monitoring.logger import get_logger
 
 logger = get_logger(__name__)
@@ -35,8 +38,8 @@ class MT5Connection:
     """
     Manages the application's connection to MetaTrader 5.
 
-    This class is the only place responsible for starting and
-    stopping the MT5 terminal connection.
+    This class is the only place responsible for starting
+    and stopping the MT5 terminal connection.
     """
 
     def __init__(self) -> None:
@@ -90,14 +93,32 @@ class MT5Connection:
             logger.debug("MetaTrader 5 is already connected.")
             return True
 
-        if not mt5.initialize():
+        initialize_kwargs = {
+            "timeout": mt5_config.timeout,
+            "portable": mt5_config.portable,
+        }
+
+        if mt5_config.terminal_path is not None:
+            initialize_kwargs["path"] = str(mt5_config.terminal_path)
+
+        if mt5_config.login is not None:
+            initialize_kwargs["login"] = mt5_config.login
+
+        if mt5_config.password is not None:
+            initialize_kwargs["password"] = mt5_config.password
+
+        if mt5_config.server is not None:
+            initialize_kwargs["server"] = mt5_config.server
+
+        if not mt5.initialize(**initialize_kwargs):
+
+            self._connected = False
 
             logger.error(
                 "MetaTrader 5 initialization failed: %s",
                 mt5.last_error(),
             )
 
-            self._connected = False
             return False
 
         self._connected = True
@@ -124,19 +145,3 @@ class MT5Connection:
         self._connected = False
 
         logger.info("MetaTrader 5 disconnected.")
-
-    # =========================================================================
-    # STATUS
-    # =========================================================================
-
-    def is_connected(self) -> bool:
-        """
-        Check whether MT5 is currently connected.
-
-        Returns
-        -------
-        bool
-            Current connection state.
-        """
-
-        return self._connected
