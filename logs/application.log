@@ -1,0 +1,13 @@
+2026-07-31 16:42:37 | INFO     | TEST | Logger is working!
+2026-08-01 01:14:42 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:14:42 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 01:14:42 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:14:42 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 01:14:42 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:14:42 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:15:24 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 01:15:24 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 01:15:24 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
