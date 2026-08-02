@@ -352,3 +352,233 @@
 2026-08-01 12:37:12 | INFO     | analysis.swing_detector | Swing detection completed.
 2026-08-01 12:37:12 | INFO     | analysis.swing_detector | Swing detection completed.
 2026-08-01 12:37:12 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 15:07:53 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-01 15:07:53 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-01 15:07:53 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:07:53 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-01 15:07:53 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-01 15:07:53 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:07:53 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:08:17 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 15:08:17 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 15:08:17 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 15:08:17 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 15:08:17 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-01 15:08:17 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-01 15:08:17 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-01 15:08:17 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-01 15:08:17 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-01 15:08:17 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-01 15:08:17 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 15:08:17 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-01 15:08:17 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-01 15:08:17 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 15:08:17 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-01 15:08:17 | ERROR    | analysis.candle_patterns | No candles supplied.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 15:08:17 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-01 15:08:17 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-01 15:08:17 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 15:08:17 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-01 15:08:17 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-01 15:08:17 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 15:08:17 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-01 15:08:17 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-01 15:08:17 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:08:17 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-01 15:08:17 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-01 15:08:17 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:08:17 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:08:17 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 15:08:17 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 15:08:17 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 15:08:17 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 15:08:17 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-01 15:08:17 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-01 15:08:17 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-01 15:08:17 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-01 15:08:17 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-01 15:08:17 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-01 15:08:17 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-01 15:08:17 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:08:17 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 15:08:17 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:08:17 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 15:08:18 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:08:18 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 15:08:18 | WARNING  | analysis.swing_detector | No candles supplied.
+2026-08-01 15:08:18 | WARNING  | analysis.swing_detector | Not enough candles to detect swings.
+2026-08-01 15:08:18 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:08:18 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:08:18 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:08:18 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:08:18 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 15:39:25 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-01 15:39:25 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-01 15:39:25 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-01 15:39:25 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 15:39:25 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-01 15:39:25 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-01 15:39:25 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 15:39:59 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 15:39:59 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 15:39:59 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 15:39:59 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 15:39:59 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-01 15:39:59 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-01 15:39:59 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-01 15:39:59 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-01 15:39:59 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-01 15:39:59 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-01 15:39:59 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 15:39:59 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-01 15:39:59 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-01 15:39:59 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 15:39:59 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-01 15:39:59 | ERROR    | analysis.candle_patterns | No candles supplied.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 15:39:59 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-01 15:39:59 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-01 15:39:59 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 15:39:59 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-01 15:39:59 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-01 15:39:59 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 15:39:59 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-01 15:39:59 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 15:39:59 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-01 15:39:59 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-01 15:39:59 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-01 15:39:59 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 15:40:00 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 15:40:00 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 15:40:00 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 15:40:00 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 15:40:00 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-01 15:40:00 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-01 15:40:00 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-01 15:40:00 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-01 15:40:00 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-01 15:40:00 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-01 15:40:00 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-01 15:40:00 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:40:00 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 15:40:00 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:40:00 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 15:40:00 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 15:40:00 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 15:40:00 | WARNING  | analysis.swing_detector | No candles supplied.
+2026-08-01 15:40:00 | WARNING  | analysis.swing_detector | Not enough candles to detect swings.
+2026-08-01 15:40:00 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:40:00 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:40:00 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:40:00 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 15:40:00 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-01 16:09:43 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-01 16:09:43 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-01 16:09:43 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-01 16:09:43 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-01 16:09:43 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-01 16:09:43 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-01 16:09:43 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-01 16:09:43 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-01 16:10:14 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 16:10:14 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 16:10:14 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-01 16:10:14 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-01 16:10:14 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-01 16:10:14 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-01 16:10:14 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-01 16:10:14 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-01 16:10:14 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-01 16:10:14 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-01 16:10:14 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 16:10:14 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-01 16:10:14 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-01 16:10:14 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-01 16:10:14 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-01 16:10:14 | ERROR    | analysis.candle_patterns | No candles supplied.
+2026-08-01 16:10:14 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 16:10:14 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 16:10:14 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 1 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 2 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | INFO     | analysis.candle_patterns | Analyzing 3 candle(s) for candlestick patterns.
+2026-08-01 16:10:15 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-01 16:10:15 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 16:10:15 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-01 16:10:15 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-01 16:10:15 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-01 16:10:15 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-01 16:10:15 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-01 16:10:15 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-01 16:10:15 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-01 16:10:15 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 16:10:15 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 16:10:15 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-01 16:10:15 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-01 16:10:15 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-01 16:10:15 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-01 16:10:15 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-01 16:10:15 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-01 16:10:15 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-01 16:10:15 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-01 16:10:15 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 16:10:15 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-01 16:10:15 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 16:10:15 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-01 16:10:15 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-01 16:10:15 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-01 16:10:15 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-01 16:10:15 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-01 16:10:15 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-01 16:10:15 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-01 16:10:15 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-01 16:10:15 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-01 16:10:15 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-01 16:10:15 | WARNING  | analysis.swing_detector | No candles supplied.
+2026-08-01 16:10:15 | WARNING  | analysis.swing_detector | Not enough candles to detect swings.
+2026-08-01 16:10:15 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 16:10:15 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 16:10:15 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 16:10:15 | INFO     | analysis.swing_detector | Swing detection completed.
+2026-08-01 16:10:16 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
