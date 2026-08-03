@@ -6,18 +6,15 @@ import pytest
 
 from analysis.order_block_detector import OrderBlockDetector
 
-
 @pytest.fixture
 def detector():
     return OrderBlockDetector()
-
 
 def test_empty_candles(detector):
     result = detector.detect([], {"bos": True, "direction": "BULLISH"})
 
     assert result.success is False
     assert result.error == "EMPTY_CANDLES"
-
 
 def test_insufficient_candles(detector):
     candles = [
@@ -41,7 +38,6 @@ def test_insufficient_candles(detector):
     assert result.success is False
     assert result.error == "INSUFFICIENT_CANDLES"
 
-
 def test_empty_bos(detector):
     candles = [
         {
@@ -57,7 +53,6 @@ def test_empty_bos(detector):
 
     assert result.success is False
     assert result.error == "EMPTY_BOS"
-
 
 def test_invalid_bos_direction(detector):
     candles = [
@@ -81,7 +76,6 @@ def test_invalid_bos_direction(detector):
     assert result.success is False
     assert result.error == "INVALID_BOS_DIRECTION"
 
-
 def test_no_bos(detector):
     candles = [
         {
@@ -102,7 +96,6 @@ def test_no_bos(detector):
 
     assert result.success is True
     assert result.data["order_block_found"] is False
-
 
 def test_detect_bullish_order_block(detector):
     candles = [
@@ -144,7 +137,6 @@ def test_detect_bullish_order_block(detector):
     assert block["body_size"] == pytest.approx(0.0020)
     assert block["mitigated"] is False
 
-
 def test_detect_bearish_order_block(detector):
     candles = [
         {
@@ -185,7 +177,6 @@ def test_detect_bearish_order_block(detector):
     assert block["body_size"] == pytest.approx(0.0030)
     assert block["mitigated"] is False
 
-
 def test_invalid_candle_data(detector):
     candles = [
         {
@@ -207,3 +198,49 @@ def test_invalid_candle_data(detector):
 
     assert result.success is False
     assert result.error == "INVALID_CANDLE_DATA"
+
+def test_bearish_order_block_skips_invalid_candle(detector):
+    candles = [
+        {
+            "open": 1.1000,
+            "close": 1.0990,
+            "high": 1.1010,
+            "low": 1.0980,
+            "time": 1,
+        }
+        for _ in range(8)
+    ]
+
+    # Valid bullish candle that should become the bearish order block
+    candles.append(
+        {
+            "open": 1.1000,
+            "close": 1.1030,
+            "high": 1.1040,
+            "low": 1.0990,
+            "time": 9,
+        }
+    )
+
+    # Invalid candle LAST
+    candles.append(
+        {
+            "open": None,
+            "close": None,
+            "high": None,
+            "low": None,
+            "time": 10,
+        }
+    )
+
+    result = detector.detect(
+        candles,
+        {
+            "bos": True,
+            "direction": "BEARISH",
+        },
+    )
+
+    assert result.success is True
+    assert result.data["order_block_found"] is True
+    assert result.data["bearish_count"] == 1

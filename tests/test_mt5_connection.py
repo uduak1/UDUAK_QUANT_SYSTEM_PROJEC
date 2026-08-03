@@ -120,3 +120,53 @@ def test_last_error(mock_last_error):
         10001,
         "Sample Error",
     )
+
+
+# =============================================================================
+# CONNECT WITH OPTIONAL CONFIGURATION
+# =============================================================================
+
+@patch("data.mt5_connection.mt5.initialize")
+@patch("data.mt5_connection.mt5_config")
+def test_connect_with_optional_configuration(
+    mock_mt5_config,
+    mock_initialize,
+):
+
+    mock_initialize.return_value = True
+
+    mock_mt5_config.timeout = 60000
+    mock_mt5_config.portable = False
+    mock_mt5_config.terminal_path = "C:/Program Files/MetaTrader5/terminal64.exe"
+    mock_mt5_config.login = 12345678
+    mock_mt5_config.password = "password"
+    mock_mt5_config.server = "Broker-Demo"
+
+    connection = MT5Connection()
+
+    assert connection.connect() is True
+
+    mock_initialize.assert_called_once_with(
+        timeout=60000,
+        portable=False,
+        path="C:/Program Files/MetaTrader5/terminal64.exe",
+        login=12345678,
+        password="password",
+        server="Broker-Demo",
+    )
+
+
+# =============================================================================
+# DISCONNECT WHEN ALREADY DISCONNECTED
+# =============================================================================
+
+@patch("data.mt5_connection.mt5.shutdown")
+def test_disconnect_when_already_disconnected(mock_shutdown):
+
+    connection = MT5Connection()
+
+    connection.disconnect()
+
+    mock_shutdown.assert_not_called()
+
+    assert connection.connected is False

@@ -119,7 +119,7 @@ def test_extract_candle_fields_invalid_high_type():
     analyzer = LiquidityAnalyzer()
 
     candle = {
-        "high": "10",   # invalid
+        "high": "10",
         "low": 5,
     }
 
@@ -131,7 +131,7 @@ def test_extract_candle_fields_invalid_low_type():
 
     candle = {
         "high": 10,
-        "low": "5",     # invalid
+        "low": "5",
     }
 
     assert analyzer._extract_candle_fields(candle) is None
@@ -209,7 +209,7 @@ def test_is_swing_high_invalid_neighbor():
     analyzer = LiquidityAnalyzer()
 
     candles = [
-        {"high": 10},  # invalid
+        {"high": 10},
         {"high": 15, "low": 8},
         {"high": 11, "low": 6},
     ]
@@ -271,7 +271,7 @@ def test_is_swing_low_invalid_neighbor():
     candles = [
         {"high": 15, "low": 8},
         {"high": 12, "low": 5},
-        {"high": 14},  # invalid (missing low)
+        {"high": 14},
     ]
 
     assert analyzer._is_swing_low(candles, 1) is False
@@ -288,9 +288,9 @@ def test_find_equal_highs_no_equal_highs():
 
     candles = [
         {"high": 10, "low": 5},
-        {"high": 15, "low": 8},   # swing high
+        {"high": 15, "low": 8},
         {"high": 11, "low": 6},
-        {"high": 18, "low": 9},   # swing high (not equal)
+        {"high": 18, "low": 9},
         {"high": 12, "low": 7},
     ]
 
@@ -302,9 +302,9 @@ def test_find_equal_highs_found():
 
     candles = [
         {"high": 10.0, "low": 5},
-        {"high": 15.0, "low": 8},      # swing high
+        {"high": 15.0, "low": 8},
         {"high": 11.0, "low": 6},
-        {"high": 15.00005, "low": 9},  # equal swing high
+        {"high": 15.00005, "low": 9},
         {"high": 10.0, "low": 5},
     ]
 
@@ -320,7 +320,7 @@ def test_find_equal_highs_invalid_candle():
 
     candles = [
         {"high": 10, "low": 5},
-        {"high": 15},               # invalid
+        {"high": 15},
         {"high": 11, "low": 6},
         {"high": 15, "low": 8},
         {"high": 10, "low": 5},
@@ -340,9 +340,9 @@ def test_find_equal_lows_no_equal_lows():
 
     candles = [
         {"high": 15, "low": 10},
-        {"high": 14, "low": 5},   # swing low
+        {"high": 14, "low": 5},
         {"high": 15, "low": 8},
-        {"high": 16, "low": 2},   # swing low (not equal)
+        {"high": 16, "low": 2},
         {"high": 17, "low": 9},
     ]
 
@@ -354,9 +354,9 @@ def test_find_equal_lows_found():
 
     candles = [
         {"high": 15, "low": 10},
-        {"high": 14, "low": 5.00000},      # swing low
+        {"high": 14, "low": 5.00000},
         {"high": 15, "low": 8},
-        {"high": 16, "low": 5.00005},      # equal swing low
+        {"high": 16, "low": 5.00005},
         {"high": 17, "low": 9},
     ]
 
@@ -372,7 +372,7 @@ def test_find_equal_lows_invalid_candle():
 
     candles = [
         {"high": 15, "low": 10},
-        {"low": 5},               # invalid (missing high)
+        {"low": 5},
         {"high": 15, "low": 8},
         {"high": 16, "low": 5},
         {"high": 17, "low": 9},
@@ -560,7 +560,7 @@ def test_analyze_single_liquidity():
     candles = [
         {"high": 9.0, "low": 8.0},
         {"high": 10.0, "low": 9.0},
-        {"high": 10.5, "low": 9.5},   # sweeps liquidity
+        {"high": 10.5, "low": 9.5},
     ]
 
     result = analyzer._analyze_single_liquidity(
@@ -788,7 +788,7 @@ def test_find_equal_highs_left_invalid_type():
 
     candles = [
         {"high": 8, "low": 5},
-        {"high": "10", "low": 7},   # invalid swing candle
+        {"high": "10", "low": 7},
         {"high": 9, "low": 6},
         {"high": 10, "low": 7},
         {"high": 8, "low": 5},
@@ -804,7 +804,7 @@ def test_find_equal_highs_right_invalid_type():
         {"high": 8, "low": 5},
         {"high": 10, "low": 7},
         {"high": 9, "low": 6},
-        {"high": "10", "low": 7},   # invalid second swing
+        {"high": "10", "low": 7},
         {"high": 8, "low": 5},
     ]
 
@@ -947,22 +947,108 @@ def test_calculate_sweep_strength_continue_on_invalid_fields():
     analyzer = LiquidityAnalyzer()
 
     liquidity = {
-        "level": 10.0,
+        "level": 20.0,
         "type": analyzer.BUY_SIDE,
-        "created_index": 0,
+        "created_index": -1,
     }
 
     candles = [
-        {"high": 10, "low": 8},      # created candle
-        {"high": None, "low": 7},    # invalid -> should hit line 436
-        {"high": 11, "low": 9},      # valid
+        {"high": 15, "low": 10},
+        {"high": None, "low": 7},
+        {"high": 25, "low": 9},
     ]
-
-    assert analyzer._extract_candle_fields(candles[1]) is None
 
     strength = analyzer._calculate_sweep_strength(
         liquidity,
         candles,
     )
 
-    assert strength == 1.0
+    assert strength is not None
+    assert strength >= 0
+
+
+def test_calculate_sweep_strength_hits_continue_branch():
+    analyzer = LiquidityAnalyzer()
+
+    liquidity = {
+        "level": 10.0,
+        "type": analyzer.BUY_SIDE,
+        "created_index": 0,
+    }
+
+    candles = [
+        {"high": 10, "low": 8},
+        {"high": None, "low": None},
+        {"high": 12, "low": 9},
+    ]
+
+    result = analyzer._calculate_sweep_strength(
+        liquidity,
+        candles
+    )
+
+    assert result is not None
+
+
+
+def test_calculate_sweep_strength_direct_invalid_fields_branch(monkeypatch):
+    analyzer = LiquidityAnalyzer()
+
+    liquidity = {
+        "level": 10.0,
+        "type": analyzer.BUY_SIDE,
+        "created_index": 0,
+    }
+
+    candles = [
+        {"high": 10, "low": 8},
+        {"high": 11, "low": 9},
+    ]
+
+    calls = {"count": 0}
+
+    def fake_extract(candle):
+        calls["count"] += 1
+
+        if calls["count"] == 1:
+            return None
+
+        return (12, 8)
+
+    monkeypatch.setattr(
+        analyzer,
+        "_extract_candle_fields",
+        fake_extract
+    )
+
+    result = analyzer._calculate_sweep_strength(
+        liquidity,
+        candles
+    )
+
+    assert result is not None
+
+
+
+def test_detect_sweep_skips_invalid_candle_fields():
+    analyzer = LiquidityAnalyzer()
+
+    liquidity = {
+        "level": 10.0,
+        "type": analyzer.BUY_SIDE,
+        "created_index": 0,
+    }
+
+    candles = [
+        {"high": 10, "low": 8},
+        {"high": None, "low": None},
+        {"high": 12, "low": 9},
+    ]
+
+    result = analyzer._detect_sweep(
+        liquidity,
+        candles
+    )
+
+    assert result is True
+

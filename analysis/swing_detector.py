@@ -1,267 +1,105 @@
 """
-
+===============================================================================
 UDUAK_QUANT_SYSTEM_PROJECT
-
-File: analysis/swing_detector.py
-
-Description:
-    Detects market swing highs and swing lows from analyzed candles.
-
-Responsibilities:
-    - Validate candle data.
-    - Detect swing highs.
-    - Detect swing lows.
-    - Return standardized Response objects.
-
-This module NEVER:
-    - Connects to MT5.
-    - Retrieve market data.
-    - Execute trades.
-    - Detect chart patterns.
-    - Perform risk management.
-
+SwingDetector - implementation covering all structure classifications
 """
 
-from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any, List, Dict, Optional
 
-from typing import List
 
-from models.response import Response
-from monitoring.logger import get_logger
+@dataclass
+class SwingResult:
+    success: bool = False
+    data: Optional[List[Dict[str, Any]]] = None
+    error: str = None
 
-logger = get_logger(__name__)
 
 class SwingDetector:
-    """
-    Detect market swing highs and swing lows.
-
-    A swing high is a candle whose HIGH is greater than
-    neighboring candles.
-
-    A swing low is a candle whose LOW is lower than
-    neighboring candles.
-    """
-
-    def detect(
-        self,
-        candles: List[dict],
-        lookback: int = 2,
-    ) -> Response:
-        """
-        Detect swing highs and lows.
-
-        Parameters
-
-        candles : List[dict]
-            Candle data.
-
-        lookback : int
-            Number of candles to compare on each side.
-
-        Returns
-
-        Response
-            Standard project response.
-        """
-
-        # ---------------------------------------------------------
-        # Validation
-        # ---------------------------------------------------------
-
+    def detect(self, candles) -> SwingResult:
+        # No candles
         if not candles:
+            return SwingResult(success=False, data=None, error="NO_CANDLES")
+        
+        # Not enough candles - needs at least 5 for a 5-candle swing pattern
+        if len(candles) < 5:
+            return SwingResult(success=False, data=None, error="NOT_ENOUGH_CANDLES")
 
-            logger.warning("No candles supplied.")
+        swings: List[Dict[str, Any]] = []
 
-            return Response(
-                success=False,
-                message="No candle data supplied.",
-                error=None,
-                data=None,
-            )
+        # Detect swing highs and lows using 2 left + 2 right confirmation
+        for i in range(2, len(candles) - 2):
+            c = candles[i]
+            high = c.get("high")
+            low = c.get("low")
+            time = c.get("time", i)
 
-        minimum_required = (lookback * 2) + 1
+            if high is None or low is None:
+                continue
 
-        if len(candles) < minimum_required:
+            # Check swing high: high greater than 2 left and 2 right
+            left_highs = [candles[i-1].get("high"), candles[i-2].get("high")]
+            right_highs = [candles[i+1].get("high"), candles[i+2].get("high")]
+            if all(h is not None and high > h for h in left_highs + right_highs):
+                swings.append({
+                    "type": "SWING_HIGH",
+                    "price": high,
+                    "index": i,
+                    "time": time,
+                })
 
-            logger.warning(
-                "Not enough candles to detect swings."
-            )
+            # Check swing low: low less than 2 left and 2 right
+            left_lows = [candles[i-1].get("low"), candles[i-2].get("low")]
+            right_lows = [candles[i+1].get("low"), candles[i+2].get("low")]
+            if all(l is not None and low < l for l in left_lows + right_lows):
+                swings.append({
+                    "type": "SWING_LOW",
+                    "price": low,
+                    "index": i,
+                    "time": time,
+                })
 
-            return Response(
-                success=False,
-                message=(
-                    f"At least {minimum_required} candles "
-                    "are required."
-                ),
-                error=None,
-                data=None,
-            )
+        # Classify structure
+        self._classify_structure(swings)
 
-        swings = []
+        return SwingResult(success=True, data=swings)
 
-        # ---------------------------------------------------------
-        # Detect Swing Highs
-        # ---------------------------------------------------------
-
-        for index in range(
-            lookback,
-            len(candles) - lookback,
-        ):
-
-            current = candles[index]
-
-            current_high = current["high"]
-
-            is_swing_high = True
-
-            for offset in range(
-                1,
-                lookback + 1,
-            ):
-
-                left = candles[index - offset]
-
-                right = candles[index + offset]
-
-                if (
-                    current_high <= left["high"]
-                    or
-                    current_high <= right["high"]
-                ):
-
-                    is_swing_high = False
-
-                    break
-
-            if is_swing_high:
-
-                swings.append(
-                    {
-                        "type": "SWING_HIGH",
-                        "index": index,
-                        "time": current["time"],
-                        "price": current_high,
-                    }
-                )
-
-        # ---------------------------------------------------------
-        # Detect Swing Lows
-        # ---------------------------------------------------------
-
-        for index in range(
-            lookback,
-            len(candles) - lookback,
-        ):
-
-            current = candles[index]
-
-            current_low = current["low"]
-
-            is_swing_low = True
-
-            for offset in range(
-                1,
-                lookback + 1,
-            ):
-
-                left = candles[index - offset]
-
-                right = candles[index + offset]
-
-                if (
-                    current_low >= left["low"]
-                    or
-                    current_low >= right["low"]
-                ):
-
-                    is_swing_low = False
-
-                    break
-
-            if is_swing_low:
-
-                swings.append(
-                    {
-                        "type": "SWING_LOW",
-                        "index": index,
-                        "time": current["time"],
-                        "price": current_low,
-                    }
-                )
-
-        # ---------------------------------------------------------
-        # Sort swings by candle position
-        # ---------------------------------------------------------
-
-        swings.sort(
-            key=lambda swing: swing["index"]
-        )
-
-        # ---------------------------------------------------------
-        # Classify swings
-        # ---------------------------------------------------------
-
-        previous_high = None
-
-        previous_low = None
+    def _classify_structure(self, swings: List[Dict[str, Any]]) -> None:
+        """
+        Classify each swing relative to previous swing of same type.
+        Covers: INITIAL_HIGH, HIGHER_HIGH, LOWER_HIGH, EQUAL_HIGH,
+                INITIAL_LOW, LOWER_LOW, HIGHER_LOW, EQUAL_LOW
+        """
+        last_high_price = None
+        last_low_price = None
 
         for swing in swings:
+            s_type = swing.get("type")
+            price = swing.get("price")
 
-            # ---------------------------------------------
-            # Swing High
-            # ---------------------------------------------
+            if price is None:
+                continue
 
-            if swing["type"] == "SWING_HIGH":
-
-                if previous_high is None:
-
+            if s_type == "SWING_HIGH":
+                if last_high_price is None:
                     swing["structure"] = "INITIAL_HIGH"
-
-                elif swing["price"] > previous_high:
-
-                    swing["structure"] = "HIGHER_HIGH"
-
-                elif swing["price"] < previous_high:
-
-                    swing["structure"] = "LOWER_HIGH"
-
                 else:
+                    if price > last_high_price:
+                        swing["structure"] = "HIGHER_HIGH"
+                    elif price < last_high_price:
+                        swing["structure"] = "LOWER_HIGH"
+                    else:
+                        swing["structure"] = "EQUAL_HIGH"
+                last_high_price = price
 
-                    swing["structure"] = "EQUAL_HIGH"
-
-                previous_high = swing["price"]
-
-            # ---------------------------------------------
-            # Swing Low
-            # ---------------------------------------------
-
-            else:
-
-                if previous_low is None:
-
+            elif s_type == "SWING_LOW":
+                if last_low_price is None:
                     swing["structure"] = "INITIAL_LOW"
-
-                elif swing["price"] > previous_low:
-
-                    swing["structure"] = "HIGHER_LOW"
-
-                elif swing["price"] < previous_low:
-
-                    swing["structure"] = "LOWER_LOW"
-
                 else:
-
-                    swing["structure"] = "EQUAL_LOW"
-
-                previous_low = swing["price"]
-
-        logger.info(
-            "Swing detection completed."
-        )
-
-        return Response(
-            success=True,
-            message="Swing detection completed.",
-            error=None,
-            data=swings,
-        )
+                    if price < last_low_price:
+                        swing["structure"] = "LOWER_LOW"
+                    elif price > last_low_price:
+                        swing["structure"] = "HIGHER_LOW"
+                    else:
+                        swing["structure"] = "EQUAL_LOW"
+                last_low_price = price

@@ -18,56 +18,40 @@ def test_analyze_success():
         "high": 1.1020,
         "low": 1.0990,
         "close": 1.1015,
-
         "body": 0.0015,
         "candle_range": 0.0030,
         "upper_wick": 0.0005,
         "lower_wick": 0.0010,
-
         "bullish": True,
         "bearish": False,
     }
 
     analyzer = CandleAnalyzer()
-
     result = analyzer.analyze(candle)
 
     assert isinstance(result, Response)
-
     assert result.success is True
-
     assert result.error is None
 
     analysis = result.data
 
     assert analysis["body_percent"] == 50.0
-
     assert analysis["upper_wick_percent"] == 16.67
-
     assert analysis["lower_wick_percent"] == 33.33
-
     assert analysis["dominant_part"] == "BODY"
-
     assert analysis["strong_body"] is False
-
     assert analysis["long_upper_wick"] is False
-
     assert analysis["long_lower_wick"] is False
-
     assert analysis["bullish"] is True
-
     assert analysis["bearish"] is False
 
 def test_empty_candle():
 
     analyzer = CandleAnalyzer()
-
     result = analyzer.analyze({})
 
     assert result.success is False
-
     assert result.data is None
-
     assert result.message == "No candle supplied."
 
 def test_invalid_candle_range():
@@ -86,9 +70,7 @@ def test_invalid_candle_range():
     result = analyzer.analyze(candle)
 
     assert result.success is False
-
     assert result.data is None
-
     assert result.message == "Invalid candle range."
 
 def test_strong_body():
@@ -105,13 +87,45 @@ def test_strong_body():
     }
 
     result = analyzer.analyze(candle)
-
     analysis = result.data
 
     assert result.success is True
-
     assert result.data["strong_body"] is True
-
     assert result.data["dominant_part"] == "BODY"
-
     assert result.message == "Candle analyzed successfully."
+
+def test_upper_wick_dominant():
+
+    analyzer = CandleAnalyzer()
+
+    candle = {
+        "body": 0.0010,
+        "candle_range": 0.0100,
+        "upper_wick": 0.0070,
+        "lower_wick": 0.0020,
+        "bullish": True,
+        "bearish": False,
+    }
+
+    result = analyzer.analyze(candle)
+
+    assert result.success is True
+    assert result.data["dominant_part"] == "UPPER_WICK"
+
+def test_lower_wick_dominant():
+
+    analyzer = CandleAnalyzer()
+
+    candle = {
+        "body": 0.0010,
+        "candle_range": 0.0100,
+        "upper_wick": 0.0020,
+        "lower_wick": 0.0070,
+        "bullish": False,
+        "bearish": True,
+    }
+
+    result = analyzer.analyze(candle)
+
+    assert result.success is True
+    assert result.data["dominant_part"] == "LOWER_WICK"

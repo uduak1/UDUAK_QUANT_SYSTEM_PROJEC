@@ -102,6 +102,20 @@ def test_auto_trading_disabled(mock_terminal_info):
 
 
 # =============================================================================
+# AUTOTRADING TERMINAL INFO NONE
+# =============================================================================
+
+@patch.object(TerminalData, "get_terminal_info")
+def test_auto_trading_terminal_info_none(mock_get_terminal_info):
+
+    mock_get_terminal_info.return_value = None
+
+    terminal = TerminalData()
+
+    assert terminal.is_auto_trading_enabled() is False
+
+
+# =============================================================================
 # VERSION
 # =============================================================================
 

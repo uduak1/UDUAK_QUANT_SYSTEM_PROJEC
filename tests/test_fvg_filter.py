@@ -198,3 +198,13 @@ def test_mitigated_allowed_when_flag_disabled():
 
     assert response.data["filtered_count"] == 0
     assert response.data["rejected_count"] == 1
+
+def test_validate_fvg_rejects_non_dict():
+    from analysis.fvg_filter import FVGFilter
+
+    f = FVGFilter()
+
+    assert f._validate_fvg(None) is False
+    assert f._validate_fvg([]) is False
+    assert f._validate_fvg("not a dict") is False
+
