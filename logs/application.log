@@ -1353,3 +1353,55 @@
 2026-08-02 17:39:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
 2026-08-02 17:39:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
 2026-08-02 17:39:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 21:51:31 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-02 21:51:31 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 21:51:31 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-02 21:51:31 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-02 21:51:31 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-02 21:51:32 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-02 21:51:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-02 21:51:33 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 21:51:33 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 21:51:33 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 21:51:33 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:01:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-02 22:01:04 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:01:04 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-02 22:01:04 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-02 22:01:04 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-02 22:01:04 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-02 22:01:04 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-02 22:01:05 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:01:05 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:01:05 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:04:31 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-02 22:04:31 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:04:31 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-02 22:04:31 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-02 22:04:31 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-02 22:04:31 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-02 22:04:31 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-02 22:04:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:04:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:04:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:04:32 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:24:55 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-02 22:24:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:24:55 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-02 22:24:55 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-02 22:24:55 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-02 22:24:55 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-02 22:24:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-02 22:24:56 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:24:56 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:24:56 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:30:54 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-02 22:30:54 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:30:55 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-02 22:30:55 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-02 22:30:55 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-02 22:30:55 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-02 22:30:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-02 22:30:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:30:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-02 22:30:55 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1

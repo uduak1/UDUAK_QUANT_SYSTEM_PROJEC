@@ -136,10 +136,6 @@ def test_is_mitigated():
     assert analyzer._is_mitigated(100) is True
     assert analyzer._is_mitigated(99.99) is False
 
-# ==========================================================
-# Additional edge-case coverage
-# ==========================================================
-
 def test_validate_none():
     analyzer = FVGAnalyzer()
     assert analyzer.validate_fvg(None) is False
@@ -244,10 +240,6 @@ def test_validate_invalid_created_index_type():
     }
     assert analyzer.validate_fvg(fvg) is False
 
-# ==========================================================
-# Coverage for uncovered branches (lines 168, 171, 313, 322, 353-364, 403, 413, 423, 513)
-# ==========================================================
-
 def test_extract_candle_fields_missing_high():
     analyzer = FVGAnalyzer()
     candle = {"low": 1.1000}
@@ -298,22 +290,25 @@ def test_calculate_fill_percentage_bearish_gap():
 
 def test_count_retests_skips_invalid_candle():
     analyzer = FVGAnalyzer()
-    fvg = {
-        "top": 10,
-        "bottom": 5,
-        "direction": "BULLISH",
-        "created_index": 0
-    }
-    # line 403: if fields is None: continue
-    result = analyzer.analyze(
-        [{"high": 10, "low": 5}, {"high": None, "low": 1}, {"high": 12, "low": 11}],
-        [fvg]
+
+    candles = [
+        {"high": 10}, # invalid -> _extract_candle_fields returns None
+        {"high": 15, "low": 11}, # valid
+        {"high": 16, "low": 13}, # another valid candle
+    ]
+
+    retests = analyzer._calculate_retest_count(
+        candles=candles,
+        top=14,
+        bottom=12,
+        bullish=True,
+        start_index=0,
     )
-    assert result.success is True
+
+    assert retests == 1
 
 def test_count_retests_bearish():
     analyzer = FVGAnalyzer()
-    # line 413: bearish branch `touched = high >= bottom`
     fvg = {
         "top": 110,
         "bottom": 100,
@@ -331,7 +326,6 @@ def test_count_retests_bearish():
 
 def test_count_retests_leave_gap():
     analyzer = FVGAnalyzer()
-    # line 423: `elif not touched: inside_gap = False`
     fvg = {
         "top": 110,
         "bottom": 100,
@@ -351,7 +345,6 @@ def test_count_retests_leave_gap():
 
 def test_analysis_start_index_beyond_candles():
     analyzer = FVGAnalyzer()
-    # line 513: `if start_index >= len(candles): start_index = len(candles)`
     fvg = {
         "top": 110,
         "bottom": 100,
@@ -365,3 +358,8 @@ def test_analysis_start_index_beyond_candles():
     ]
     result = analyzer.analyze(candles, [fvg])
     assert result.success is True
+
+def test_extract_invalid_candle_returns_none():
+    analyzer = FVGAnalyzer()
+
+    assert analyzer._extract_candle_fields({"high": 10}) is None
