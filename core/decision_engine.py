@@ -34,6 +34,7 @@ from config.scoring import (
 from core.scoring_models import (
     DynamicScoringEngine,
     StrategyScore,
+    ScoreBreakdown,
 )
 
 
@@ -90,3 +91,104 @@ class DecisionEngine:
         self.minimum_score = MINIMUM_SCORE
 
         self.minimum_rr = MIN_RISK_REWARD_RATIO
+            # ==========================================================
+    # MAIN EVALUATION
+    # ==========================================================
+
+    def evaluate(
+        self,
+        strategy_name: str,
+        strengths: Dict[str, float],
+        risk_reward: float,
+    ) -> DecisionResult:
+        """
+        Evaluate a strategy and produce the final decision.
+
+        Parameters
+        ----------
+        strategy_name
+            Name of the strategy being evaluated.
+
+        strengths
+            Dictionary containing normalized analyzer strengths
+            (0.0 - 1.0).
+
+        risk_reward
+            Calculated Risk : Reward ratio.
+
+        Returns
+        -------
+        DecisionResult
+            Final institutional decision.
+        """
+
+                # --------------------------------------------------
+        # Validate Risk : Reward
+        # --------------------------------------------------
+
+        if risk_reward < self.minimum_rr:
+
+            return DecisionResult(
+                strategy_name=strategy_name,
+                decision="REJECTED",
+                approved=False,
+                total_score=0.0,
+                minimum_required=self.minimum_score,
+                risk_reward=risk_reward,
+                score=StrategyScore(
+                    strategy_name=strategy_name,
+                    total_score=0.0,
+                    approved=False,
+                    minimum_required=self.minimum_score,
+                    breakdown=ScoreBreakdown(),
+                    missing_components=[],
+                ),
+                rejection_reason=(
+                    f"Risk:Reward below minimum "
+                    f"({risk_reward:.2f} < {self.minimum_rr:.2f})"
+                ),
+            )
+
+        # --------------------------------------------------
+        # Run Dynamic Scoring Engine
+        # --------------------------------------------------
+
+        score = self.scoring_engine.calculate(
+            strategy_name,
+            strengths,
+        )
+
+                # --------------------------------------------------
+        # Final Decision
+        # --------------------------------------------------
+
+        if score.approved:
+
+            decision = "APPROVED"
+            rejection_reason = None
+
+        else:
+
+            decision = "REJECTED"
+            rejection_reason = (
+                f"Score below minimum "
+                f"({score.total_score:.2f} < "
+                f"{score.minimum_required:.2f})"
+            )
+
+        return DecisionResult(
+            strategy_name=strategy_name,
+            decision=decision,
+            approved=score.approved,
+            total_score=score.total_score,
+            minimum_required=score.minimum_required,
+            risk_reward=risk_reward,
+            score=score,
+            missing_components=score.missing_components,
+            rejection_reason=rejection_reason,
+            metadata={
+                "component_count": len(strengths),
+                "approved_by_score": score.approved,
+                "risk_reward_passed": risk_reward >= self.minimum_rr,
+            },
+        )

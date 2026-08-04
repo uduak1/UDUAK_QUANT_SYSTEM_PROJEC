@@ -1,0 +1,174 @@
+"""
+core/signal_engine.py
+
+==========================================================
+UDUAK QUANT SYSTEM
+Institutional Signal Engine
+==========================================================
+
+The Signal Engine coordinates the institutional trading
+pipeline.
+
+Responsibilities
+
+    • Collect analyzer outputs
+
+    • Organize normalized strengths
+
+    • Submit strengths to the Decision Engine
+
+    • Produce one institutional trading signal
+
+The Signal Engine does NOT:
+
+    • Analyze candles
+
+    • Score trades
+
+    • Execute orders
+
+It only coordinates the workflow.
+"""
+
+from dataclasses import dataclass, field
+from typing import Dict, Optional
+
+from core.decision_engine import DecisionResult
+from core.analyzer_registry import AnalyzerRegistry
+from core.strategy_registry import StrategyRegistry
+
+# ==========================================================
+# SIGNAL REQUEST
+# ==========================================================
+
+@dataclass(slots=True)
+class SignalRequest:
+    """
+    Input supplied to the Signal Engine.
+    """
+
+    strategy_name: str
+
+    strengths: Dict[str, float]
+
+    risk_reward: float
+
+    symbol: str = ""
+
+    timeframe: str = ""
+
+
+# ==========================================================
+# SIGNAL RESULT
+# ==========================================================
+
+@dataclass(slots=True)
+class SignalResult:
+    """
+    Final output produced by the Signal Engine.
+
+    This wraps the Decision Engine output together with
+    additional metadata required by dashboards,
+    execution, logging, and backtesting.
+    """
+
+    symbol: str
+
+    timeframe: str
+
+    strategy_name: str
+
+    approved: bool
+
+    decision: str
+
+    score: float
+
+    risk_reward: float
+
+    decision_result: Optional[DecisionResult] = None
+
+    metadata: Dict = field(default_factory=dict)
+
+    # ==========================================================
+# SIGNAL ENGINE
+# ==========================================================
+
+from core.decision_engine import DecisionEngine
+
+
+class SignalEngine:
+    """
+    Institutional Signal Engine.
+
+    Coordinates the trading workflow between the analyzers
+    and the Decision Engine.
+
+    Responsibilities
+
+        • Receive normalized analyzer outputs
+
+        • Submit them to the Decision Engine
+
+        • Return one institutional signal
+
+    The Signal Engine never analyzes candles itself.
+    """
+
+    def __init__(self):
+        """
+        Initialize the Signal Engine.
+        """
+
+        self.decision_engine = DecisionEngine()
+        
+        self.analyzer_registry = AnalyzerRegistry()
+
+        self.strategy_registry = StrategyRegistry()
+
+    # ------------------------------------------------------
+
+            
+        # --------------------------------------------------
+        # Verify strategy exists
+        # --------------------------------------------------
+
+        strategy = self.strategy_registry.get(
+            request.strategy_name,
+        )
+
+        if strategy is None:
+
+            raise ValueError(
+                f"Unknown strategy: {request.strategy_name}"
+            )
+
+# --------------------------------------------------
+        # Ask the Decision Engine to evaluate the strategy
+        # --------------------------------------------------
+
+        decision = self.decision_engine.evaluate(
+            strategy_name=request.strategy_name,
+            strengths=request.strengths,
+            risk_reward=request.risk_reward,
+        )
+
+        # --------------------------------------------------
+        # Wrap DecisionResult inside SignalResult
+        # --------------------------------------------------
+
+        return SignalResult(
+            symbol=request.symbol,
+            timeframe=request.timeframe,
+            strategy_name=request.strategy_name,
+            approved=decision.approved,
+            decision=decision.decision,
+            score=decision.total_score,
+            risk_reward=request.risk_reward,
+            decision_result=decision,
+            metadata={
+                "component_count": len(request.strengths),
+                "approved": decision.approved,
+                "decision": decision.decision,
+            },
+        )

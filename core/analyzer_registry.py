@@ -1,0 +1,226 @@
+"""
+core/analyzer_registry.py
+
+==========================================================
+UDUAK QUANT SYSTEM
+Institutional Analyzer Registry
+==========================================================
+
+The Analyzer Registry maintains every market analyzer
+available inside the system.
+
+It does NOT execute analyzers.
+
+It does NOT perform market analysis.
+
+It simply stores analyzer metadata so other modules
+(Signal Engine, Dashboard, Backtester) can discover
+available analyzers without hard-coding them.
+"""
+
+from dataclasses import dataclass
+from typing import Dict, List, Optional
+
+
+# ==========================================================
+# ANALYZER DEFINITION
+# ==========================================================
+
+@dataclass(slots=True)
+class AnalyzerDefinition:
+    """
+    Describes one market analyzer.
+    """
+
+    name: str
+
+    description: str
+
+    enabled: bool = True
+
+    category: str = "Market Analysis"
+
+    version: str = "1.0"
+
+    instance: object | None = None
+
+
+# ==========================================================
+# ANALYZER REGISTRY
+# ==========================================================
+
+class AnalyzerRegistry:
+    """
+    Central registry for every market analyzer.
+
+    Responsibilities
+
+        • Register analyzers
+
+        • Retrieve analyzers
+
+        • Enable analyzers
+
+        • Disable analyzers
+
+        • Remove analyzers
+
+        • List analyzers
+
+    No market analysis belongs here.
+    """
+
+    def __init__(self):
+
+        self._analyzers: Dict[str, AnalyzerDefinition] = {}
+
+    # ------------------------------------------------------
+
+    def register(
+        self,
+        analyzer: AnalyzerDefinition,
+    ) -> None:
+        """
+        Register one analyzer.
+
+        Raises
+        ------
+        ValueError
+            If an analyzer with the same name
+            already exists.
+        """
+
+        if analyzer.name in self._analyzers:
+
+            raise ValueError(
+                f"Analyzer '{analyzer.name}' already exists."
+            )
+
+        self._analyzers[analyzer.name] = analyzer
+
+    # ------------------------------------------------------
+
+    def exists(
+        self,
+        analyzer_name: str,
+    ) -> bool:
+        """
+        Check whether an analyzer exists.
+        """
+
+        return analyzer_name in self._analyzers
+
+    # ------------------------------------------------------
+
+    def get(
+        self,
+        analyzer_name: str,
+    ) -> Optional[AnalyzerDefinition]:
+        """
+        Retrieve one analyzer.
+
+        Returns
+        -------
+        AnalyzerDefinition | None
+        """
+
+        return self._analyzers.get(analyzer_name)
+
+    # ------------------------------------------------------
+
+    def list_all(
+        self,
+    ) -> List[AnalyzerDefinition]:
+        """
+        Return every registered analyzer.
+        """
+
+        return list(self._analyzers.values())
+
+    # ------------------------------------------------------
+
+    def list_enabled(
+        self,
+    ) -> List[AnalyzerDefinition]:
+        """
+        Return only enabled analyzers.
+        """
+
+        return [
+            analyzer
+            for analyzer in self._analyzers.values()
+            if analyzer.enabled
+        ]
+
+    # ------------------------------------------------------
+
+    def enable(
+        self,
+        analyzer_name: str,
+    ) -> bool:
+        """
+        Enable an analyzer.
+
+        Returns
+        -------
+        bool
+            True if analyzer exists.
+        """
+
+        analyzer = self.get(analyzer_name)
+
+        if analyzer is None:
+
+            return False
+
+        analyzer.enabled = True
+
+        return True
+
+    # ------------------------------------------------------
+
+    def disable(
+        self,
+        analyzer_name: str,
+    ) -> bool:
+        """
+        Disable an analyzer.
+
+        Returns
+        -------
+        bool
+            True if analyzer exists.
+        """
+
+        analyzer = self.get(analyzer_name)
+
+        if analyzer is None:
+
+            return False
+
+        analyzer.enabled = False
+
+        return True
+
+    # ------------------------------------------------------
+
+    def remove(
+        self,
+        analyzer_name: str,
+    ) -> bool:
+        """
+        Remove an analyzer.
+
+        Returns
+        -------
+        bool
+            True if analyzer existed.
+        """
+
+        if analyzer_name not in self._analyzers:
+
+            return False
+
+        del self._analyzers[analyzer_name]
+
+        return True
