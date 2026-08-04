@@ -42,6 +42,8 @@ class AnalyzerDefinition:
 
     version: str = "1.0"
 
+    instance: object | None = None
+
 
 # ==========================================================
 # ANALYZER REGISTRY

@@ -143,13 +143,24 @@ class SignalEngine:
                 f"Unknown strategy: {request.strategy_name}"
             )
 
+
+        # --------------------------------------------------
+        # Automatically collect analyzer strengths
+        # --------------------------------------------------
+
+        strengths = request.strengths
+
+        if not strengths:
+
+            strengths = self.collect_strengths()
+
 # --------------------------------------------------
         # Ask the Decision Engine to evaluate the strategy
         # --------------------------------------------------
 
         decision = self.decision_engine.evaluate(
             strategy_name=request.strategy_name,
-            strengths=request.strengths,
+            strengths=strengths,
             risk_reward=request.risk_reward,
         )
 
@@ -167,7 +178,7 @@ class SignalEngine:
             risk_reward=request.risk_reward,
             decision_result=decision,
             metadata={
-                "component_count": len(request.strengths),
+                "component_count": len(strengths),
                 "approved": decision.approved,
                 "decision": decision.decision,
             },

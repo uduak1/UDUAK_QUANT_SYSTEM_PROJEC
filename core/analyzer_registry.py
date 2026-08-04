@@ -224,3 +224,39 @@ class AnalyzerRegistry:
         del self._analyzers[analyzer_name]
 
         return True
+
+    # ------------------------------------------------------
+
+    def register_instance(
+        self,
+        analyzer_name: str,
+        instance: object,
+    ) -> bool:
+        """
+        Attach a runtime analyzer instance.
+        """
+
+        analyzer = self.get(analyzer_name)
+
+        if analyzer is None:
+            return False
+
+        analyzer.instance = instance
+
+        return True
+
+
+
+    # ------------------------------------------------------
+
+    def clear_instances(
+        self,
+    ) -> None:
+        """
+        Remove all runtime instances.
+        """
+
+        for analyzer in self._analyzers.values():
+
+            analyzer.instance = None
+
