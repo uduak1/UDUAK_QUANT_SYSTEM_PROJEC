@@ -80,7 +80,9 @@ class StrategyRegistry:
         ]
 
         for strategy in defaults:
-            self.register(strategy)
+
+            if strategy.name not in self._strategies:
+                self.register(strategy)
 
     # --------------------------------------------------
 
@@ -90,7 +92,9 @@ class StrategyRegistry:
     ) -> None:
 
         if strategy.name in self._strategies:
-            return
+            raise ValueError(
+                f"Strategy '{strategy.name}' already exists."
+            )
 
         self._strategies[strategy.name] = strategy
 
