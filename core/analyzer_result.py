@@ -1,111 +1,152 @@
 """
 core/analyzer_result.py
 
-==========================================================
 UDUAK QUANT SYSTEM
+Institutional Analyzer Result Model
 
-Analyzer Result Model
+Every analyzer MUST return this object.
 
-Every analyzer in the system returns this object.
+This standardizes communication between:
 
-This creates a unified interface between:
-
-    • Signal Engine
-    • Analyzer Registry
-    • Decision Engine
-    • Dashboard
-    • Backtester
-
-==========================================================
+    Analyzer
+        ↓
+Analyzer Manager
+        ↓
+Signal Engine
+        ↓
+Decision Engine
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any
+from datetime import datetime
+from typing import Any, Dict, List
 
-
-# ==========================================================
-# ANALYZER RESULT
-# ==========================================================
 
 @dataclass(slots=True)
 class AnalyzerResult:
     """
-    Standard output returned by every analyzer.
+    Standard output from every analyzer.
     """
 
-    analyzer_name: str
+    analyzer: str
 
-    score: float
+    success: bool
 
-    confidence: float
+    confidence: float = 0.0
 
-    direction: str | None = None
+    data: Dict[str, Any] = field(default_factory=dict)
 
-    valid: bool = True
+    warnings: List[str] = field(default_factory=list)
 
-    metadata: dict[str, Any] = field(default_factory=dict)
+    errors: List[str] = field(default_factory=list)
 
-    warnings: list[str] = field(default_factory=list)
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
-    timestamp: Any | None = None
+    execution_time_ms: float = 0.0
 
-    # ------------------------------------------------------
+    timestamp: datetime = field(default_factory=datetime.utcnow)
+
+    # ======================================================
+    # VALIDATION
+    # ======================================================
+
+    def __post_init__(self) -> None:
+        self.confidence = max(0.0, min(100.0, float(self.confidence)))
+
+    # ======================================================
+    # STATUS
+    # ======================================================
 
     @property
-    def approved(self) -> bool:
-        """
-        Whether this analyzer produced
-        a usable institutional signal.
-        """
-        return self.valid and self.score > 0.0
+    def has_errors(self) -> bool:
+        return len(self.errors) > 0
 
-    # ------------------------------------------------------
+    @property
+    def has_warnings(self) -> bool:
+        return len(self.warnings) > 0
 
-    def add_warning(
-        self,
-        message: str,
-    ) -> None:
+    @property
+    def is_valid(self) -> bool:
+        return self.success and not self.has_errors
 
-        self.warnings.append(message)
+    # ======================================================
+    # HELPERS
+    # ======================================================
 
-    # ------------------------------------------------------
+    def add_warning(self, message: str) -> None:
+        self.warnings.append(str(message))
 
-    def merge_metadata(
-        self,
-        values: dict[str, Any],
-    ) -> None:
+    def add_error(self, message: str) -> None:
+        self.errors.append(str(message))
 
-        self.metadata.update(values)
+    def add_metadata(self, key: str, value: Any) -> None:
+        self.metadata[key] = value
 
-    # ------------------------------------------------------
+    # ======================================================
+    # SERIALIZATION
+    # ======================================================
 
-    def to_dict(self) -> dict[str, Any]:
-
+    def to_dict(self) -> Dict[str, Any]:
         return {
-            "analyzer_name": self.analyzer_name,
-            "score": self.score,
+            "analyzer": self.analyzer,
+            "success": self.success,
             "confidence": self.confidence,
-            "direction": self.direction,
-            "valid": self.valid,
-            "metadata": self.metadata,
+            "data": self.data,
             "warnings": self.warnings,
-            "timestamp": self.timestamp,
+            "errors": self.errors,
+            "metadata": self.metadata,
+            "execution_time_ms": self.execution_time_ms,
+            "timestamp": self.timestamp.isoformat(),
         }
 
-    # ------------------------------------------------------
+    # ======================================================
+    # FACTORY METHODS
+    # ======================================================
 
     @classmethod
-    def empty(
+    def success_result(
         cls,
-        analyzer_name: str,
+        analyzer: str,
+        confidence: float,
+        data: Dict[str, Any],
+        execution_time_ms: float = 0.0,
     ) -> "AnalyzerResult":
-
         return cls(
-            analyzer_name=analyzer_name,
-            score=0.0,
+            analyzer=analyzer,
+            success=True,
+            confidence=confidence,
+            data=data,
+            execution_time_ms=execution_time_ms,
+        )
+
+    @classmethod
+    def failure_result(
+        cls,
+        analyzer: str,
+        error: str,
+        execution_time_ms: float = 0.0,
+    ) -> "AnalyzerResult":
+        result = cls(
+            analyzer=analyzer,
+            success=False,
             confidence=0.0,
-            direction=None,
-            valid=False,
+            execution_time_ms=execution_time_ms,
+        )
+        result.add_error(error)
+        return result
+
+    # ======================================================
+    # REPRESENTATION
+    # ======================================================
+
+    def __repr__(self) -> str:
+        return (
+            f"AnalyzerResult("
+            f"analyzer='{self.analyzer}', "
+            f"success={self.success}, "
+            f"confidence={self.confidence:.1f}, "
+            f"errors={len(self.errors)}, "
+            f"warnings={len(self.warnings)})"
         )

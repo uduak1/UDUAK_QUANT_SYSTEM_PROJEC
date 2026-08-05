@@ -3,260 +3,348 @@ core/analyzer_registry.py
 
 ==========================================================
 UDUAK QUANT SYSTEM
+
 Institutional Analyzer Registry
+
+Responsibilities
+
+    • Register analyzers
+    • Remove analyzers
+    • Enable / Disable analyzers
+    • Retrieve analyzers
+    • Execute analyzers
+    • Validate analyzer type
+    • Isolate analyzer failures
+    • Record execution timing
+
+Every registered analyzer MUST inherit BaseAnalyzer.
 ==========================================================
-
-The Analyzer Registry maintains every market analyzer
-available inside the system.
-
-It does NOT execute analyzers.
-
-It does NOT perform market analysis.
-
-It simply stores analyzer metadata so other modules
-(Signal Engine, Dashboard, Backtester) can discover
-available analyzers without hard-coding them.
 """
 
-from dataclasses import dataclass
-from typing import Dict, List, Optional
+from __future__ import annotations
+
+import logging
+import time
+
+from typing import Dict
+from typing import List
+
+from core.base_analyzer import BaseAnalyzer
+from core.analyzer_result import AnalyzerResult
 
 
-# ==========================================================
-# ANALYZER DEFINITION
-# ==========================================================
+logger = logging.getLogger(__name__)
 
-@dataclass(slots=True)
-class AnalyzerDefinition:
-    """
-    Describes one market analyzer.
-    """
-
-    name: str
-
-    description: str
-
-    enabled: bool = True
-
-    category: str = "Market Analysis"
-
-    version: str = "1.0"
-
-    instance: object | None = None
-
-
-# ==========================================================
-# ANALYZER REGISTRY
-# ==========================================================
 
 class AnalyzerRegistry:
     """
-    Central registry for every market analyzer.
-
-    Responsibilities
-
-        • Register analyzers
-
-        • Retrieve analyzers
-
-        • Enable analyzers
-
-        • Disable analyzers
-
-        • Remove analyzers
-
-        • List analyzers
-
-    No market analysis belongs here.
+    Registry for all analyzers.
     """
 
     def __init__(self):
 
-        self._analyzers: Dict[str, AnalyzerDefinition] = {}
+        self._analyzers: Dict[str, BaseAnalyzer] = {}
+
+        self._enabled: Dict[str, bool] = {}
+
+
+        self.last_execution_times: Dict[str, float] = {}
+
+        self.last_failures: Dict[str, str] = {}
+
+        self.last_results: Dict[str, AnalyzerResult] = {}
+
+        # ----------------------------------------------
+        # Execution statistics
+        # ----------------------------------------------
+
+        self._execution_times: Dict[str, float] = {}
+
+        self._failed_analyzers: Dict[str, str] = {}
 
     # ------------------------------------------------------
 
     def register(
         self,
-        analyzer: AnalyzerDefinition,
+        analyzer: BaseAnalyzer,
     ) -> None:
         """
-        Register one analyzer.
-
-        Raises
-        ------
-        ValueError
-            If an analyzer with the same name
-            already exists.
+        Register an analyzer instance.
         """
 
-        if analyzer.name in self._analyzers:
-
-            raise ValueError(
-                f"Analyzer '{analyzer.name}' already exists."
+        if not isinstance(analyzer, BaseAnalyzer):
+            raise TypeError(
+                "Analyzer must inherit BaseAnalyzer."
             )
 
-        self._analyzers[analyzer.name] = analyzer
+        name = analyzer.analyzer_name
 
-    # ------------------------------------------------------
+        if name in self._analyzers:
+            raise ValueError(
+                f"Analyzer '{name}' already registered."
+            )
 
-    def exists(
-        self,
-        analyzer_name: str,
-    ) -> bool:
-        """
-        Check whether an analyzer exists.
-        """
-
-        return analyzer_name in self._analyzers
-
-    # ------------------------------------------------------
-
-    def get(
-        self,
-        analyzer_name: str,
-    ) -> Optional[AnalyzerDefinition]:
-        """
-        Retrieve one analyzer.
-
-        Returns
-        -------
-        AnalyzerDefinition | None
-        """
-
-        return self._analyzers.get(analyzer_name)
-
-    # ------------------------------------------------------
-
-    def list_all(
-        self,
-    ) -> List[AnalyzerDefinition]:
-        """
-        Return every registered analyzer.
-        """
-
-        return list(self._analyzers.values())
-
-    # ------------------------------------------------------
-
-    def list_enabled(
-        self,
-    ) -> List[AnalyzerDefinition]:
-        """
-        Return only enabled analyzers.
-        """
-
-        return [
-            analyzer
-            for analyzer in self._analyzers.values()
-            if analyzer.enabled
-        ]
-
-    # ------------------------------------------------------
-
-    def enable(
-        self,
-        analyzer_name: str,
-    ) -> bool:
-        """
-        Enable an analyzer.
-
-        Returns
-        -------
-        bool
-            True if analyzer exists.
-        """
-
-        analyzer = self.get(analyzer_name)
-
-        if analyzer is None:
-
-            return False
-
-        analyzer.enabled = True
-
-        return True
-
-    # ------------------------------------------------------
-
-    def disable(
-        self,
-        analyzer_name: str,
-    ) -> bool:
-        """
-        Disable an analyzer.
-
-        Returns
-        -------
-        bool
-            True if analyzer exists.
-        """
-
-        analyzer = self.get(analyzer_name)
-
-        if analyzer is None:
-
-            return False
-
-        analyzer.enabled = False
-
-        return True
+        self._analyzers[name] = analyzer
+        self._enabled[name] = True
 
     # ------------------------------------------------------
 
     def remove(
         self,
         analyzer_name: str,
-    ) -> bool:
-        """
-        Remove an analyzer.
+    ) -> None:
 
-        Returns
-        -------
-        bool
-            True if analyzer existed.
-        """
+        self._analyzers.pop(analyzer_name, None)
+        self._enabled.pop(analyzer_name, None)
 
-        if analyzer_name not in self._analyzers:
-
-            return False
-
-        del self._analyzers[analyzer_name]
-
-        return True
+        self._execution_times.pop(analyzer_name, None)
+        self._failed_analyzers.pop(analyzer_name, None)
 
     # ------------------------------------------------------
 
-    def register_instance(
+    def enable(
         self,
         analyzer_name: str,
-        instance: object,
+    ) -> None:
+
+        if analyzer_name not in self._enabled:
+            raise KeyError(analyzer_name)
+
+        self._enabled[analyzer_name] = True
+
+    # ------------------------------------------------------
+
+    def disable(
+        self,
+        analyzer_name: str,
+    ) -> None:
+
+        if analyzer_name not in self._enabled:
+            raise KeyError(analyzer_name)
+
+        self._enabled[analyzer_name] = False
+
+    # ------------------------------------------------------
+
+    def is_enabled(
+        self,
+        analyzer_name: str,
     ) -> bool:
+
+        return self._enabled.get(
+            analyzer_name,
+            False,
+        )
+
+    # ------------------------------------------------------
+
+    def get(
+        self,
+        analyzer_name: str,
+    ) -> BaseAnalyzer:
+
+        if analyzer_name not in self._analyzers:
+            raise KeyError(analyzer_name)
+
+        return self._analyzers[analyzer_name]
+
+    # ------------------------------------------------------
+
+    def list_all(
+        self,
+    ) -> List[str]:
+
+        return sorted(self._analyzers.keys())
+
+    # ------------------------------------------------------
+
+    def list_enabled(
+        self,
+    ) -> List[str]:
+
+        return sorted(
+            name
+            for name, enabled in self._enabled.items()
+            if enabled
+        )
+
+    # ------------------------------------------------------
+
+    def _execute_analyzer(
+        self,
+        analyzer_name: str,
+        analyzer: BaseAnalyzer,
+        market_data,
+    ) -> AnalyzerResult | None:
         """
-        Attach a runtime analyzer instance.
+        Execute one analyzer with timing and
+        failure isolation.
         """
 
-        analyzer = self.get(analyzer_name)
+        start = time.perf_counter()
 
-        if analyzer is None:
-            return False
+        try:
 
-        analyzer.instance = instance
+            result = analyzer.analyze(
+                market_data,
+            )
 
-        return True
+            elapsed = (
+                time.perf_counter() - start
+            ) * 1000.0
 
+            self.last_execution_times[
+                analyzer_name
+            ] = elapsed
+
+            if not isinstance(
+                result,
+                AnalyzerResult,
+            ):
+                raise TypeError(
+                    f"{analyzer_name} did not return AnalyzerResult."
+                )
+
+            self.last_results[
+                analyzer_name
+            ] = result
+
+            return result
+
+        except Exception:
+
+            elapsed = (
+                time.perf_counter() - start
+            ) * 1000.0
+
+            self.last_execution_times[
+                analyzer_name
+            ] = elapsed
+
+            self.last_failures[
+                analyzer_name
+            ] = traceback.format_exc()
+
+            return None
 
 
     # ------------------------------------------------------
 
-    def clear_instances(
+    def execute(
+        self,
+        market_data,
+    ) -> Dict[str, AnalyzerResult]:
+        """
+        Execute every enabled analyzer.
+
+        Failure isolation:
+            One analyzer failing does NOT stop the engine.
+
+        Execution timing:
+            Every analyzer runtime is recorded.
+        """
+
+        results: Dict[str, AnalyzerResult] = {}
+
+        self._failed_analyzers.clear()
+
+        for name in self.list_enabled():
+
+            analyzer = self._analyzers[name]
+
+            start = time.perf_counter()
+
+            try:
+
+                result = analyzer.analyze(
+                    market_data,
+                )
+
+                if not isinstance(
+                    result,
+                    AnalyzerResult,
+                ):
+                    raise TypeError(
+                        f"{name} did not return AnalyzerResult."
+                    )
+
+                results[name] = result
+
+            except Exception as exc:
+
+                self._failed_analyzers[name] = str(exc)
+
+                logger.exception(
+                    "Analyzer '%s' failed.",
+                    name,
+                )
+
+            finally:
+
+                elapsed = (
+                    time.perf_counter() - start
+                ) * 1000.0
+
+                self._execution_times[name] = elapsed
+
+        return results
+
+    # ------------------------------------------------------
+
+    def execution_time(
+        self,
+        analyzer_name: str,
+    ) -> float:
+
+        return self._execution_times.get(
+            analyzer_name,
+            0.0,
+        )
+
+    # ------------------------------------------------------
+
+    def execution_times(
+        self,
+    ) -> Dict[str, float]:
+
+        return dict(
+            self._execution_times,
+        )
+
+    # ------------------------------------------------------
+
+    def failed_analyzers(
+        self,
+    ) -> Dict[str, str]:
+
+        return dict(
+            self._failed_analyzers,
+        )
+
+    # ------------------------------------------------------
+
+    def clear(
         self,
     ) -> None:
-        """
-        Remove all runtime instances.
-        """
 
-        for analyzer in self._analyzers.values():
+        self._analyzers.clear()
+        self._enabled.clear()
+        self._execution_times.clear()
+        self._failed_analyzers.clear()
 
-            analyzer.instance = None
+    # ------------------------------------------------------
 
+    def __len__(
+        self,
+    ) -> int:
+
+        return len(self._analyzers)
+
+    # ------------------------------------------------------
+
+    def __contains__(
+        self,
+        analyzer_name: str,
+    ) -> bool:
+
+        return analyzer_name in self._analyzers

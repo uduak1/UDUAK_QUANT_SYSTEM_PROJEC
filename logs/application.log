@@ -2359,3 +2359,573 @@
 2026-08-03 23:20:30 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
 2026-08-03 23:20:30 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
 2026-08-03 23:20:31 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-04 22:44:40 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:44:40 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:44:40 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:44:40 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:44:41 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-04 22:44:41 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-04 22:44:41 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-04 22:44:41 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-04 22:44:41 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-04 22:44:41 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-04 22:44:41 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:44:41 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-04 22:44:41 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-04 22:44:41 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:44:41 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:44:41 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:44:41 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-04 22:44:41 | ERROR    | data.candle_data | Unable to retrieve candle data for 'EURUSD': (500, 'No data')
+2026-08-04 22:44:42 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-04 22:44:42 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-04 22:44:42 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:44:42 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-04 22:44:42 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-04 22:44:42 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:44:42 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:42 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:44:42 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-04 22:44:42 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-04 22:44:42 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-04 22:44:42 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:42 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:44:43 | ERROR    | analysis.fvg_detector | No candle data supplied.
+2026-08-04 22:44:43 | ERROR    | analysis.fvg_detector | At least 3 candles are required.
+2026-08-04 22:44:43 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:43 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | No Fair Value Gaps available for filtering.
+2026-08-04 22:44:43 | ERROR    | analysis.fvg_filter | No Fair Value Gap data supplied.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:43 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:44:44 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-04 22:44:44 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:44:44 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-04 22:44:44 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-04 22:44:44 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:44:44 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:44:45 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:44:45 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:44:45 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:44:45 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:44:45 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-04 22:44:45 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-04 22:44:45 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-04 22:44:45 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-04 22:44:45 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-04 22:44:45 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-04 22:44:45 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-04 22:44:45 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:44:45 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-04 22:44:45 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:44:45 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-04 22:44:45 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:44:45 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-04 22:44:45 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:44:45 | DEBUG    | data.mt5_connection | MetaTrader 5 is already disconnected.
+2026-08-04 22:44:45 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-04 22:44:45 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-04 22:44:45 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-04 22:44:45 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-04 22:44:45 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-04 22:44:45 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-04 22:44:45 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:44:45 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-04 22:44:45 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:44:46 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-04 22:46:07 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:46:07 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:46:07 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:46:07 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:46:07 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-04 22:46:07 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-04 22:46:07 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-04 22:46:07 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-04 22:46:07 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-04 22:46:07 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-04 22:46:07 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:46:07 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-04 22:46:07 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-04 22:46:07 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:46:07 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:46:07 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:46:07 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-04 22:46:07 | ERROR    | data.candle_data | Unable to retrieve candle data for 'EURUSD': (500, 'No data')
+2026-08-04 22:46:07 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-04 22:46:08 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-04 22:46:08 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:46:08 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-04 22:46:08 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-04 22:46:08 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:46:08 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:08 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:46:08 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-04 22:46:08 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-04 22:46:08 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-04 22:46:08 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:08 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:46:09 | ERROR    | analysis.fvg_detector | No candle data supplied.
+2026-08-04 22:46:09 | ERROR    | analysis.fvg_detector | At least 3 candles are required.
+2026-08-04 22:46:09 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:09 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | No Fair Value Gaps available for filtering.
+2026-08-04 22:46:09 | ERROR    | analysis.fvg_filter | No Fair Value Gap data supplied.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:09 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:46:10 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-04 22:46:10 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:46:10 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-04 22:46:10 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-04 22:46:10 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:46:10 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:46:11 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:46:11 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:46:11 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:46:11 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:46:11 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-04 22:46:11 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-04 22:46:11 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-04 22:46:11 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-04 22:46:11 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-04 22:46:11 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-04 22:46:11 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-04 22:46:11 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:46:11 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-04 22:46:11 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:46:11 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-04 22:46:11 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:46:11 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-04 22:46:11 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:46:11 | DEBUG    | data.mt5_connection | MetaTrader 5 is already disconnected.
+2026-08-04 22:46:11 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-04 22:46:11 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-04 22:46:11 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-04 22:46:11 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-04 22:46:11 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-04 22:46:11 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-04 22:46:11 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:46:11 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-04 22:46:11 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:46:12 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-04 22:50:28 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:50:28 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:50:28 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:50:28 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:50:28 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-04 22:50:28 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-04 22:50:29 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-04 22:50:29 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-04 22:50:29 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-04 22:50:29 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-04 22:50:29 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:50:29 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-04 22:50:29 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-04 22:50:29 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:50:29 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:50:29 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:50:29 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-04 22:50:29 | ERROR    | data.candle_data | Unable to retrieve candle data for 'EURUSD': (500, 'No data')
+2026-08-04 22:50:29 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-04 22:50:29 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-04 22:50:29 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:50:29 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-04 22:50:29 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-04 22:50:29 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-04 22:50:30 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_detector | No candle data supplied.
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_detector | At least 3 candles are required.
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:30 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | No Fair Value Gaps available for filtering.
+2026-08-04 22:50:30 | ERROR    | analysis.fvg_filter | No Fair Value Gap data supplied.
+2026-08-04 22:50:30 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=1
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:50:31 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:31 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:50:32 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-04 22:50:32 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:50:32 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-04 22:50:32 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-04 22:50:32 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:50:32 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:50:32 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:50:32 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:50:32 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:50:32 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:50:32 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-04 22:50:32 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-04 22:50:32 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-04 22:50:32 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-04 22:50:32 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-04 22:50:32 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-04 22:50:32 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-04 22:50:32 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:50:32 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-04 22:50:32 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:50:32 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-04 22:50:32 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:50:32 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-04 22:50:32 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:50:33 | DEBUG    | data.mt5_connection | MetaTrader 5 is already disconnected.
+2026-08-04 22:50:33 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-04 22:50:33 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-04 22:50:33 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-04 22:50:33 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-04 22:50:33 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-04 22:50:33 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-04 22:50:33 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:50:33 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-04 22:50:33 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:50:34 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-04 22:51:02 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:51:02 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:51:02 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 22:51:02 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 22:51:02 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-04 22:51:02 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-04 22:51:02 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-04 22:51:02 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-04 22:51:02 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-04 22:51:02 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-04 22:51:02 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:51:02 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-04 22:51:02 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-04 22:51:02 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:51:02 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:51:02 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 22:51:02 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-04 22:51:02 | ERROR    | data.candle_data | Unable to retrieve candle data for 'EURUSD': (500, 'No data')
+2026-08-04 22:51:03 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-04 22:51:03 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-04 22:51:03 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:51:03 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-04 22:51:03 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-04 22:51:03 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 22:51:03 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:03 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:51:03 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-04 22:51:03 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-04 22:51:03 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-04 22:51:03 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:03 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 22:51:04 | ERROR    | analysis.fvg_detector | No candle data supplied.
+2026-08-04 22:51:04 | ERROR    | analysis.fvg_detector | At least 3 candles are required.
+2026-08-04 22:51:04 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:04 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | No Fair Value Gaps available for filtering.
+2026-08-04 22:51:04 | ERROR    | analysis.fvg_filter | No Fair Value Gap data supplied.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:04 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 22:51:05 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-04 22:51:05 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 22:51:05 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-04 22:51:05 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-04 22:51:05 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 22:51:05 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 22:51:05 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:51:05 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:51:05 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 22:51:05 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 22:51:05 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-04 22:51:06 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-04 22:51:06 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-04 22:51:06 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-04 22:51:06 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-04 22:51:06 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-04 22:51:06 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-04 22:51:06 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:51:06 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-04 22:51:06 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:51:06 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-04 22:51:06 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:51:06 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-04 22:51:06 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 22:51:06 | DEBUG    | data.mt5_connection | MetaTrader 5 is already disconnected.
+2026-08-04 22:51:06 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-04 22:51:06 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-04 22:51:06 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-04 22:51:06 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-04 22:51:06 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-04 22:51:06 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-04 22:51:06 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:51:06 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-04 22:51:06 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 22:51:07 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')
+2026-08-04 23:35:08 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 23:35:08 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 23:35:08 | INFO     | data.account_data | Account information retrieved successfully.
+2026-08-04 23:35:08 | ERROR    | data.account_data | Unable to retrieve account information: (-1, 'Account unavailable')
+2026-08-04 23:35:09 | ERROR    | analysis.bos_detector | No market structure supplied.
+2026-08-04 23:35:09 | ERROR    | analysis.bos_detector | At least three structure points are required.
+2026-08-04 23:35:09 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.11
+2026-08-04 23:35:09 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BEARISH Level=1.1
+2026-08-04 23:35:09 | INFO     | analysis.bos_detector | No Break of Structure detected.
+2026-08-04 23:35:09 | INFO     | analysis.bos_detector | Break of Structure detected. Direction=BULLISH Level=1.105
+2026-08-04 23:35:09 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 23:35:09 | ERROR    | analysis.candle_analyzer | No candle supplied for analysis.
+2026-08-04 23:35:09 | ERROR    | analysis.candle_analyzer | Invalid candle range.
+2026-08-04 23:35:09 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 23:35:09 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 23:35:09 | INFO     | analysis.candle_analyzer | Candle analyzed successfully.
+2026-08-04 23:35:09 | INFO     | data.candle_data | Retrieved 1 candles for 'EURUSD'.
+2026-08-04 23:35:09 | ERROR    | data.candle_data | Unable to retrieve candle data for 'EURUSD': (500, 'No data')
+2026-08-04 23:35:09 | ERROR    | analysis.choch_detector | No market structure supplied.
+2026-08-04 23:35:09 | ERROR    | analysis.choch_detector | At least four structure points are required.
+2026-08-04 23:35:09 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 23:35:09 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BEARISH Level=1.095
+2026-08-04 23:35:09 | INFO     | analysis.choch_detector | No Change of Character detected.
+2026-08-04 23:35:09 | INFO     | analysis.choch_detector | Change of Character detected. Direction=BULLISH Level=1.125
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_analyzer | No candle data supplied.
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_analyzer | No Fair Value Gap data supplied.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | No Fair Value Gap available for analysis.
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_analyzer | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_analyzer | FVG Analysis | Total=1
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_detector | No candle data supplied.
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_detector | At least 3 candles are required.
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=0 Bearish=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_detector | FVG Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_detector | All candles supplied are malformed.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | No Fair Value Gaps available for filtering.
+2026-08-04 23:35:10 | ERROR    | analysis.fvg_filter | No Fair Value Gap data supplied.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=1
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:10 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:10 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:11 | WARNING  | analysis.fvg_filter | Skipping malformed Fair Value Gap.
+2026-08-04 23:35:11 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:11 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:11 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=1 Rejected=0
+2026-08-04 23:35:11 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:11 | INFO     | analysis.fvg_filter | FVG Filter | Accepted=0 Rejected=1
+2026-08-04 23:35:12 | ERROR    | analysis.liquidity_detector | No swing data supplied.
+2026-08-04 23:35:12 | ERROR    | analysis.liquidity_detector | At least two swing points are required.
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=1 EQH=0 EQL=1
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=1 SSL=0 EQH=1 EQL=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_detector | Liquidity Detection | BSL=0 SSL=0 EQH=0 EQL=0
+2026-08-04 23:35:12 | ERROR    | analysis.liquidity_sweep_detector | No candle data supplied.
+2026-08-04 23:35:12 | ERROR    | analysis.liquidity_sweep_detector | At least two candles are required.
+2026-08-04 23:35:12 | ERROR    | analysis.liquidity_sweep_detector | No liquidity data supplied.
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=1
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=1 Sell Sweeps=0
+2026-08-04 23:35:12 | INFO     | analysis.liquidity_sweep_detector | Liquidity Sweep Detection | Buy Sweeps=0 Sell Sweeps=0
+2026-08-04 23:35:12 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 23:35:12 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 23:35:12 | INFO     | data.market_data | Retrieved market data for 'EURUSD'.
+2026-08-04 23:35:12 | ERROR    | data.market_data | Unable to retrieve market data for 'EURUSD': (-1, 'Market data unavailable')
+2026-08-04 23:35:12 | ERROR    | analysis.market_structure | No swing data supplied.
+2026-08-04 23:35:12 | ERROR    | analysis.market_structure | At least two swings are required.
+2026-08-04 23:35:12 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UPTREND | Swings=6
+2026-08-04 23:35:12 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=DOWNTREND | Swings=6
+2026-08-04 23:35:12 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=RANGE | Swings=6
+2026-08-04 23:35:12 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=TRANSITION | Swings=4
+2026-08-04 23:35:12 | INFO     | analysis.market_structure | Market structure analyzed successfully. Trend=UNKNOWN | Swings=4
+2026-08-04 23:35:13 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 23:35:13 | ERROR    | data.mt5_connection | MetaTrader 5 initialization failed: (-1, 'Initialization Failed')
+2026-08-04 23:35:13 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 23:35:13 | INFO     | data.mt5_connection | MetaTrader 5 disconnected.
+2026-08-04 23:35:13 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 23:35:13 | DEBUG    | data.mt5_connection | MetaTrader 5 is already connected.
+2026-08-04 23:35:13 | INFO     | data.mt5_connection | MetaTrader 5 connected successfully.
+2026-08-04 23:35:13 | DEBUG    | data.mt5_connection | MetaTrader 5 is already disconnected.
+2026-08-04 23:35:13 | ERROR    | analysis.order_block_detector | No candle data supplied.
+2026-08-04 23:35:13 | ERROR    | analysis.order_block_detector | At least 10 candles are required.
+2026-08-04 23:35:13 | ERROR    | analysis.order_block_detector | No BOS data supplied.
+2026-08-04 23:35:13 | ERROR    | analysis.order_block_detector | Invalid BOS direction: UP
+2026-08-04 23:35:13 | INFO     | analysis.order_block_detector | No BOS detected.
+2026-08-04 23:35:13 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=1 Bearish=0
+2026-08-04 23:35:13 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 23:35:13 | ERROR    | analysis.order_block_detector | All candles in lookback are malformed.
+2026-08-04 23:35:13 | INFO     | analysis.order_block_detector | Order Block Detection | Bullish=0 Bearish=1
+2026-08-04 23:35:14 | ERROR    | data.terminal_data | Unable to retrieve terminal information: (-1, 'Terminal not running')

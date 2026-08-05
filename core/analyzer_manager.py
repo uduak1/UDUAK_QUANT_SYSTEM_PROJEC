@@ -3,126 +3,204 @@ core/analyzer_manager.py
 
 ==========================================================
 UDUAK QUANT SYSTEM
+
 Institutional Analyzer Manager
+
+Responsibilities
+
+    • Own Analyzer Registry
+    • Register analyzers
+    • Register multiple analyzers
+    • Execute all enabled analyzers
+    • Build institutional execution snapshot
+    • Store latest snapshot
+
+The manager NEVER performs analysis.
+
+It orchestrates analyzers.
 ==========================================================
-
-The Analyzer Manager is responsible for creating and
-registering runtime analyzer instances.
-
-It acts as the bridge between the Analyzer Registry and
-the Signal Engine.
-
-It NEVER performs market analysis itself.
 """
 
 from __future__ import annotations
 
-from typing import Dict
+from datetime import datetime
+from typing import Dict, List
 
-from core.analyzer_registry import AnalyzerRegistry
 from core.base_analyzer import BaseAnalyzer
+from core.analyzer_registry import AnalyzerRegistry
+from core.analyzer_result import AnalyzerResult
 
-
-# ==========================================================
-# ANALYZER MANAGER
-# ==========================================================
 
 class AnalyzerManager:
     """
-    Creates, stores and registers analyzer instances.
+    Institutional Analyzer Orchestration Layer.
     """
 
     def __init__(
         self,
-        registry: AnalyzerRegistry,
-    ):
+        registry: AnalyzerRegistry | None = None,
+    ) -> None:
 
-        self.registry = registry
+        self.registry = registry or AnalyzerRegistry()
 
-        self.instances: Dict[str, BaseAnalyzer] = {}
+        self._last_snapshot: Dict = {}
 
-    # ------------------------------------------------------
+    # --------------------------------------------------
 
     def register(
         self,
         analyzer: BaseAnalyzer,
-    ) -> bool:
+    ) -> None:
         """
-        Register one analyzer instance.
+        Register one analyzer.
         """
 
-        self.instances[analyzer.name] = analyzer
+        self.registry.register(analyzer)
 
-        return self.registry.register_instance(
-            analyzer.name,
-            analyzer,
+    # --------------------------------------------------
+
+    def register_many(
+        self,
+        analyzers: List[BaseAnalyzer],
+    ) -> None:
+        """
+        Register multiple analyzers.
+        """
+
+        for analyzer in analyzers:
+            self.registry.register(analyzer)
+
+    # --------------------------------------------------
+
+    def execute(
+        self,
+        market_data,
+    ) -> Dict:
+        """
+        Execute every enabled analyzer and
+        return institutional snapshot.
+        """
+
+        results: Dict[str, AnalyzerResult] = (
+            self.registry.execute(
+                market_data
+            )
         )
 
-    # ------------------------------------------------------
+        snapshot = {
 
-    def unregister(
+            "timestamp": datetime.utcnow().isoformat(),
+
+            "market_data": market_data,
+
+            "results": results,
+
+            "registered_analyzers": len(
+                self.registry
+            ),
+
+            "enabled_analyzers": len(
+                self.registry.list_enabled()
+            ),
+
+            "successful_analyzers": len(
+                results
+            ),
+
+            "overall_status": "SUCCESS",
+
+        }
+
+        self._last_snapshot = snapshot
+
+        return snapshot
+
+    # --------------------------------------------------
+
+    def get_snapshot(
         self,
-        analyzer_name: str,
-    ) -> bool:
+    ) -> Dict:
         """
-        Remove one analyzer instance.
-        """
-
-        if analyzer_name not in self.instances:
-            return False
-
-        del self.instances[analyzer_name]
-
-        analyzer = self.registry.get(analyzer_name)
-
-        if analyzer is not None:
-            analyzer.instance = None
-
-        return True
-
-    # ------------------------------------------------------
-
-    def get(
-        self,
-        analyzer_name: str,
-    ) -> BaseAnalyzer | None:
-        """
-        Return one analyzer instance.
+        Return latest execution snapshot.
         """
 
-        return self.instances.get(analyzer_name)
+        return self._last_snapshot.copy()
 
-    # ------------------------------------------------------
+    # --------------------------------------------------
 
-    def clear(
+    def clear_snapshot(
         self,
     ) -> None:
         """
-        Remove every registered analyzer instance.
+        Clear stored snapshot.
         """
 
-        self.instances.clear()
+        self._last_snapshot.clear()
 
-        self.registry.clear_instances()
+    # --------------------------------------------------
 
-    # ------------------------------------------------------
+    def clear_registry(
+        self,
+    ) -> None:
+        """
+        Remove every registered analyzer.
+        """
 
-    def count(
+        self.registry.clear()
+
+    # --------------------------------------------------
+
+    def execution_summary(
+        self,
+    ) -> Dict:
+        """
+        Return execution summary.
+        """
+
+        if not self._last_snapshot:
+
+            return {
+
+                "executed": False,
+
+                "registered_analyzers": len(
+                    self.registry
+                ),
+
+                "enabled_analyzers": len(
+                    self.registry.list_enabled()
+                ),
+            }
+
+        return {
+
+            "executed": True,
+
+            "registered_analyzers":
+                self._last_snapshot[
+                    "registered_analyzers"
+                ],
+
+            "enabled_analyzers":
+                self._last_snapshot[
+                    "enabled_analyzers"
+                ],
+
+            "successful_analyzers":
+                self._last_snapshot[
+                    "successful_analyzers"
+                ],
+
+            "overall_status":
+                self._last_snapshot[
+                    "overall_status"
+                ],
+        }
+
+    # --------------------------------------------------
+
+    def __len__(
         self,
     ) -> int:
-        """
-        Number of registered analyzer instances.
-        """
 
-        return len(self.instances)
-
-    # ------------------------------------------------------
-
-    def all_instances(
-        self,
-    ) -> Dict[str, BaseAnalyzer]:
-        """
-        Return every registered analyzer instance.
-        """
-
-        return self.instances.copy()
+        return len(self.registry)

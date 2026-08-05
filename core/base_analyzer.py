@@ -1,97 +1,153 @@
 """
 core/base_analyzer.py
 
-==========================================================
 UDUAK QUANT SYSTEM
-
 Institutional Base Analyzer
 
-Every analyzer in the system inherits from this class.
+Every analyzer in the system MUST inherit from this class.
 
 Responsibilities
-
-    • Standard interface
-    • Standard metadata
-    • Standard result object
-    • Future logging hooks
-    • Future timing hooks
-==========================================================
+----------------
+- Standardize analyzer interface
+- Validate input
+- Execute analysis
+- Perform health checks
+- Report metadata
 """
 
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from datetime import datetime
-from typing import Any
+from typing import Any, Dict
 
-from core.analyzer_result import AnalyzerResult
-
-
-# ==========================================================
-# BASE ANALYZER
-# ==========================================================
 
 class BaseAnalyzer(ABC):
     """
-    Abstract base class for all analyzers.
+    Base class for every analyzer.
+
+    Required methods:
+
+        validate()
+        analyze()
+
+    Optional methods:
+
+        initialize()
+        health_check()
     """
 
-    def __init__(self, analyzer_name: str):
+    def __init__(
+        self,
+        name: str,
+        version: str = "1.0.0",
+        enabled: bool = True,
+    ) -> None:
+        self._name = name
+        self._version = version
+        self._enabled = enabled
 
-        self.analyzer_name = analyzer_name
+    # ==========================================================
+    # PROPERTIES
+    # ==========================================================
 
-    # ------------------------------------------------------
+    @property
+    def name(self) -> str:
+        """Analyzer name."""
+        return self._name
+
+    @property
+    def version(self) -> str:
+        """Analyzer version."""
+        return self._version
+
+    @property
+    def enabled(self) -> bool:
+        """Whether analyzer is enabled."""
+        return self._enabled
+
+    # ==========================================================
+    # CONTROL
+    # ==========================================================
+
+    def enable(self) -> None:
+        """Enable analyzer."""
+        self._enabled = True
+
+    def disable(self) -> None:
+        """Disable analyzer."""
+        self._enabled = False
+
+    # ==========================================================
+    # INITIALIZATION
+    # ==========================================================
+
+    def initialize(self) -> bool:
+        """
+        Optional initialization.
+
+        Override if analyzer requires startup logic.
+        """
+        return True
+
+    # ==========================================================
+    # HEALTH
+    # ==========================================================
+
+    def health_check(self) -> bool:
+        """
+        Analyzer health check.
+
+        Override if analyzer depends on
+        external resources.
+        """
+        return True
+
+    # ==========================================================
+    # REQUIRED METHODS
+    # ==========================================================
+
+    @abstractmethod
+    def validate(
+        self,
+        market_snapshot: Dict[str, Any],
+    ) -> bool:
+        """
+        Validate input before analysis.
+        """
+        raise NotImplementedError
 
     @abstractmethod
     def analyze(
         self,
-        market_data: Any,
-    ) -> AnalyzerResult:
+        market_snapshot: Dict[str, Any],
+    ) -> Any:
         """
         Execute analyzer logic.
-
-        Every analyzer MUST return an AnalyzerResult.
         """
         raise NotImplementedError
 
-    # ------------------------------------------------------
+    # ==========================================================
+    # INFORMATION
+    # ==========================================================
 
-    def empty_result(self) -> AnalyzerResult:
+    def metadata(self) -> Dict[str, Any]:
         """
-        Standard empty result.
+        Analyzer metadata.
         """
+        return {
+            "name": self.name,
+            "version": self.version,
+            "enabled": self.enabled,
+        }
 
-        return AnalyzerResult.empty(
-            self.analyzer_name,
-        )
-
-    # ------------------------------------------------------
-
-    def create_result(
-        self,
-        *,
-        score: float,
-        confidence: float,
-        direction: str | None = None,
-        valid: bool = True,
-        metadata: dict[str, Any] | None = None,
-    ) -> AnalyzerResult:
-        """
-        Helper for creating analyzer results.
-        """
-
-        return AnalyzerResult(
-            analyzer_name=self.analyzer_name,
-            score=score,
-            confidence=confidence,
-            direction=direction,
-            valid=valid,
-            metadata=metadata or {},
-            timestamp=datetime.utcnow(),
-        )
-
-    # ------------------------------------------------------
+    # ==========================================================
+    # REPRESENTATION
+    # ==========================================================
 
     def __repr__(self) -> str:
-
-        return f"{self.__class__.__name__}('{self.analyzer_name}')"
+        return (
+            f"{self.__class__.__name__}("
+            f"name='{self.name}', "
+            f"version='{self.version}', "
+            f"enabled={self.enabled})"
+        )
