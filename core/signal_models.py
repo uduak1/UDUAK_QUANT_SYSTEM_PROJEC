@@ -3,16 +3,7 @@ core/signal_models.py
 
 ==========================================================
 UDUAK QUANT SYSTEM
-
 Institutional Signal Models
-
-Shared signal models used by
-
-    • Signal Engine
-    • Decision Engine
-    • Dashboard
-    • Execution
-    • Backtesting
 ==========================================================
 """
 
@@ -21,147 +12,90 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any
+from typing import Any, Dict, Optional
 
 from core.analyzer_result import AnalyzerResult
 
 
 # ==========================================================
-# SIGNAL DIRECTION
+# ENUMS
 # ==========================================================
 
 class SignalDirection(str, Enum):
-
     BUY = "BUY"
-
     SELL = "SELL"
-
     WAIT = "WAIT"
 
 
-# ==========================================================
-# SIGNAL QUALITY
-# ==========================================================
-
 class SignalQuality(str, Enum):
-
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
     PREMIUM = "PREMIUM"
 
-    HIGH = "HIGH"
 
-    MEDIUM = "MEDIUM"
-
+class SignalConfidence(str, Enum):
     LOW = "LOW"
-
-    REJECTED = "REJECTED"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
 
 
 # ==========================================================
-# CONFIDENCE
+# SIGNAL REQUEST
 # ==========================================================
 
 @dataclass(slots=True)
-class SignalConfidence:
+class SignalRequest:
+    """
+    Input supplied to the Signal Engine.
+    """
 
-    score: float
-
-    quality: SignalQuality
-
-    analyzer_count: int
-
-    agreement_ratio: float
-
-    passed: bool
+    strategy_name: str
+    strengths: Dict[str, float]
+    risk_reward: float
+    symbol: str = ""
+    timeframe: str = ""
 
 
 # ==========================================================
-# SIGNAL
+# SIGNAL RESULT
+# ==========================================================
+
+@dataclass(slots=True)
+class SignalResult:
+    """
+    Output returned by the Signal Engine.
+    """
+
+    symbol: str
+    timeframe: str
+    strategy_name: str
+    approved: bool
+    decision: str
+    score: float
+    risk_reward: float
+    decision_result: Optional[Any] = None
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+
+# ==========================================================
+# LEGACY SIGNAL MODEL
 # ==========================================================
 
 @dataclass(slots=True)
 class Signal:
+    """
+    Generic signal model retained for backwards compatibility.
+    """
 
     symbol: str
-
-    timeframe: str
-
     direction: SignalDirection
-
     confidence: SignalConfidence
-
-    analyzer_results: dict[str, AnalyzerResult]
+    quality: SignalQuality
+    score: float
 
     timestamp: datetime = field(default_factory=datetime.utcnow)
 
-    metadata: dict[str, Any] = field(default_factory=dict)
+    analyzer_results: Dict[str, AnalyzerResult] = field(default_factory=dict)
 
-    warnings: list[str] = field(default_factory=list)
-
-    # ------------------------------------------------------
-
-    @property
-    def approved(self) -> bool:
-
-        return self.confidence.passed
-
-    # ------------------------------------------------------
-
-    @property
-    def score(self) -> float:
-
-        return self.confidence.score
-
-    # ------------------------------------------------------
-
-    def add_warning(
-        self,
-        warning: str,
-    ) -> None:
-
-        self.warnings.append(warning)
-
-    # ------------------------------------------------------
-
-    def add_metadata(
-        self,
-        key: str,
-        value: Any,
-    ) -> None:
-
-        self.metadata[key] = value
-
-    # ------------------------------------------------------
-
-    def analyzer(
-        self,
-        name: str,
-    ) -> AnalyzerResult | None:
-
-        return self.analyzer_results.get(name)
-
-    # ------------------------------------------------------
-
-    def to_dict(self) -> dict[str, Any]:
-
-        return {
-
-            "symbol": self.symbol,
-
-            "timeframe": self.timeframe,
-
-            "direction": self.direction.value,
-
-            "score": self.score,
-
-            "approved": self.approved,
-
-            "quality": self.confidence.quality.value,
-
-            "agreement_ratio": self.confidence.agreement_ratio,
-
-            "timestamp": self.timestamp.isoformat(),
-
-            "metadata": self.metadata,
-
-            "warnings": self.warnings,
-        }
+    metadata: Dict[str, Any] = field(default_factory=dict)

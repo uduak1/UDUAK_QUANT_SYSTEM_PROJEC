@@ -18,7 +18,7 @@ from core.strategy_registry import (
 
 def test_registry_creation():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     assert registry is not None
 
@@ -29,7 +29,7 @@ def test_registry_creation():
 
 def test_register_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="LiquiditySweepReversal",
@@ -47,7 +47,7 @@ def test_register_strategy():
 
 def test_duplicate_registration():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="LiquiditySweepReversal",
@@ -73,7 +73,7 @@ def test_duplicate_registration():
 
 def test_get_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="BOSContinuation",
@@ -93,7 +93,7 @@ def test_get_strategy():
 
 def test_disable_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="CHOCHReversal",
@@ -109,7 +109,7 @@ def test_disable_strategy():
 
 def test_enable_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="CHOCHReversal",
@@ -130,7 +130,7 @@ def test_enable_strategy():
 
 def test_remove_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     strategy = StrategyDefinition(
         name="TrendContinuation",
@@ -150,7 +150,7 @@ def test_remove_strategy():
 
 def test_list_all():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     registry.register(
         StrategyDefinition(
@@ -175,7 +175,7 @@ def test_list_all():
 
 def test_list_enabled():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     registry.register(
         StrategyDefinition(
@@ -204,20 +204,20 @@ def test_list_enabled():
 
 def test_disable_missing_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     assert registry.disable("UnknownStrategy") is False
 
 
 def test_enable_missing_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     assert registry.enable("UnknownStrategy") is False
 
 
 def test_remove_missing_strategy():
 
-    registry = StrategyRegistry()
+    registry = StrategyRegistry(load_defaults=False)
 
     assert registry.remove("UnknownStrategy") is False

@@ -30,12 +30,8 @@ The Signal Engine does NOT:
 It only coordinates the workflow.
 """
 
-from typing import Dict
-
-from core.signal_models import (
-    SignalRequest,
-    SignalResult,
-)
+from dataclasses import dataclass, field
+from typing import Dict, Optional
 
 from core.decision_engine import DecisionResult
 from core.decision_engine import DecisionEngine
@@ -45,6 +41,62 @@ from core.strategy_registry import StrategyRegistry
 # ==========================================================
 # SIGNAL REQUEST
 # ==========================================================
+
+@dataclass(slots=True)
+class SignalRequest:
+    """
+    Input supplied to the Signal Engine.
+    """
+
+    strategy_name: str
+
+    strengths: Dict[str, float]
+
+    risk_reward: float
+
+    symbol: str = ""
+
+    timeframe: str = ""
+
+
+# ==========================================================
+# SIGNAL RESULT
+# ==========================================================
+
+@dataclass(slots=True)
+class SignalResult:
+    """
+    Final output produced by the Signal Engine.
+
+    This wraps the Decision Engine output together with
+    additional metadata required by dashboards,
+    execution, logging, and backtesting.
+    """
+
+    symbol: str
+
+    timeframe: str
+
+    strategy_name: str
+
+    approved: bool
+
+    decision: str
+
+    score: float
+
+    risk_reward: float
+
+    decision_result: Optional[DecisionResult] = None
+
+    metadata: Dict = field(default_factory=dict)
+
+    # ==========================================================
+# SIGNAL ENGINE
+# ==========================================================
+
+
+
 
 class SignalEngine:
     """
@@ -81,7 +133,6 @@ class SignalEngine:
     def generate_signal(
         self,
         request: SignalRequest,
-        market_data=None,
     ) -> SignalResult:
         """
         Generate one institutional trading signal.
@@ -110,7 +161,7 @@ class SignalEngine:
 
         if not strengths:
 
-            strengths = self.collect_strengths(market_data)
+            strengths = self.collect_strengths()
 
     # --------------------------------------------------
         # Ask the Decision Engine to evaluate the strategy
@@ -141,37 +192,3 @@ class SignalEngine:
                 "decision": decision.decision,
             },
         )
-
-
-    # --------------------------------------------------
-    # Collect analyzer confidence strengths
-    # --------------------------------------------------
-
-    def collect_strengths(
-        self,
-        market_data,
-    ) -> Dict[str, float]:
-        """
-        Execute registered analyzers and convert
-        AnalyzerResult confidence values into
-        normalized strengths.
-        """
-
-        if market_data is None:
-            return {}
-
-        results = self.analyzer_registry.execute(
-            market_data
-        )
-
-        strengths = {}
-
-        for name, result in results.items():
-
-            if result.success:
-
-                strengths[name] = float(
-                    result.confidence
-                )
-
-        return strengths

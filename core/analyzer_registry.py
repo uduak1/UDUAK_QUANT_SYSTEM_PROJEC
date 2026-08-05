@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import logging
 import time
+import traceback
 
 from typing import Dict
 from typing import List
@@ -48,19 +49,11 @@ class AnalyzerRegistry:
         self._enabled: Dict[str, bool] = {}
 
 
-        self.last_execution_times: Dict[str, float] = {}
+        self.lastlastlastlast_execution_times: Dict[str, float] = {}
 
         self.last_failures: Dict[str, str] = {}
 
         self.last_results: Dict[str, AnalyzerResult] = {}
-
-        # ----------------------------------------------
-        # Execution statistics
-        # ----------------------------------------------
-
-        self._execution_times: Dict[str, float] = {}
-
-        self._failed_analyzers: Dict[str, str] = {}
 
     # ------------------------------------------------------
 
@@ -77,7 +70,7 @@ class AnalyzerRegistry:
                 "Analyzer must inherit BaseAnalyzer."
             )
 
-        name = analyzer.analyzer_name
+        name = analyzer.name
 
         if name in self._analyzers:
             raise ValueError(
@@ -97,8 +90,8 @@ class AnalyzerRegistry:
         self._analyzers.pop(analyzer_name, None)
         self._enabled.pop(analyzer_name, None)
 
-        self._execution_times.pop(analyzer_name, None)
-        self._failed_analyzers.pop(analyzer_name, None)
+        self.lastlastlast_execution_times.pop(analyzer_name, None)
+        self.last_failures.pop(analyzer_name, None)
 
     # ------------------------------------------------------
 
@@ -193,7 +186,7 @@ class AnalyzerRegistry:
                 time.perf_counter() - start
             ) * 1000.0
 
-            self.last_execution_times[
+            self.lastlastlastlast_execution_times[
                 analyzer_name
             ] = elapsed
 
@@ -217,7 +210,7 @@ class AnalyzerRegistry:
                 time.perf_counter() - start
             ) * 1000.0
 
-            self.last_execution_times[
+            self.lastlastlastlast_execution_times[
                 analyzer_name
             ] = elapsed
 
@@ -230,6 +223,7 @@ class AnalyzerRegistry:
 
     # ------------------------------------------------------
 
+    
     def execute(
         self,
         market_data,
@@ -237,55 +231,31 @@ class AnalyzerRegistry:
         """
         Execute every enabled analyzer.
 
-        Failure isolation:
-            One analyzer failing does NOT stop the engine.
-
-        Execution timing:
-            Every analyzer runtime is recorded.
+        Returns
+        -------
+        Dictionary containing successful analyzer results.
         """
 
-        results: Dict[str, AnalyzerResult] = {}
+        self.lastlastlastlast_execution_times.clear()
+        self.last_failures.clear()
+        self.last_results.clear()
 
-        self._failed_analyzers.clear()
+        results: Dict[str, AnalyzerResult] = {}
 
         for name in self.list_enabled():
 
             analyzer = self._analyzers[name]
 
-            start = time.perf_counter()
+            result = self._execute_analyzer(
+                analyzer_name=name,
+                analyzer=analyzer,
+                market_data=market_data,
+            )
 
-            try:
+            if result is None:
+                continue
 
-                result = analyzer.analyze(
-                    market_data,
-                )
-
-                if not isinstance(
-                    result,
-                    AnalyzerResult,
-                ):
-                    raise TypeError(
-                        f"{name} did not return AnalyzerResult."
-                    )
-
-                results[name] = result
-
-            except Exception as exc:
-
-                self._failed_analyzers[name] = str(exc)
-
-                logger.exception(
-                    "Analyzer '%s' failed.",
-                    name,
-                )
-
-            finally:
-
-                elapsed = (
-                    time.perf_counter() - start
-                ) * 1000.0
-
-                self._execution_times[name] = elapsed
+            results[name] = result
 
         return results
 
@@ -296,7 +266,7 @@ class AnalyzerRegistry:
         analyzer_name: str,
     ) -> float:
 
-        return self._execution_times.get(
+        return self.lastlastlast_execution_times.get(
             analyzer_name,
             0.0,
         )
@@ -308,7 +278,7 @@ class AnalyzerRegistry:
     ) -> Dict[str, float]:
 
         return dict(
-            self._execution_times,
+            self.lastlastlast_execution_times,
         )
 
     # ------------------------------------------------------
@@ -318,7 +288,7 @@ class AnalyzerRegistry:
     ) -> Dict[str, str]:
 
         return dict(
-            self._failed_analyzers,
+            self.last_failures,
         )
 
     # ------------------------------------------------------
@@ -329,8 +299,8 @@ class AnalyzerRegistry:
 
         self._analyzers.clear()
         self._enabled.clear()
-        self._execution_times.clear()
-        self._failed_analyzers.clear()
+        self.lastlastlast_execution_times.clear()
+        self.last_failures.clear()
 
     # ------------------------------------------------------
 
