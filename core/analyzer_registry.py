@@ -49,7 +49,7 @@ class AnalyzerRegistry:
         self._enabled: Dict[str, bool] = {}
 
 
-        self.lastlastlastlast_execution_times: Dict[str, float] = {}
+        self.last_execution_times: Dict[str, float] = {}
 
         self.last_failures: Dict[str, str] = {}
 
@@ -90,7 +90,7 @@ class AnalyzerRegistry:
         self._analyzers.pop(analyzer_name, None)
         self._enabled.pop(analyzer_name, None)
 
-        self.lastlastlast_execution_times.pop(analyzer_name, None)
+        self.last_execution_times.pop(analyzer_name, None)
         self.last_failures.pop(analyzer_name, None)
 
     # ------------------------------------------------------
@@ -186,7 +186,7 @@ class AnalyzerRegistry:
                 time.perf_counter() - start
             ) * 1000.0
 
-            self.lastlastlastlast_execution_times[
+            self.last_execution_times[
                 analyzer_name
             ] = elapsed
 
@@ -210,7 +210,7 @@ class AnalyzerRegistry:
                 time.perf_counter() - start
             ) * 1000.0
 
-            self.lastlastlastlast_execution_times[
+            self.last_execution_times[
                 analyzer_name
             ] = elapsed
 
@@ -236,7 +236,7 @@ class AnalyzerRegistry:
         Dictionary containing successful analyzer results.
         """
 
-        self.lastlastlastlast_execution_times.clear()
+        self.last_execution_times.clear()
         self.last_failures.clear()
         self.last_results.clear()
 
@@ -266,7 +266,7 @@ class AnalyzerRegistry:
         analyzer_name: str,
     ) -> float:
 
-        return self.lastlastlast_execution_times.get(
+        return self.last_execution_times.get(
             analyzer_name,
             0.0,
         )
@@ -278,7 +278,7 @@ class AnalyzerRegistry:
     ) -> Dict[str, float]:
 
         return dict(
-            self.lastlastlast_execution_times,
+            self.last_execution_times,
         )
 
     # ------------------------------------------------------
@@ -299,7 +299,7 @@ class AnalyzerRegistry:
 
         self._analyzers.clear()
         self._enabled.clear()
-        self.lastlastlast_execution_times.clear()
+        self.last_execution_times.clear()
         self.last_failures.clear()
 
     # ------------------------------------------------------
