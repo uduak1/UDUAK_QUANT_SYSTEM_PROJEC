@@ -1,0 +1,38 @@
+{
+    "project": {
+        "modules": 177,
+        "classes": 151,
+        "functions": 523,
+        "imports": 712,
+        "syntax_errors": 0
+    },
+    "health": {
+        "health_score": 92.5,
+        "breakdown": {
+            "analysis": {
+                "deduction": 0.0,
+                "syntax_errors": 0
+            },
+            "architecture": {
+                "deduction": 6,
+                "modules": 177,
+                "independent_modules": 7,
+                "highly_connected_modules": 3
+            },
+            "recommendations": {
+                "deduction": 1.5,
+                "count": 1
+            }
+        }
+    },
+    "recommendations": {
+        "count": 1,
+        "items": [
+            "Reduce coupling in highly connected modules."
+        ]
+    },
+    "dependencies": {
+        "cycle_count": 0,
+        "cycles": []
+    }
+}

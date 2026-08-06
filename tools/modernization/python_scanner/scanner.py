@@ -1,0 +1,212 @@
+"""
+tools/modernization/python_scanner/scanner.py
+
+UDUAK QUANT SYSTEM
+Modernization Toolkit
+
+Part 2.9
+
+Python Project Scanner
+
+High-level interface for parsing an entire
+Python project and generating reports.
+"""
+
+from __future__ import annotations
+
+import logging
+
+from pathlib import Path
+
+from tools.modernization.python_scanner.project_parser import (
+    ProjectParser,
+)
+
+from tools.modernization.python_scanner.report_generator import (
+    ReportGenerator,
+)
+
+LOGGER = logging.getLogger(
+    "MQT.PythonScanner"
+)
+
+
+class PythonScanner:
+    """
+    High-level scanner.
+
+    Responsibilities
+
+        • Parse project
+
+        • Build ProjectAnalysis
+
+        • Generate reports
+    """
+
+    def __init__(
+        self,
+        project_root: Path,
+        report_directory: Path,
+    ) -> None:
+
+        self.project_root = Path(
+            project_root
+        )
+
+        self.report_directory = Path(
+            report_directory
+        )
+
+        self.project_parser = (
+            ProjectParser()
+        )
+
+        self.report_generator = (
+            ReportGenerator(
+                self.report_directory
+            )
+        )
+
+    # ======================================================
+    # RUN
+    # ======================================================
+
+    def scan(self):
+
+        LOGGER.info(
+            "Scanning project: %s",
+            self.project_root,
+        )
+
+        analysis = (
+            self.project_parser.parse(
+                self.project_root
+            )
+        )
+
+        # ------------------------------------------
+        # Refresh project statistics
+        # ------------------------------------------
+
+        if hasattr(
+            analysis,
+            "update_statistics",
+        ):
+            analysis.update_statistics()
+
+
+        LOGGER.info(
+            "Modules      : %s",
+            analysis.total_modules,
+        )
+
+        LOGGER.info(
+            "Classes      : %s",
+            analysis.total_classes,
+        )
+
+        LOGGER.info(
+            "Functions    : %s",
+            analysis.total_functions,
+        )
+
+        LOGGER.info(
+            "Imports      : %s",
+            analysis.total_imports,
+        )
+
+        LOGGER.info(
+            "SyntaxErrors : %s",
+            analysis.syntax_errors,
+        )
+
+        reports = (
+            self.report_generator.generate_all(
+                analysis
+            )
+        )
+
+        LOGGER.info(
+            "Reports generated."
+        )
+
+        return (
+            analysis,
+            reports,
+        )
+
+    # ======================================================
+    # QUICK SUMMARY
+    # ======================================================
+
+    @staticmethod
+    def summary(
+        analysis,
+    ) -> dict:
+
+        return {
+            "modules": analysis.total_modules,
+            "classes": analysis.total_classes,
+            "functions": analysis.total_functions,
+            "imports": analysis.total_imports,
+            "syntax_errors": analysis.syntax_errors,
+        }
+
+        
+# ==========================================================
+# MAIN
+# ==========================================================
+
+def main() -> None:
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format=(
+            "%(asctime)s | "
+            "%(levelname)s | "
+            "%(name)s | "
+            "%(message)s"
+        ),
+    )
+
+    project_root = Path(".")
+
+    report_directory = Path(
+        "tools/modernization/reports"
+    )
+
+    scanner = PythonScanner(
+        project_root=project_root,
+        report_directory=report_directory,
+    )
+
+    analysis, reports = scanner.scan()
+
+    print("=" * 60)
+    print("PYTHON PROJECT SCANNER")
+    print("=" * 60)
+
+    summary = scanner.summary(
+        analysis
+    )
+
+    for key, value in summary.items():
+
+        print(
+            f"{key:<18}: {value}"
+        )
+
+    print()
+    print("Generated Reports")
+
+    for name, path in reports.items():
+
+        print(
+            f"{name:<12}: {path}"
+        )
+
+
+if __name__ == "__main__":
+
+    main()

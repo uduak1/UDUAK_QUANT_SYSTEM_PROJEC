@@ -1,0 +1,7 @@
+PROJECT SUMMARY
+============================================================
+total_modules       : 168
+total_classes       : 142
+total_functions     : 516
+total_imports       : 648
+syntax_errors       : 0

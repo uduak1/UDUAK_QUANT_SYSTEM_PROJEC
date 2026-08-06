@@ -1,0 +1,2193 @@
+{
+    "summary": {
+        "modules": 177,
+        "errors": 0,
+        "warnings": 357,
+        "valid": true
+    },
+    "graph": {
+        "analysis.balanced_price_range_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.bos_analyzer": [
+            "__future__",
+            "analysis.market_structure_analyzer",
+            "core.base_analyzer",
+            "pandas",
+            "typing"
+        ],
+        "analysis.bos_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.breaker_block_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.candle_analyzer": [
+            "__future__",
+            "models.response",
+            "monitoring.logger"
+        ],
+        "analysis.candle_patterns": [
+            "dataclasses",
+            "typing"
+        ],
+        "analysis.choch_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.choch_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.cumulative_delta_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.dealing_range_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.delta_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.displacement_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.equilibrium_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.fair_value_gap_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.fvg_analyzer": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.fvg_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.fvg_filter": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.imbalance_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.inducement_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.liquidity_analyzer": [
+            "__future__",
+            "typing"
+        ],
+        "analysis.liquidity_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.liquidity_pool_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.liquidity_sweep_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.liquidity_sweep_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.market_structure": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.market_structure_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "dataclasses",
+            "pandas",
+            "typing"
+        ],
+        "analysis.mitigation_block_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.news_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.order_block_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.order_block_detector": [
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "analysis.premium_discount_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.session_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.swing_detector": [
+            "dataclasses",
+            "typing"
+        ],
+        "analysis.trend_alignment_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.volatility_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "analysis.volume_analyzer": [
+            "__future__",
+            "core.base_analyzer",
+            "typing"
+        ],
+        "config.__init__": [],
+        "config.logging": [
+            "config.storage",
+            "dataclasses",
+            "pathlib"
+        ],
+        "config.mt5": [
+            "__future__",
+            "dataclasses",
+            "pathlib",
+            "typing"
+        ],
+        "config.risk": [
+            "__future__",
+            "dataclasses"
+        ],
+        "config.scoring": [
+            "dataclasses",
+            "typing"
+        ],
+        "config.settings": [
+            "dataclasses",
+            "pathlib",
+            "typing"
+        ],
+        "config.storage": [
+            "config.settings",
+            "dataclasses",
+            "pathlib"
+        ],
+        "config.symbols": [
+            "dataclasses",
+            "typing"
+        ],
+        "config.tests.test_timeframes": [
+            "config.timeframes"
+        ],
+        "config.timeframes": [
+            "dataclasses",
+            "typing"
+        ],
+        "config.trading": [
+            "__future__",
+            "dataclasses",
+            "enum"
+        ],
+        "core.__init__": [],
+        "core.analyzer_manager": [
+            "__future__",
+            "core.analyzer_registry",
+            "core.analyzer_result",
+            "core.base_analyzer",
+            "datetime",
+            "typing"
+        ],
+        "core.analyzer_registry": [
+            "__future__",
+            "core.analyzer_result",
+            "core.base_analyzer",
+            "logging",
+            "time",
+            "traceback",
+            "typing"
+        ],
+        "core.analyzer_result": [
+            "__future__",
+            "dataclasses",
+            "datetime",
+            "typing"
+        ],
+        "core.application": [
+            "__future__"
+        ],
+        "core.base_analyzer": [
+            "__future__",
+            "abc",
+            "typing"
+        ],
+        "core.decision_engine": [
+            "config.scoring",
+            "core.scoring_models",
+            "dataclasses",
+            "typing"
+        ],
+        "core.scoring.__init__": [],
+        "core.scoring_models": [
+            "config.scoring",
+            "dataclasses",
+            "typing"
+        ],
+        "core.service_locator": [
+            "__future__",
+            "services.account_service",
+            "services.configuration_service",
+            "services.database_service",
+            "services.maintenance_service",
+            "services.market_service",
+            "services.performance_service",
+            "services.signal_service",
+            "services.storage_service",
+            "services.trade_service"
+        ],
+        "core.signal_engine": [
+            "core.analyzer_registry",
+            "core.decision_engine",
+            "core.signal_models",
+            "core.strategy_registry",
+            "typing"
+        ],
+        "core.signal_models": [
+            "__future__",
+            "core.analyzer_result",
+            "dataclasses",
+            "datetime",
+            "enum",
+            "typing"
+        ],
+        "core.strategy_registry": [
+            "dataclasses",
+            "typing"
+        ],
+        "data.account_data": [
+            "MetaTrader5",
+            "__future__",
+            "models.response",
+            "monitoring.logger"
+        ],
+        "data.candle_data": [
+            "MetaTrader5",
+            "__future__",
+            "models.response",
+            "monitoring.logger",
+            "typing"
+        ],
+        "data.market_data": [
+            "MetaTrader5",
+            "__future__",
+            "models.response",
+            "monitoring.logger"
+        ],
+        "data.mt5_connection": [
+            "MetaTrader5",
+            "__future__",
+            "config.mt5",
+            "monitoring.logger"
+        ],
+        "data.symbol_data": [
+            "MetaTrader5",
+            "__future__",
+            "models.response",
+            "monitoring.logger"
+        ],
+        "data.terminal_data": [
+            "MetaTrader5",
+            "__future__",
+            "monitoring.logger"
+        ],
+        "database.backup": [
+            "__future__",
+            "config.storage",
+            "datetime",
+            "monitoring.logger",
+            "pathlib",
+            "shutil"
+        ],
+        "database.database": [
+            "__future__",
+            "config.storage",
+            "monitoring.logger",
+            "pathlib",
+            "sqlite3",
+            "typing"
+        ],
+        "database.health": [
+            "__future__",
+            "database.database",
+            "database.maintenance",
+            "datetime",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.maintenance": [
+            "__future__",
+            "database.database",
+            "datetime",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.migrations": [
+            "__future__",
+            "collections.abc",
+            "database.database",
+            "monitoring.logger"
+        ],
+        "database.repositories.market_repository": [
+            "__future__",
+            "database.database",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.repositories.performance_repository": [
+            "__future__",
+            "database.database",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.repositories.position_repository": [
+            "__future__",
+            "database.database",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.repositories.signal_repository": [
+            "__future__",
+            "database.database",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.repositories.trade_repository": [
+            "__future__",
+            "database.database",
+            "monitoring.logger",
+            "typing"
+        ],
+        "database.schema": [
+            "__future__",
+            "database.database",
+            "monitoring.logger"
+        ],
+        "database.services.database_service": [
+            "__future__",
+            "database.repositories.market_repository",
+            "database.repositories.performance_repository",
+            "database.repositories.position_repository",
+            "database.repositories.signal_repository",
+            "database.repositories.trade_repository",
+            "monitoring.logger",
+            "typing"
+        ],
+        "fix_signal_engine": [
+            "pathlib",
+            "shutil"
+        ],
+        "main": [
+            "core.application"
+        ],
+        "models.response": [
+            "__future__",
+            "dataclasses",
+            "typing"
+        ],
+        "models.signal": [
+            "__future__",
+            "dataclasses",
+            "enum"
+        ],
+        "monitoring.__init__": [],
+        "monitoring.logger": [
+            "__future__",
+            "config.logging",
+            "logging",
+            "logging.handlers"
+        ],
+        "rename_project_structure": [
+            "pathlib",
+            "shutil"
+        ],
+        "services.account_service": [
+            "__future__",
+            "data.account_data",
+            "models.response",
+            "monitoring.logger"
+        ],
+        "services.configuration_service": [
+            "__future__",
+            "config.settings",
+            "monitoring.logger"
+        ],
+        "services.database_service": [
+            "__future__",
+            "database.database",
+            "monitoring.logger"
+        ],
+        "services.maintenance_service": [
+            "__future__",
+            "database.maintenance",
+            "monitoring.logger",
+            "typing"
+        ],
+        "services.market_service": [
+            "__future__",
+            "database.repositories.market_repository",
+            "monitoring.logger",
+            "typing"
+        ],
+        "services.performance_service": [
+            "__future__",
+            "collections",
+            "datetime",
+            "monitoring.logger",
+            "typing"
+        ],
+        "services.signal_service": [
+            "__future__",
+            "database.repositories.signal_repository",
+            "monitoring.logger",
+            "typing"
+        ],
+        "services.storage_service": [
+            "__future__",
+            "monitoring.logger",
+            "storage"
+        ],
+        "services.trade_service": [
+            "__future__",
+            "database.repositories.trade_repository",
+            "monitoring.logger",
+            "typing"
+        ],
+        "tests.__init__": [],
+        "tests.test_account_data": [
+            "data.account_data",
+            "models.response",
+            "types",
+            "unittest.mock"
+        ],
+        "tests.test_analyzer_registry": [
+            "core.analyzer_registry",
+            "core.analyzer_result",
+            "core.base_analyzer",
+            "pytest"
+        ],
+        "tests.test_analyzer_result": [
+            "core.analyzer_result",
+            "datetime"
+        ],
+        "tests.test_application": [
+            "core.application"
+        ],
+        "tests.test_base_analyzer": [
+            "core.base_analyzer",
+            "pytest"
+        ],
+        "tests.test_bos_detector": [
+            "analysis.bos_detector"
+        ],
+        "tests.test_candle_analyzer": [
+            "analysis.candle_analyzer",
+            "models.response"
+        ],
+        "tests.test_candle_data": [
+            "data.candle_data",
+            "models.response",
+            "types",
+            "unittest.mock"
+        ],
+        "tests.test_candle_patterns": [
+            "analysis.candle_patterns"
+        ],
+        "tests.test_choch_detector": [
+            "analysis.choch_detector"
+        ],
+        "tests.test_decision_engine": [
+            "core.decision_engine",
+            "pytest"
+        ],
+        "tests.test_fvg_analyzer": [
+            "analysis.fvg_analyzer",
+            "analysis.fvg_detector",
+            "pytest"
+        ],
+        "tests.test_fvg_detector": [
+            "analysis.fvg_detector"
+        ],
+        "tests.test_fvg_filter": [
+            "analysis.fvg_filter",
+            "pytest"
+        ],
+        "tests.test_liquidity_analyzer": [
+            "analysis.liquidity_analyzer",
+            "pytest",
+            "unittest.mock"
+        ],
+        "tests.test_liquidity_detector": [
+            "analysis.liquidity_detector"
+        ],
+        "tests.test_liquidity_sweep_detector": [
+            "analysis.liquidity_sweep_detector"
+        ],
+        "tests.test_logger": [
+            "os",
+            "sys"
+        ],
+        "tests.test_logging_config": [
+            "config.logging",
+            "monitoring.logger"
+        ],
+        "tests.test_main": [
+            "main",
+            "unittest.mock"
+        ],
+        "tests.test_market_data": [
+            "data.market_data",
+            "models.response",
+            "pytest",
+            "types",
+            "unittest.mock"
+        ],
+        "tests.test_market_structure": [
+            "analysis.market_structure"
+        ],
+        "tests.test_mt5_config": [
+            "config.mt5",
+            "pathlib"
+        ],
+        "tests.test_mt5_connection": [
+            "data.mt5_connection",
+            "unittest.mock"
+        ],
+        "tests.test_order_block_detector": [
+            "analysis.order_block_detector",
+            "pytest"
+        ],
+        "tests.test_risk": [
+            "config.risk"
+        ],
+        "tests.test_scoring": [
+            "config.scoring",
+            "pytest"
+        ],
+        "tests.test_scoring_models": [
+            "config.scoring",
+            "core.scoring_models",
+            "pytest"
+        ],
+        "tests.test_settings": [
+            "config.settings"
+        ],
+        "tests.test_signal": [
+            "models.signal",
+            "pytest"
+        ],
+        "tests.test_signal_engine": [
+            "core.signal_engine",
+            "core.signal_models",
+            "pytest"
+        ],
+        "tests.test_storage": [
+            "config.storage"
+        ],
+        "tests.test_strategy_registry": [
+            "core.strategy_registry"
+        ],
+        "tests.test_swing_detector": [
+            "analysis.swing_detector"
+        ],
+        "tests.test_symbols": [
+            "config.symbols"
+        ],
+        "tests.test_terminal_data": [
+            "data.terminal_data",
+            "types",
+            "unittest.mock"
+        ],
+        "tests.test_timeframes": [
+            "config.timeframes"
+        ],
+        "tests.test_trading": [
+            "config.trading"
+        ],
+        "tools.__init__": [],
+        "tools.apply_patch": [
+            "pathlib",
+            "shutil",
+            "sys"
+        ],
+        "tools.fix_analyzer_registry_phase8": [
+            "pathlib"
+        ],
+        "tools.fix_filesystem_scanner_asdict": [
+            "pathlib",
+            "re",
+            "shutil"
+        ],
+        "tools.fix_parser_shared_list_bug": [
+            "pathlib",
+            "re"
+        ],
+        "tools.fix_python_scanner_statistics": [
+            "pathlib",
+            "shutil"
+        ],
+        "tools.fix_scanner_indentation": [
+            "pathlib",
+            "shutil"
+        ],
+        "tools.fix_storage": [
+            "pathlib",
+            "subprocess",
+            "sys"
+        ],
+        "tools.inspect_scoring_models": [
+            "ast",
+            "pathlib"
+        ],
+        "tools.modernization.config": [
+            "__future__",
+            "dataclasses",
+            "logging",
+            "pathlib",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.architecture_analyzer": [
+            "__future__",
+            "collections",
+            "pathlib",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.ast_loader": [
+            "__future__",
+            "argparse",
+            "ast",
+            "dataclasses",
+            "logging",
+            "pathlib",
+            "tokenize",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.circular_dependency_detector": [
+            "__future__",
+            "pathlib",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.class_parser": [
+            "__future__",
+            "ast",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.models",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.class_parser_repair": [
+            "__future__",
+            "ast",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.class_parser"
+        ],
+        "tools.modernization.python_scanner.dashboard_builder": [
+            "__future__",
+            "json",
+            "pathlib",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.project_health_score",
+            "tools.modernization.python_scanner.project_parser"
+        ],
+        "tools.modernization.python_scanner.dependency_graph": [
+            "__future__",
+            "collections",
+            "pathlib",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.dependency_report": [
+            "__future__",
+            "json",
+            "pathlib",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.project_parser"
+        ],
+        "tools.modernization.python_scanner.dependency_validator": [
+            "__future__",
+            "pathlib",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.function_parser": [
+            "__future__",
+            "ast",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.models",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.html_dashboard_generator": [
+            "__future__",
+            "html",
+            "pathlib",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.import_parser": [
+            "__future__",
+            "ast",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.models",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.models": [
+            "__future__",
+            "dataclasses",
+            "pathlib",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.modernization_recommender": [
+            "__future__",
+            "pathlib",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.module_parser": [
+            "__future__",
+            "ast",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.models"
+        ],
+        "tools.modernization.python_scanner.parser_accuracy_report": [
+            "__future__",
+            "json",
+            "pathlib",
+            "tools.modernization.python_scanner.parser_regression_tests"
+        ],
+        "tools.modernization.python_scanner.parser_regression_tests": [
+            "__future__",
+            "dataclasses",
+            "pathlib",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.project_health_score": [
+            "__future__",
+            "pathlib",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.project_parser"
+        ],
+        "tools.modernization.python_scanner.project_parser": [
+            "__future__",
+            "pathlib",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.module_parser"
+        ],
+        "tools.modernization.python_scanner.report_generator": [
+            "__future__",
+            "json",
+            "pathlib",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.python_scanner.scanner": [
+            "__future__",
+            "logging",
+            "pathlib",
+            "tools.modernization.python_scanner.project_parser",
+            "tools.modernization.python_scanner.report_generator"
+        ],
+        "tools.modernization.python_scanner.validation": [
+            "__future__",
+            "dataclasses",
+            "pathlib",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.project_parser",
+            "typing"
+        ],
+        "tools.modernization.scanner.filesystem_scanner": [
+            "__future__",
+            "dataclasses",
+            "json",
+            "logging",
+            "pathlib",
+            "tools.modernization.config",
+            "typing"
+        ],
+        "tools.patch_analyzer_registry_execute": [
+            "pathlib",
+            "re"
+        ],
+        "tools.patch_analyzer_registry_option1": [
+            "pathlib"
+        ],
+        "tools.patch_analyzer_registry_phase1": [
+            "pathlib",
+            "re",
+            "shutil"
+        ],
+        "tools.patch_decision_engine_return": [
+            "pathlib"
+        ],
+        "tools.patch_scoring_models": [
+            "pathlib",
+            "shutil",
+            "sys"
+        ],
+        "tools.patch_signal_engine_phase4": [
+            "pathlib",
+            "shutil"
+        ],
+        "tools.patch_signal_engine_phase6": [
+            "pathlib",
+            "shutil"
+        ],
+        "tools.patch_signal_engine_phase7": [
+            "pathlib"
+        ],
+        "tools.patch_test_decision_engine": [
+            "pathlib"
+        ],
+        "tools.project_organizer": [
+            "pathlib",
+            "shutil"
+        ],
+        "utils.__init__": []
+    },
+    "reverse_graph": {
+        "analysis.balanced_price_range_analyzer": [],
+        "__future__": [
+            "analysis.balanced_price_range_analyzer",
+            "analysis.bos_analyzer",
+            "analysis.bos_detector",
+            "analysis.breaker_block_analyzer",
+            "analysis.candle_analyzer",
+            "analysis.choch_analyzer",
+            "analysis.choch_detector",
+            "analysis.cumulative_delta_analyzer",
+            "analysis.dealing_range_analyzer",
+            "analysis.delta_analyzer",
+            "analysis.displacement_analyzer",
+            "analysis.equilibrium_analyzer",
+            "analysis.fair_value_gap_analyzer",
+            "analysis.fvg_analyzer",
+            "analysis.fvg_detector",
+            "analysis.fvg_filter",
+            "analysis.imbalance_analyzer",
+            "analysis.inducement_analyzer",
+            "analysis.liquidity_analyzer",
+            "analysis.liquidity_detector",
+            "analysis.liquidity_pool_analyzer",
+            "analysis.liquidity_sweep_analyzer",
+            "analysis.liquidity_sweep_detector",
+            "analysis.market_structure",
+            "analysis.market_structure_analyzer",
+            "analysis.mitigation_block_analyzer",
+            "analysis.news_analyzer",
+            "analysis.order_block_analyzer",
+            "analysis.order_block_detector",
+            "analysis.premium_discount_analyzer",
+            "analysis.session_analyzer",
+            "analysis.trend_alignment_analyzer",
+            "analysis.volatility_analyzer",
+            "analysis.volume_analyzer",
+            "config.mt5",
+            "config.risk",
+            "config.trading",
+            "core.analyzer_manager",
+            "core.analyzer_registry",
+            "core.analyzer_result",
+            "core.application",
+            "core.base_analyzer",
+            "core.service_locator",
+            "core.signal_models",
+            "data.account_data",
+            "data.candle_data",
+            "data.market_data",
+            "data.mt5_connection",
+            "data.symbol_data",
+            "data.terminal_data",
+            "database.backup",
+            "database.database",
+            "database.health",
+            "database.maintenance",
+            "database.migrations",
+            "database.repositories.market_repository",
+            "database.repositories.performance_repository",
+            "database.repositories.position_repository",
+            "database.repositories.signal_repository",
+            "database.repositories.trade_repository",
+            "database.schema",
+            "database.services.database_service",
+            "models.response",
+            "models.signal",
+            "monitoring.logger",
+            "services.account_service",
+            "services.configuration_service",
+            "services.database_service",
+            "services.maintenance_service",
+            "services.market_service",
+            "services.performance_service",
+            "services.signal_service",
+            "services.storage_service",
+            "services.trade_service",
+            "tools.modernization.config",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.class_parser_repair",
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.dependency_report",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.html_dashboard_generator",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_accuracy_report",
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.project_health_score",
+            "tools.modernization.python_scanner.project_parser",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.python_scanner.scanner",
+            "tools.modernization.python_scanner.validation",
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "typing": [
+            "analysis.balanced_price_range_analyzer",
+            "analysis.bos_analyzer",
+            "analysis.bos_detector",
+            "analysis.breaker_block_analyzer",
+            "analysis.candle_patterns",
+            "analysis.choch_analyzer",
+            "analysis.choch_detector",
+            "analysis.cumulative_delta_analyzer",
+            "analysis.dealing_range_analyzer",
+            "analysis.delta_analyzer",
+            "analysis.displacement_analyzer",
+            "analysis.equilibrium_analyzer",
+            "analysis.fair_value_gap_analyzer",
+            "analysis.fvg_analyzer",
+            "analysis.fvg_detector",
+            "analysis.fvg_filter",
+            "analysis.imbalance_analyzer",
+            "analysis.inducement_analyzer",
+            "analysis.liquidity_analyzer",
+            "analysis.liquidity_detector",
+            "analysis.liquidity_pool_analyzer",
+            "analysis.liquidity_sweep_analyzer",
+            "analysis.liquidity_sweep_detector",
+            "analysis.market_structure",
+            "analysis.market_structure_analyzer",
+            "analysis.mitigation_block_analyzer",
+            "analysis.news_analyzer",
+            "analysis.order_block_analyzer",
+            "analysis.order_block_detector",
+            "analysis.premium_discount_analyzer",
+            "analysis.session_analyzer",
+            "analysis.swing_detector",
+            "analysis.trend_alignment_analyzer",
+            "analysis.volatility_analyzer",
+            "analysis.volume_analyzer",
+            "config.mt5",
+            "config.scoring",
+            "config.settings",
+            "config.symbols",
+            "config.timeframes",
+            "core.analyzer_manager",
+            "core.analyzer_registry",
+            "core.analyzer_result",
+            "core.base_analyzer",
+            "core.decision_engine",
+            "core.scoring_models",
+            "core.signal_engine",
+            "core.signal_models",
+            "core.strategy_registry",
+            "data.candle_data",
+            "database.database",
+            "database.health",
+            "database.maintenance",
+            "database.repositories.market_repository",
+            "database.repositories.performance_repository",
+            "database.repositories.position_repository",
+            "database.repositories.signal_repository",
+            "database.repositories.trade_repository",
+            "database.services.database_service",
+            "models.response",
+            "services.maintenance_service",
+            "services.market_service",
+            "services.performance_service",
+            "services.signal_service",
+            "services.trade_service",
+            "tools.modernization.config",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.html_dashboard_generator",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.python_scanner.validation",
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "core.base_analyzer": [
+            "analysis.balanced_price_range_analyzer",
+            "analysis.bos_analyzer",
+            "analysis.breaker_block_analyzer",
+            "analysis.choch_analyzer",
+            "analysis.cumulative_delta_analyzer",
+            "analysis.dealing_range_analyzer",
+            "analysis.delta_analyzer",
+            "analysis.displacement_analyzer",
+            "analysis.equilibrium_analyzer",
+            "analysis.fair_value_gap_analyzer",
+            "analysis.imbalance_analyzer",
+            "analysis.inducement_analyzer",
+            "analysis.liquidity_pool_analyzer",
+            "analysis.liquidity_sweep_analyzer",
+            "analysis.market_structure_analyzer",
+            "analysis.mitigation_block_analyzer",
+            "analysis.news_analyzer",
+            "analysis.order_block_analyzer",
+            "analysis.premium_discount_analyzer",
+            "analysis.session_analyzer",
+            "analysis.trend_alignment_analyzer",
+            "analysis.volatility_analyzer",
+            "analysis.volume_analyzer",
+            "core.analyzer_manager",
+            "core.analyzer_registry",
+            "tests.test_analyzer_registry",
+            "tests.test_base_analyzer"
+        ],
+        "analysis.bos_analyzer": [],
+        "pandas": [
+            "analysis.bos_analyzer",
+            "analysis.market_structure_analyzer"
+        ],
+        "analysis.market_structure_analyzer": [
+            "analysis.bos_analyzer"
+        ],
+        "analysis.bos_detector": [
+            "tests.test_bos_detector"
+        ],
+        "models.response": [
+            "analysis.bos_detector",
+            "analysis.candle_analyzer",
+            "analysis.choch_detector",
+            "analysis.fvg_analyzer",
+            "analysis.fvg_detector",
+            "analysis.fvg_filter",
+            "analysis.liquidity_detector",
+            "analysis.liquidity_sweep_detector",
+            "analysis.market_structure",
+            "analysis.order_block_detector",
+            "data.account_data",
+            "data.candle_data",
+            "data.market_data",
+            "data.symbol_data",
+            "services.account_service",
+            "tests.test_account_data",
+            "tests.test_candle_analyzer",
+            "tests.test_candle_data",
+            "tests.test_market_data"
+        ],
+        "monitoring.logger": [
+            "analysis.bos_detector",
+            "analysis.candle_analyzer",
+            "analysis.choch_detector",
+            "analysis.fvg_analyzer",
+            "analysis.fvg_detector",
+            "analysis.fvg_filter",
+            "analysis.liquidity_detector",
+            "analysis.liquidity_sweep_detector",
+            "analysis.market_structure",
+            "analysis.order_block_detector",
+            "data.account_data",
+            "data.candle_data",
+            "data.market_data",
+            "data.mt5_connection",
+            "data.symbol_data",
+            "data.terminal_data",
+            "database.backup",
+            "database.database",
+            "database.health",
+            "database.maintenance",
+            "database.migrations",
+            "database.repositories.market_repository",
+            "database.repositories.performance_repository",
+            "database.repositories.position_repository",
+            "database.repositories.signal_repository",
+            "database.repositories.trade_repository",
+            "database.schema",
+            "database.services.database_service",
+            "services.account_service",
+            "services.configuration_service",
+            "services.database_service",
+            "services.maintenance_service",
+            "services.market_service",
+            "services.performance_service",
+            "services.signal_service",
+            "services.storage_service",
+            "services.trade_service",
+            "tests.test_logging_config"
+        ],
+        "analysis.breaker_block_analyzer": [],
+        "analysis.candle_analyzer": [
+            "tests.test_candle_analyzer"
+        ],
+        "analysis.candle_patterns": [
+            "tests.test_candle_patterns"
+        ],
+        "dataclasses": [
+            "analysis.candle_patterns",
+            "analysis.market_structure_analyzer",
+            "analysis.swing_detector",
+            "config.logging",
+            "config.mt5",
+            "config.risk",
+            "config.scoring",
+            "config.settings",
+            "config.storage",
+            "config.symbols",
+            "config.timeframes",
+            "config.trading",
+            "core.analyzer_result",
+            "core.decision_engine",
+            "core.scoring_models",
+            "core.signal_models",
+            "core.strategy_registry",
+            "models.response",
+            "models.signal",
+            "tools.modernization.config",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.validation",
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "analysis.choch_analyzer": [],
+        "analysis.choch_detector": [
+            "tests.test_choch_detector"
+        ],
+        "analysis.cumulative_delta_analyzer": [],
+        "analysis.dealing_range_analyzer": [],
+        "analysis.delta_analyzer": [],
+        "analysis.displacement_analyzer": [],
+        "analysis.equilibrium_analyzer": [],
+        "analysis.fair_value_gap_analyzer": [],
+        "analysis.fvg_analyzer": [
+            "tests.test_fvg_analyzer"
+        ],
+        "analysis.fvg_detector": [
+            "tests.test_fvg_analyzer",
+            "tests.test_fvg_detector"
+        ],
+        "analysis.fvg_filter": [
+            "tests.test_fvg_filter"
+        ],
+        "analysis.imbalance_analyzer": [],
+        "analysis.inducement_analyzer": [],
+        "analysis.liquidity_analyzer": [
+            "tests.test_liquidity_analyzer"
+        ],
+        "analysis.liquidity_detector": [
+            "tests.test_liquidity_detector"
+        ],
+        "analysis.liquidity_pool_analyzer": [],
+        "analysis.liquidity_sweep_analyzer": [],
+        "analysis.liquidity_sweep_detector": [
+            "tests.test_liquidity_sweep_detector"
+        ],
+        "analysis.market_structure": [
+            "tests.test_market_structure"
+        ],
+        "analysis.mitigation_block_analyzer": [],
+        "analysis.news_analyzer": [],
+        "analysis.order_block_analyzer": [],
+        "analysis.order_block_detector": [
+            "tests.test_order_block_detector"
+        ],
+        "analysis.premium_discount_analyzer": [],
+        "analysis.session_analyzer": [],
+        "analysis.swing_detector": [
+            "tests.test_swing_detector"
+        ],
+        "analysis.trend_alignment_analyzer": [],
+        "analysis.volatility_analyzer": [],
+        "analysis.volume_analyzer": [],
+        "config.__init__": [],
+        "config.logging": [
+            "monitoring.logger",
+            "tests.test_logging_config"
+        ],
+        "pathlib": [
+            "config.logging",
+            "config.mt5",
+            "config.settings",
+            "config.storage",
+            "database.backup",
+            "database.database",
+            "fix_signal_engine",
+            "rename_project_structure",
+            "tests.test_mt5_config",
+            "tools.apply_patch",
+            "tools.fix_analyzer_registry_phase8",
+            "tools.fix_filesystem_scanner_asdict",
+            "tools.fix_parser_shared_list_bug",
+            "tools.fix_python_scanner_statistics",
+            "tools.fix_scanner_indentation",
+            "tools.fix_storage",
+            "tools.inspect_scoring_models",
+            "tools.modernization.config",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.class_parser_repair",
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.dependency_report",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.html_dashboard_generator",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.models",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_accuracy_report",
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.project_health_score",
+            "tools.modernization.python_scanner.project_parser",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.python_scanner.scanner",
+            "tools.modernization.python_scanner.validation",
+            "tools.modernization.scanner.filesystem_scanner",
+            "tools.patch_analyzer_registry_execute",
+            "tools.patch_analyzer_registry_option1",
+            "tools.patch_analyzer_registry_phase1",
+            "tools.patch_decision_engine_return",
+            "tools.patch_scoring_models",
+            "tools.patch_signal_engine_phase4",
+            "tools.patch_signal_engine_phase6",
+            "tools.patch_signal_engine_phase7",
+            "tools.patch_test_decision_engine",
+            "tools.project_organizer"
+        ],
+        "config.storage": [
+            "config.logging",
+            "database.backup",
+            "database.database",
+            "tests.test_storage"
+        ],
+        "config.mt5": [
+            "data.mt5_connection",
+            "tests.test_mt5_config"
+        ],
+        "config.risk": [
+            "tests.test_risk"
+        ],
+        "config.scoring": [
+            "core.decision_engine",
+            "core.scoring_models",
+            "tests.test_scoring",
+            "tests.test_scoring_models"
+        ],
+        "config.settings": [
+            "config.storage",
+            "services.configuration_service",
+            "tests.test_settings"
+        ],
+        "config.symbols": [
+            "tests.test_symbols"
+        ],
+        "config.tests.test_timeframes": [],
+        "config.timeframes": [
+            "config.tests.test_timeframes",
+            "tests.test_timeframes"
+        ],
+        "config.trading": [
+            "tests.test_trading"
+        ],
+        "enum": [
+            "config.trading",
+            "core.signal_models",
+            "models.signal"
+        ],
+        "core.__init__": [],
+        "core.analyzer_manager": [],
+        "datetime": [
+            "core.analyzer_manager",
+            "core.analyzer_result",
+            "core.signal_models",
+            "database.backup",
+            "database.health",
+            "database.maintenance",
+            "services.performance_service",
+            "tests.test_analyzer_result"
+        ],
+        "core.analyzer_registry": [
+            "core.analyzer_manager",
+            "core.signal_engine",
+            "tests.test_analyzer_registry"
+        ],
+        "core.analyzer_result": [
+            "core.analyzer_manager",
+            "core.analyzer_registry",
+            "core.signal_models",
+            "tests.test_analyzer_registry",
+            "tests.test_analyzer_result"
+        ],
+        "logging": [
+            "core.analyzer_registry",
+            "monitoring.logger",
+            "tools.modernization.config",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.scanner",
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "time": [
+            "core.analyzer_registry"
+        ],
+        "traceback": [
+            "core.analyzer_registry"
+        ],
+        "core.application": [
+            "main",
+            "tests.test_application"
+        ],
+        "abc": [
+            "core.base_analyzer"
+        ],
+        "core.decision_engine": [
+            "core.signal_engine",
+            "tests.test_decision_engine"
+        ],
+        "core.scoring_models": [
+            "core.decision_engine",
+            "tests.test_scoring_models"
+        ],
+        "core.scoring.__init__": [],
+        "core.service_locator": [],
+        "services.account_service": [
+            "core.service_locator"
+        ],
+        "services.configuration_service": [
+            "core.service_locator"
+        ],
+        "services.database_service": [
+            "core.service_locator"
+        ],
+        "services.maintenance_service": [
+            "core.service_locator"
+        ],
+        "services.market_service": [
+            "core.service_locator"
+        ],
+        "services.performance_service": [
+            "core.service_locator"
+        ],
+        "services.signal_service": [
+            "core.service_locator"
+        ],
+        "services.storage_service": [
+            "core.service_locator"
+        ],
+        "services.trade_service": [
+            "core.service_locator"
+        ],
+        "core.signal_engine": [
+            "tests.test_signal_engine"
+        ],
+        "core.signal_models": [
+            "core.signal_engine",
+            "tests.test_signal_engine"
+        ],
+        "core.strategy_registry": [
+            "core.signal_engine",
+            "tests.test_strategy_registry"
+        ],
+        "data.account_data": [
+            "services.account_service",
+            "tests.test_account_data"
+        ],
+        "MetaTrader5": [
+            "data.account_data",
+            "data.candle_data",
+            "data.market_data",
+            "data.mt5_connection",
+            "data.symbol_data",
+            "data.terminal_data"
+        ],
+        "data.candle_data": [
+            "tests.test_candle_data"
+        ],
+        "data.market_data": [
+            "tests.test_market_data"
+        ],
+        "data.mt5_connection": [
+            "tests.test_mt5_connection"
+        ],
+        "data.symbol_data": [],
+        "data.terminal_data": [
+            "tests.test_terminal_data"
+        ],
+        "database.backup": [],
+        "shutil": [
+            "database.backup",
+            "fix_signal_engine",
+            "rename_project_structure",
+            "tools.apply_patch",
+            "tools.fix_filesystem_scanner_asdict",
+            "tools.fix_python_scanner_statistics",
+            "tools.fix_scanner_indentation",
+            "tools.patch_analyzer_registry_phase1",
+            "tools.patch_scoring_models",
+            "tools.patch_signal_engine_phase4",
+            "tools.patch_signal_engine_phase6",
+            "tools.project_organizer"
+        ],
+        "database.database": [
+            "database.health",
+            "database.maintenance",
+            "database.migrations",
+            "database.repositories.market_repository",
+            "database.repositories.performance_repository",
+            "database.repositories.position_repository",
+            "database.repositories.signal_repository",
+            "database.repositories.trade_repository",
+            "database.schema",
+            "services.database_service"
+        ],
+        "sqlite3": [
+            "database.database"
+        ],
+        "database.health": [],
+        "database.maintenance": [
+            "database.health",
+            "services.maintenance_service"
+        ],
+        "database.migrations": [],
+        "collections.abc": [
+            "database.migrations"
+        ],
+        "database.repositories.market_repository": [
+            "database.services.database_service",
+            "services.market_service"
+        ],
+        "database.repositories.performance_repository": [
+            "database.services.database_service"
+        ],
+        "database.repositories.position_repository": [
+            "database.services.database_service"
+        ],
+        "database.repositories.signal_repository": [
+            "database.services.database_service",
+            "services.signal_service"
+        ],
+        "database.repositories.trade_repository": [
+            "database.services.database_service",
+            "services.trade_service"
+        ],
+        "database.schema": [],
+        "database.services.database_service": [],
+        "fix_signal_engine": [],
+        "main": [
+            "tests.test_main"
+        ],
+        "models.signal": [
+            "tests.test_signal"
+        ],
+        "monitoring.__init__": [],
+        "logging.handlers": [
+            "monitoring.logger"
+        ],
+        "rename_project_structure": [],
+        "collections": [
+            "services.performance_service",
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.dependency_graph"
+        ],
+        "storage": [
+            "services.storage_service"
+        ],
+        "tests.__init__": [],
+        "tests.test_account_data": [],
+        "types": [
+            "tests.test_account_data",
+            "tests.test_candle_data",
+            "tests.test_market_data",
+            "tests.test_terminal_data"
+        ],
+        "unittest.mock": [
+            "tests.test_account_data",
+            "tests.test_candle_data",
+            "tests.test_liquidity_analyzer",
+            "tests.test_main",
+            "tests.test_market_data",
+            "tests.test_mt5_connection",
+            "tests.test_terminal_data"
+        ],
+        "tests.test_analyzer_registry": [],
+        "pytest": [
+            "tests.test_analyzer_registry",
+            "tests.test_base_analyzer",
+            "tests.test_decision_engine",
+            "tests.test_fvg_analyzer",
+            "tests.test_fvg_filter",
+            "tests.test_liquidity_analyzer",
+            "tests.test_market_data",
+            "tests.test_order_block_detector",
+            "tests.test_scoring",
+            "tests.test_scoring_models",
+            "tests.test_signal",
+            "tests.test_signal_engine"
+        ],
+        "tests.test_analyzer_result": [],
+        "tests.test_application": [],
+        "tests.test_base_analyzer": [],
+        "tests.test_bos_detector": [],
+        "tests.test_candle_analyzer": [],
+        "tests.test_candle_data": [],
+        "tests.test_candle_patterns": [],
+        "tests.test_choch_detector": [],
+        "tests.test_decision_engine": [],
+        "tests.test_fvg_analyzer": [],
+        "tests.test_fvg_detector": [],
+        "tests.test_fvg_filter": [],
+        "tests.test_liquidity_analyzer": [],
+        "tests.test_liquidity_detector": [],
+        "tests.test_liquidity_sweep_detector": [],
+        "tests.test_logger": [],
+        "os": [
+            "tests.test_logger"
+        ],
+        "sys": [
+            "tests.test_logger",
+            "tools.apply_patch",
+            "tools.fix_storage",
+            "tools.patch_scoring_models"
+        ],
+        "tests.test_logging_config": [],
+        "tests.test_main": [],
+        "tests.test_market_data": [],
+        "tests.test_market_structure": [],
+        "tests.test_mt5_config": [],
+        "tests.test_mt5_connection": [],
+        "tests.test_order_block_detector": [],
+        "tests.test_risk": [],
+        "tests.test_scoring": [],
+        "tests.test_scoring_models": [],
+        "tests.test_settings": [],
+        "tests.test_signal": [],
+        "tests.test_signal_engine": [],
+        "tests.test_storage": [],
+        "tests.test_strategy_registry": [],
+        "tests.test_swing_detector": [],
+        "tests.test_symbols": [],
+        "tests.test_terminal_data": [],
+        "tests.test_timeframes": [],
+        "tests.test_trading": [],
+        "tools.__init__": [],
+        "tools.apply_patch": [],
+        "tools.fix_analyzer_registry_phase8": [],
+        "tools.fix_filesystem_scanner_asdict": [],
+        "re": [
+            "tools.fix_filesystem_scanner_asdict",
+            "tools.fix_parser_shared_list_bug",
+            "tools.patch_analyzer_registry_execute",
+            "tools.patch_analyzer_registry_phase1"
+        ],
+        "tools.fix_parser_shared_list_bug": [],
+        "tools.fix_python_scanner_statistics": [],
+        "tools.fix_scanner_indentation": [],
+        "tools.fix_storage": [],
+        "subprocess": [
+            "tools.fix_storage"
+        ],
+        "tools.inspect_scoring_models": [],
+        "ast": [
+            "tools.inspect_scoring_models",
+            "tools.modernization.python_scanner.ast_loader",
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.class_parser_repair",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.module_parser"
+        ],
+        "tools.modernization.config": [
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "tools.modernization.python_scanner.architecture_analyzer": [
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.project_health_score"
+        ],
+        "tools.modernization.python_scanner.dependency_graph": [
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_report",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.project_health_score"
+        ],
+        "tools.modernization.python_scanner.project_parser": [
+            "tools.modernization.python_scanner.architecture_analyzer",
+            "tools.modernization.python_scanner.circular_dependency_detector",
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.dependency_report",
+            "tools.modernization.python_scanner.dependency_validator",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.project_health_score",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.python_scanner.scanner",
+            "tools.modernization.python_scanner.validation"
+        ],
+        "tools.modernization.python_scanner.ast_loader": [
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.class_parser_repair",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_regression_tests"
+        ],
+        "tokenize": [
+            "tools.modernization.python_scanner.ast_loader"
+        ],
+        "argparse": [
+            "tools.modernization.python_scanner.ast_loader"
+        ],
+        "tools.modernization.python_scanner.circular_dependency_detector": [
+            "tools.modernization.python_scanner.dashboard_builder"
+        ],
+        "tools.modernization.python_scanner.class_parser": [
+            "tools.modernization.python_scanner.class_parser_repair",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_regression_tests"
+        ],
+        "tools.modernization.python_scanner.models": [
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_graph",
+            "tools.modernization.python_scanner.function_parser",
+            "tools.modernization.python_scanner.import_parser",
+            "tools.modernization.python_scanner.modernization_recommender",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.project_health_score",
+            "tools.modernization.python_scanner.project_parser",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.python_scanner.validation"
+        ],
+        "tools.modernization.python_scanner.function_parser": [
+            "tools.modernization.python_scanner.class_parser",
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_regression_tests"
+        ],
+        "tools.modernization.python_scanner.class_parser_repair": [],
+        "tools.modernization.python_scanner.dashboard_builder": [],
+        "tools.modernization.python_scanner.project_health_score": [
+            "tools.modernization.python_scanner.dashboard_builder"
+        ],
+        "tools.modernization.python_scanner.modernization_recommender": [
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.project_health_score"
+        ],
+        "json": [
+            "tools.modernization.python_scanner.dashboard_builder",
+            "tools.modernization.python_scanner.dependency_report",
+            "tools.modernization.python_scanner.parser_accuracy_report",
+            "tools.modernization.python_scanner.report_generator",
+            "tools.modernization.scanner.filesystem_scanner"
+        ],
+        "tools.modernization.python_scanner.dependency_report": [],
+        "tools.modernization.python_scanner.dependency_validator": [
+            "tools.modernization.python_scanner.dependency_report"
+        ],
+        "tools.modernization.python_scanner.html_dashboard_generator": [],
+        "html": [
+            "tools.modernization.python_scanner.html_dashboard_generator"
+        ],
+        "tools.modernization.python_scanner.import_parser": [
+            "tools.modernization.python_scanner.module_parser",
+            "tools.modernization.python_scanner.parser_regression_tests"
+        ],
+        "tools.modernization.python_scanner.module_parser": [
+            "tools.modernization.python_scanner.parser_regression_tests",
+            "tools.modernization.python_scanner.project_parser"
+        ],
+        "tools.modernization.python_scanner.parser_accuracy_report": [],
+        "tools.modernization.python_scanner.parser_regression_tests": [
+            "tools.modernization.python_scanner.parser_accuracy_report"
+        ],
+        "tools.modernization.python_scanner.report_generator": [
+            "tools.modernization.python_scanner.scanner"
+        ],
+        "tools.modernization.python_scanner.scanner": [],
+        "tools.modernization.python_scanner.validation": [],
+        "tools.modernization.scanner.filesystem_scanner": [],
+        "tools.patch_analyzer_registry_execute": [],
+        "tools.patch_analyzer_registry_option1": [],
+        "tools.patch_analyzer_registry_phase1": [],
+        "tools.patch_decision_engine_return": [],
+        "tools.patch_scoring_models": [],
+        "tools.patch_signal_engine_phase4": [],
+        "tools.patch_signal_engine_phase6": [],
+        "tools.patch_signal_engine_phase7": [],
+        "tools.patch_test_decision_engine": [],
+        "tools.project_organizer": [],
+        "utils.__init__": []
+    },
+    "errors": [],
+    "warnings": [
+        "analysis.balanced_price_range_analyzer -> Missing module: typing",
+        "analysis.balanced_price_range_analyzer -> Missing module: __future__",
+        "analysis.bos_analyzer -> Missing module: typing",
+        "analysis.bos_analyzer -> Missing module: __future__",
+        "analysis.bos_analyzer -> Missing module: pandas",
+        "analysis.bos_detector -> Missing module: typing",
+        "analysis.bos_detector -> Missing module: __future__",
+        "analysis.breaker_block_analyzer -> Missing module: typing",
+        "analysis.breaker_block_analyzer -> Missing module: __future__",
+        "analysis.candle_analyzer -> Missing module: __future__",
+        "analysis.candle_patterns -> Missing module: typing",
+        "analysis.candle_patterns -> Missing module: dataclasses",
+        "analysis.choch_analyzer -> Missing module: typing",
+        "analysis.choch_analyzer -> Missing module: __future__",
+        "analysis.choch_detector -> Missing module: typing",
+        "analysis.choch_detector -> Missing module: __future__",
+        "analysis.cumulative_delta_analyzer -> Missing module: typing",
+        "analysis.cumulative_delta_analyzer -> Missing module: __future__",
+        "analysis.dealing_range_analyzer -> Missing module: typing",
+        "analysis.dealing_range_analyzer -> Missing module: __future__",
+        "analysis.delta_analyzer -> Missing module: typing",
+        "analysis.delta_analyzer -> Missing module: __future__",
+        "analysis.displacement_analyzer -> Missing module: typing",
+        "analysis.displacement_analyzer -> Missing module: __future__",
+        "analysis.equilibrium_analyzer -> Missing module: typing",
+        "analysis.equilibrium_analyzer -> Missing module: __future__",
+        "analysis.fair_value_gap_analyzer -> Missing module: typing",
+        "analysis.fair_value_gap_analyzer -> Missing module: __future__",
+        "analysis.fvg_analyzer -> Missing module: typing",
+        "analysis.fvg_analyzer -> Missing module: __future__",
+        "analysis.fvg_detector -> Missing module: typing",
+        "analysis.fvg_detector -> Missing module: __future__",
+        "analysis.fvg_filter -> Missing module: typing",
+        "analysis.fvg_filter -> Missing module: __future__",
+        "analysis.imbalance_analyzer -> Missing module: typing",
+        "analysis.imbalance_analyzer -> Missing module: __future__",
+        "analysis.inducement_analyzer -> Missing module: typing",
+        "analysis.inducement_analyzer -> Missing module: __future__",
+        "analysis.liquidity_analyzer -> Missing module: typing",
+        "analysis.liquidity_analyzer -> Missing module: __future__",
+        "analysis.liquidity_detector -> Missing module: typing",
+        "analysis.liquidity_detector -> Missing module: __future__",
+        "analysis.liquidity_pool_analyzer -> Missing module: typing",
+        "analysis.liquidity_pool_analyzer -> Missing module: __future__",
+        "analysis.liquidity_sweep_analyzer -> Missing module: typing",
+        "analysis.liquidity_sweep_analyzer -> Missing module: __future__",
+        "analysis.liquidity_sweep_detector -> Missing module: typing",
+        "analysis.liquidity_sweep_detector -> Missing module: __future__",
+        "analysis.market_structure -> Missing module: typing",
+        "analysis.market_structure -> Missing module: __future__",
+        "analysis.market_structure_analyzer -> Missing module: typing",
+        "analysis.market_structure_analyzer -> Missing module: __future__",
+        "analysis.market_structure_analyzer -> Missing module: pandas",
+        "analysis.market_structure_analyzer -> Missing module: dataclasses",
+        "analysis.mitigation_block_analyzer -> Missing module: typing",
+        "analysis.mitigation_block_analyzer -> Missing module: __future__",
+        "analysis.news_analyzer -> Missing module: typing",
+        "analysis.news_analyzer -> Missing module: __future__",
+        "analysis.order_block_analyzer -> Missing module: typing",
+        "analysis.order_block_analyzer -> Missing module: __future__",
+        "analysis.order_block_detector -> Missing module: typing",
+        "analysis.order_block_detector -> Missing module: __future__",
+        "analysis.premium_discount_analyzer -> Missing module: typing",
+        "analysis.premium_discount_analyzer -> Missing module: __future__",
+        "analysis.session_analyzer -> Missing module: typing",
+        "analysis.session_analyzer -> Missing module: __future__",
+        "analysis.swing_detector -> Missing module: typing",
+        "analysis.swing_detector -> Missing module: dataclasses",
+        "analysis.trend_alignment_analyzer -> Missing module: typing",
+        "analysis.trend_alignment_analyzer -> Missing module: __future__",
+        "analysis.volatility_analyzer -> Missing module: typing",
+        "analysis.volatility_analyzer -> Missing module: __future__",
+        "analysis.volume_analyzer -> Missing module: typing",
+        "analysis.volume_analyzer -> Missing module: __future__",
+        "config.logging -> Missing module: pathlib",
+        "config.logging -> Missing module: dataclasses",
+        "config.mt5 -> Missing module: pathlib",
+        "config.mt5 -> Missing module: typing",
+        "config.mt5 -> Missing module: dataclasses",
+        "config.mt5 -> Missing module: __future__",
+        "config.risk -> Missing module: dataclasses",
+        "config.risk -> Missing module: __future__",
+        "config.scoring -> Missing module: typing",
+        "config.scoring -> Missing module: dataclasses",
+        "config.settings -> Missing module: pathlib",
+        "config.settings -> Missing module: typing",
+        "config.settings -> Missing module: dataclasses",
+        "config.storage -> Missing module: pathlib",
+        "config.storage -> Missing module: dataclasses",
+        "config.symbols -> Missing module: typing",
+        "config.symbols -> Missing module: dataclasses",
+        "config.timeframes -> Missing module: typing",
+        "config.timeframes -> Missing module: dataclasses",
+        "config.trading -> Missing module: enum",
+        "config.trading -> Missing module: dataclasses",
+        "config.trading -> Missing module: __future__",
+        "core.analyzer_manager -> Missing module: typing",
+        "core.analyzer_manager -> Missing module: __future__",
+        "core.analyzer_manager -> Missing module: datetime",
+        "core.analyzer_registry -> Missing module: typing",
+        "core.analyzer_registry -> Missing module: __future__",
+        "core.analyzer_registry -> Missing module: logging",
+        "core.analyzer_registry -> Missing module: traceback",
+        "core.analyzer_registry -> Missing module: time",
+        "core.analyzer_result -> Missing module: datetime",
+        "core.analyzer_result -> Missing module: typing",
+        "core.analyzer_result -> Missing module: dataclasses",
+        "core.analyzer_result -> Missing module: __future__",
+        "core.application -> Missing module: __future__",
+        "core.base_analyzer -> Missing module: typing",
+        "core.base_analyzer -> Missing module: abc",
+        "core.base_analyzer -> Missing module: __future__",
+        "core.decision_engine -> Missing module: typing",
+        "core.decision_engine -> Missing module: dataclasses",
+        "core.scoring_models -> Missing module: typing",
+        "core.scoring_models -> Missing module: dataclasses",
+        "core.service_locator -> Missing module: __future__",
+        "core.signal_engine -> Missing module: typing",
+        "core.signal_models -> Missing module: typing",
+        "core.signal_models -> Missing module: __future__",
+        "core.signal_models -> Missing module: datetime",
+        "core.signal_models -> Missing module: enum",
+        "core.signal_models -> Missing module: dataclasses",
+        "core.strategy_registry -> Missing module: typing",
+        "core.strategy_registry -> Missing module: dataclasses",
+        "data.account_data -> Missing module: MetaTrader5",
+        "data.account_data -> Missing module: __future__",
+        "data.candle_data -> Missing module: typing",
+        "data.candle_data -> Missing module: __future__",
+        "data.candle_data -> Missing module: MetaTrader5",
+        "data.market_data -> Missing module: MetaTrader5",
+        "data.market_data -> Missing module: __future__",
+        "data.mt5_connection -> Missing module: MetaTrader5",
+        "data.mt5_connection -> Missing module: __future__",
+        "data.symbol_data -> Missing module: MetaTrader5",
+        "data.symbol_data -> Missing module: __future__",
+        "data.terminal_data -> Missing module: MetaTrader5",
+        "data.terminal_data -> Missing module: __future__",
+        "database.backup -> Missing module: pathlib",
+        "database.backup -> Missing module: __future__",
+        "database.backup -> Missing module: datetime",
+        "database.backup -> Missing module: shutil",
+        "database.database -> Missing module: pathlib",
+        "database.database -> Missing module: typing",
+        "database.database -> Missing module: __future__",
+        "database.database -> Missing module: sqlite3",
+        "database.health -> Missing module: typing",
+        "database.health -> Missing module: __future__",
+        "database.health -> Missing module: datetime",
+        "database.maintenance -> Missing module: typing",
+        "database.maintenance -> Missing module: __future__",
+        "database.maintenance -> Missing module: datetime",
+        "database.migrations -> Missing module: collections.abc",
+        "database.migrations -> Missing module: __future__",
+        "database.repositories.market_repository -> Missing module: typing",
+        "database.repositories.market_repository -> Missing module: __future__",
+        "database.repositories.performance_repository -> Missing module: typing",
+        "database.repositories.performance_repository -> Missing module: __future__",
+        "database.repositories.position_repository -> Missing module: typing",
+        "database.repositories.position_repository -> Missing module: __future__",
+        "database.repositories.signal_repository -> Missing module: typing",
+        "database.repositories.signal_repository -> Missing module: __future__",
+        "database.repositories.trade_repository -> Missing module: typing",
+        "database.repositories.trade_repository -> Missing module: __future__",
+        "database.schema -> Missing module: __future__",
+        "database.services.database_service -> Missing module: typing",
+        "database.services.database_service -> Missing module: __future__",
+        "fix_signal_engine -> Missing module: pathlib",
+        "fix_signal_engine -> Missing module: shutil",
+        "models.response -> Missing module: typing",
+        "models.response -> Missing module: dataclasses",
+        "models.response -> Missing module: __future__",
+        "models.signal -> Missing module: enum",
+        "models.signal -> Missing module: dataclasses",
+        "models.signal -> Missing module: __future__",
+        "monitoring.logger -> Missing module: logging",
+        "monitoring.logger -> Missing module: logging.handlers",
+        "monitoring.logger -> Missing module: __future__",
+        "rename_project_structure -> Missing module: pathlib",
+        "rename_project_structure -> Missing module: shutil",
+        "services.account_service -> Missing module: __future__",
+        "services.configuration_service -> Missing module: __future__",
+        "services.database_service -> Missing module: __future__",
+        "services.maintenance_service -> Missing module: typing",
+        "services.maintenance_service -> Missing module: __future__",
+        "services.market_service -> Missing module: typing",
+        "services.market_service -> Missing module: __future__",
+        "services.performance_service -> Missing module: typing",
+        "services.performance_service -> Missing module: collections",
+        "services.performance_service -> Missing module: __future__",
+        "services.performance_service -> Missing module: datetime",
+        "services.signal_service -> Missing module: typing",
+        "services.signal_service -> Missing module: __future__",
+        "services.storage_service -> Missing module: storage",
+        "services.storage_service -> Missing module: __future__",
+        "services.trade_service -> Missing module: typing",
+        "services.trade_service -> Missing module: __future__",
+        "tests.test_account_data -> Missing module: unittest.mock",
+        "tests.test_account_data -> Missing module: types",
+        "tests.test_analyzer_registry -> Missing module: pytest",
+        "tests.test_analyzer_result -> Missing module: datetime",
+        "tests.test_base_analyzer -> Missing module: pytest",
+        "tests.test_candle_data -> Missing module: unittest.mock",
+        "tests.test_candle_data -> Missing module: types",
+        "tests.test_decision_engine -> Missing module: pytest",
+        "tests.test_fvg_analyzer -> Missing module: pytest",
+        "tests.test_fvg_filter -> Missing module: pytest",
+        "tests.test_liquidity_analyzer -> Missing module: pytest",
+        "tests.test_liquidity_analyzer -> Missing module: unittest.mock",
+        "tests.test_logger -> Missing module: os",
+        "tests.test_logger -> Missing module: sys",
+        "tests.test_main -> Missing module: unittest.mock",
+        "tests.test_market_data -> Missing module: pytest",
+        "tests.test_market_data -> Missing module: unittest.mock",
+        "tests.test_market_data -> Missing module: types",
+        "tests.test_mt5_config -> Missing module: pathlib",
+        "tests.test_mt5_connection -> Missing module: unittest.mock",
+        "tests.test_order_block_detector -> Missing module: pytest",
+        "tests.test_scoring -> Missing module: pytest",
+        "tests.test_scoring_models -> Missing module: pytest",
+        "tests.test_signal -> Missing module: pytest",
+        "tests.test_signal_engine -> Missing module: pytest",
+        "tests.test_terminal_data -> Missing module: unittest.mock",
+        "tests.test_terminal_data -> Missing module: types",
+        "tools.apply_patch -> Missing module: pathlib",
+        "tools.apply_patch -> Missing module: shutil",
+        "tools.apply_patch -> Missing module: sys",
+        "tools.fix_analyzer_registry_phase8 -> Missing module: pathlib",
+        "tools.fix_filesystem_scanner_asdict -> Missing module: pathlib",
+        "tools.fix_filesystem_scanner_asdict -> Missing module: shutil",
+        "tools.fix_filesystem_scanner_asdict -> Missing module: re",
+        "tools.fix_parser_shared_list_bug -> Missing module: pathlib",
+        "tools.fix_parser_shared_list_bug -> Missing module: re",
+        "tools.fix_python_scanner_statistics -> Missing module: pathlib",
+        "tools.fix_python_scanner_statistics -> Missing module: shutil",
+        "tools.fix_scanner_indentation -> Missing module: pathlib",
+        "tools.fix_scanner_indentation -> Missing module: shutil",
+        "tools.fix_storage -> Missing module: pathlib",
+        "tools.fix_storage -> Missing module: subprocess",
+        "tools.fix_storage -> Missing module: sys",
+        "tools.inspect_scoring_models -> Missing module: pathlib",
+        "tools.inspect_scoring_models -> Missing module: ast",
+        "tools.modernization.config -> Missing module: pathlib",
+        "tools.modernization.config -> Missing module: typing",
+        "tools.modernization.config -> Missing module: __future__",
+        "tools.modernization.config -> Missing module: logging",
+        "tools.modernization.config -> Missing module: dataclasses",
+        "tools.modernization.python_scanner.architecture_analyzer -> Missing module: pathlib",
+        "tools.modernization.python_scanner.architecture_analyzer -> Missing module: typing",
+        "tools.modernization.python_scanner.architecture_analyzer -> Missing module: collections",
+        "tools.modernization.python_scanner.architecture_analyzer -> Missing module: __future__",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: pathlib",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: typing",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: argparse",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: __future__",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: tokenize",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: logging",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: dataclasses",
+        "tools.modernization.python_scanner.ast_loader -> Missing module: ast",
+        "tools.modernization.python_scanner.circular_dependency_detector -> Missing module: pathlib",
+        "tools.modernization.python_scanner.circular_dependency_detector -> Missing module: typing",
+        "tools.modernization.python_scanner.circular_dependency_detector -> Missing module: __future__",
+        "tools.modernization.python_scanner.class_parser -> Missing module: pathlib",
+        "tools.modernization.python_scanner.class_parser -> Missing module: typing",
+        "tools.modernization.python_scanner.class_parser -> Missing module: __future__",
+        "tools.modernization.python_scanner.class_parser -> Missing module: ast",
+        "tools.modernization.python_scanner.class_parser_repair -> Missing module: pathlib",
+        "tools.modernization.python_scanner.class_parser_repair -> Missing module: __future__",
+        "tools.modernization.python_scanner.class_parser_repair -> Missing module: ast",
+        "tools.modernization.python_scanner.dashboard_builder -> Missing module: pathlib",
+        "tools.modernization.python_scanner.dashboard_builder -> Missing module: __future__",
+        "tools.modernization.python_scanner.dashboard_builder -> Missing module: json",
+        "tools.modernization.python_scanner.dependency_graph -> Missing module: pathlib",
+        "tools.modernization.python_scanner.dependency_graph -> Missing module: typing",
+        "tools.modernization.python_scanner.dependency_graph -> Missing module: collections",
+        "tools.modernization.python_scanner.dependency_graph -> Missing module: __future__",
+        "tools.modernization.python_scanner.dependency_report -> Missing module: pathlib",
+        "tools.modernization.python_scanner.dependency_report -> Missing module: __future__",
+        "tools.modernization.python_scanner.dependency_report -> Missing module: json",
+        "tools.modernization.python_scanner.dependency_validator -> Missing module: pathlib",
+        "tools.modernization.python_scanner.dependency_validator -> Missing module: typing",
+        "tools.modernization.python_scanner.dependency_validator -> Missing module: __future__",
+        "tools.modernization.python_scanner.function_parser -> Missing module: pathlib",
+        "tools.modernization.python_scanner.function_parser -> Missing module: typing",
+        "tools.modernization.python_scanner.function_parser -> Missing module: __future__",
+        "tools.modernization.python_scanner.function_parser -> Missing module: ast",
+        "tools.modernization.python_scanner.html_dashboard_generator -> Missing module: pathlib",
+        "tools.modernization.python_scanner.html_dashboard_generator -> Missing module: typing",
+        "tools.modernization.python_scanner.html_dashboard_generator -> Missing module: html",
+        "tools.modernization.python_scanner.html_dashboard_generator -> Missing module: __future__",
+        "tools.modernization.python_scanner.import_parser -> Missing module: pathlib",
+        "tools.modernization.python_scanner.import_parser -> Missing module: typing",
+        "tools.modernization.python_scanner.import_parser -> Missing module: __future__",
+        "tools.modernization.python_scanner.import_parser -> Missing module: ast",
+        "tools.modernization.python_scanner.models -> Missing module: pathlib",
+        "tools.modernization.python_scanner.models -> Missing module: typing",
+        "tools.modernization.python_scanner.models -> Missing module: dataclasses",
+        "tools.modernization.python_scanner.models -> Missing module: __future__",
+        "tools.modernization.python_scanner.modernization_recommender -> Missing module: pathlib",
+        "tools.modernization.python_scanner.modernization_recommender -> Missing module: typing",
+        "tools.modernization.python_scanner.modernization_recommender -> Missing module: __future__",
+        "tools.modernization.python_scanner.module_parser -> Missing module: pathlib",
+        "tools.modernization.python_scanner.module_parser -> Missing module: __future__",
+        "tools.modernization.python_scanner.module_parser -> Missing module: ast",
+        "tools.modernization.python_scanner.parser_accuracy_report -> Missing module: json",
+        "tools.modernization.python_scanner.parser_accuracy_report -> Missing module: pathlib",
+        "tools.modernization.python_scanner.parser_accuracy_report -> Missing module: __future__",
+        "tools.modernization.python_scanner.parser_regression_tests -> Missing module: pathlib",
+        "tools.modernization.python_scanner.parser_regression_tests -> Missing module: typing",
+        "tools.modernization.python_scanner.parser_regression_tests -> Missing module: __future__",
+        "tools.modernization.python_scanner.parser_regression_tests -> Missing module: dataclasses",
+        "tools.modernization.python_scanner.project_health_score -> Missing module: pathlib",
+        "tools.modernization.python_scanner.project_health_score -> Missing module: __future__",
+        "tools.modernization.python_scanner.project_parser -> Missing module: pathlib",
+        "tools.modernization.python_scanner.project_parser -> Missing module: __future__",
+        "tools.modernization.python_scanner.report_generator -> Missing module: pathlib",
+        "tools.modernization.python_scanner.report_generator -> Missing module: typing",
+        "tools.modernization.python_scanner.report_generator -> Missing module: __future__",
+        "tools.modernization.python_scanner.report_generator -> Missing module: json",
+        "tools.modernization.python_scanner.scanner -> Missing module: pathlib",
+        "tools.modernization.python_scanner.scanner -> Missing module: __future__",
+        "tools.modernization.python_scanner.scanner -> Missing module: logging",
+        "tools.modernization.python_scanner.validation -> Missing module: pathlib",
+        "tools.modernization.python_scanner.validation -> Missing module: typing",
+        "tools.modernization.python_scanner.validation -> Missing module: __future__",
+        "tools.modernization.python_scanner.validation -> Missing module: dataclasses",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: pathlib",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: typing",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: __future__",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: json",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: logging",
+        "tools.modernization.scanner.filesystem_scanner -> Missing module: dataclasses",
+        "tools.patch_analyzer_registry_execute -> Missing module: pathlib",
+        "tools.patch_analyzer_registry_execute -> Missing module: re",
+        "tools.patch_analyzer_registry_option1 -> Missing module: pathlib",
+        "tools.patch_analyzer_registry_phase1 -> Missing module: pathlib",
+        "tools.patch_analyzer_registry_phase1 -> Missing module: shutil",
+        "tools.patch_analyzer_registry_phase1 -> Missing module: re",
+        "tools.patch_decision_engine_return -> Missing module: pathlib",
+        "tools.patch_scoring_models -> Missing module: pathlib",
+        "tools.patch_scoring_models -> Missing module: shutil",
+        "tools.patch_scoring_models -> Missing module: sys",
+        "tools.patch_signal_engine_phase4 -> Missing module: pathlib",
+        "tools.patch_signal_engine_phase4 -> Missing module: shutil",
+        "tools.patch_signal_engine_phase6 -> Missing module: pathlib",
+        "tools.patch_signal_engine_phase6 -> Missing module: shutil",
+        "tools.patch_signal_engine_phase7 -> Missing module: pathlib",
+        "tools.patch_test_decision_engine -> Missing module: pathlib",
+        "tools.project_organizer -> Missing module: pathlib",
+        "tools.project_organizer -> Missing module: shutil",
+        "Isolated module: config.__init__",
+        "Isolated module: core.__init__",
+        "Isolated module: core.scoring.__init__",
+        "Isolated module: monitoring.__init__",
+        "Isolated module: tests.__init__",
+        "Isolated module: tools.__init__",
+        "Isolated module: utils.__init__"
+    ]
+}

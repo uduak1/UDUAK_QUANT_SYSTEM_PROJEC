@@ -1,0 +1,230 @@
+"""
+tools/modernization/python_scanner/class_parser.py
+
+UDUAK QUANT SYSTEM
+Modernization Toolkit
+
+Part 2.5
+
+Class Parser
+
+Extracts Python classes from an AST.
+"""
+
+from __future__ import annotations
+
+import ast
+
+from typing import List
+
+from tools.modernization.python_scanner.models import (
+    ClassInfo,
+    FunctionInfo,
+)
+
+from tools.modernization.python_scanner.function_parser import (
+    FunctionParser,
+)
+
+
+class ClassParser(ast.NodeVisitor):
+    """
+    Parses Python classes.
+    """
+
+    def __init__(self) -> None:
+
+        self.classes: List[ClassInfo] = []
+
+    # ======================================================
+    # PUBLIC
+    # ======================================================
+
+    def parse(
+        self,
+        tree: ast.AST,
+    ) -> List[ClassInfo]:
+
+        self.classes.clear()
+
+        self.visit(tree)
+
+        return self.classes
+
+    # ======================================================
+    # CLASS
+    # ======================================================
+
+    def visit_ClassDef(
+        self,
+        node: ast.ClassDef,
+    ) -> None:
+
+        self.classes.append(
+            self._build_class(node)
+        )
+
+        self.generic_visit(node)
+
+            # ======================================================
+    # BUILD CLASS
+    # ======================================================
+
+    def _build_class(
+        self,
+        node: ast.ClassDef,
+    ) -> ClassInfo:
+
+        end_line = getattr(
+            node,
+            "end_lineno",
+            node.lineno,
+        )
+
+        bases = [
+            ast.unparse(base)
+            for base in node.bases
+        ]
+
+        decorators = [
+            ast.unparse(decorator)
+            for decorator in node.decorator_list
+        ]
+
+        function_parser = FunctionParser()
+
+        methods: List[FunctionInfo] = []
+
+        for child in node.body:
+
+            if isinstance(
+                child,
+                (
+                    ast.FunctionDef,
+                    ast.AsyncFunctionDef,
+                ),
+            ):
+
+                methods.append(
+                    function_parser._build_function(
+                        child
+                    )
+                )
+
+        return ClassInfo(
+            name=node.name,
+            line=node.lineno,
+            end_line=end_line,
+            bases=bases,
+            decorators=decorators,
+            methods=methods,
+            docstring=ast.get_docstring(node),
+            is_dataclass=(
+                "dataclass"
+                in decorators
+            ),
+            is_abstract=(
+                any(
+                    "ABC" in base
+                    or "ABCMeta" in base
+                    for base in bases
+                )
+            ),
+        )
+
+            # ======================================================
+    # FILTERS
+    # ======================================================
+
+    @staticmethod
+    def dataclasses_only(
+        classes: List[ClassInfo],
+    ) -> List[ClassInfo]:
+
+        return [
+            cls
+            for cls in classes
+            if cls.is_dataclass
+        ]
+
+    # ------------------------------------------------------
+
+    @staticmethod
+    def abstract_classes_only(
+        classes: List[ClassInfo],
+    ) -> List[ClassInfo]:
+
+        return [
+            cls
+            for cls in classes
+            if cls.is_abstract
+        ]
+
+    # ------------------------------------------------------
+
+    @staticmethod
+    def summary(
+        classes: List[ClassInfo],
+    ) -> dict:
+
+        return {
+            "total_classes": len(classes),
+            "dataclasses": sum(
+                1
+                for cls in classes
+                if cls.is_dataclass
+            ),
+            "abstract_classes": sum(
+                1
+                for cls in classes
+                if cls.is_abstract
+            ),
+            "total_methods": sum(
+                len(cls.methods)
+                for cls in classes
+            ),
+        }
+
+
+# ==========================================================
+# MAIN
+# ==========================================================
+
+if __name__ == "__main__":
+
+    from pathlib import Path
+
+    from tools.modernization.python_scanner.ast_loader import (
+        ASTLoader,
+    )
+
+    loader = ASTLoader()
+
+    parser = ClassParser()
+
+    result = loader.safe_load(
+        Path("core/base_analyzer.py")
+    )
+
+    if result.loaded:
+
+        classes = parser.parse(
+            result.tree
+        )
+
+        print("=" * 60)
+        print("CLASS PARSER")
+        print("=" * 60)
+
+        for cls in classes:
+
+            print(cls)
+
+        print()
+        print(
+            parser.summary(classes)
+        )
+
+    else:
+
+        print(result.syntax_error)

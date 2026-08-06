@@ -42,14 +42,11 @@ class FunctionParser(ast.NodeVisitor):
         tree: ast.AST,
     ) -> List[FunctionInfo]:
 
-        self.functions = []
-
-        self._inside_class = False if hasattr(self, "_inside_class") else False
+        self.functions.clear()
 
         self.visit(tree)
 
-        return list(self.functions)
-
+        return self.functions
 
     # ======================================================
     # CLASS

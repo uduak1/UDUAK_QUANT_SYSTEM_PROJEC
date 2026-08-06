@@ -1,0 +1,65 @@
+{
+    "summary": {
+        "total_tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "success": true
+    },
+    "results": [
+        {
+            "component": "ASTLoader",
+            "passed": true,
+            "message": ""
+        },
+        {
+            "component": "ImportParser",
+            "passed": true,
+            "message": "5 imports found"
+        },
+        {
+            "component": "FunctionParser",
+            "passed": true,
+            "message": "12 functions found"
+        },
+        {
+            "component": "StandaloneFunctions",
+            "passed": true,
+            "message": "0 standalone functions"
+        },
+        {
+            "component": "ClassParser",
+            "passed": true,
+            "message": "1 classes found"
+        },
+        {
+            "component": "ClassNames",
+            "passed": true,
+            "message": "Verified class names"
+        },
+        {
+            "component": "ModuleParser",
+            "passed": true,
+            "message": "core.base_analyzer"
+        },
+        {
+            "component": "ModuleClassCount",
+            "passed": true,
+            "message": "Module=1, Parser=1"
+        },
+        {
+            "component": "ModuleFunctionCount",
+            "passed": true,
+            "message": "Module=0, Parser=0"
+        },
+        {
+            "component": "ProjectParser",
+            "passed": true,
+            "message": "168 modules"
+        },
+        {
+            "component": "ProjectStatistics",
+            "passed": true,
+            "message": "Statistics verified"
+        }
+    ]
+}

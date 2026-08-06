@@ -178,11 +178,7 @@ class ModuleInfo:
 
     def to_dict(self) -> Dict:
 
-        data = asdict(self)
-
-        data["path"] = str(self.path)
-
-        return data
+        return asdict(self)
 
 
 # ==========================================================
