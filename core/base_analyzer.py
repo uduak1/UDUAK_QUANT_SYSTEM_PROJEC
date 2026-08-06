@@ -3,16 +3,6 @@ core/base_analyzer.py
 
 UDUAK QUANT SYSTEM
 Institutional Base Analyzer
-
-Every analyzer in the system MUST inherit from this class.
-
-Responsibilities
-----------------
-- Standardize analyzer interface
-- Validate input
-- Execute analysis
-- Perform health checks
-- Report metadata
 """
 
 from __future__ import annotations
@@ -20,20 +10,12 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any, Dict
 
+from core.analyzer_result import AnalyzerResult
+
 
 class BaseAnalyzer(ABC):
     """
     Base class for every analyzer.
-
-    Required methods:
-
-        validate()
-        analyze()
-
-    Optional methods:
-
-        initialize()
-        health_check()
     """
 
     def __init__(
@@ -52,17 +34,14 @@ class BaseAnalyzer(ABC):
 
     @property
     def name(self) -> str:
-        """Analyzer name."""
         return self._name
 
     @property
     def version(self) -> str:
-        """Analyzer version."""
         return self._version
 
     @property
     def enabled(self) -> bool:
-        """Whether analyzer is enabled."""
         return self._enabled
 
     # ==========================================================
@@ -70,11 +49,9 @@ class BaseAnalyzer(ABC):
     # ==========================================================
 
     def enable(self) -> None:
-        """Enable analyzer."""
         self._enabled = True
 
     def disable(self) -> None:
-        """Disable analyzer."""
         self._enabled = False
 
     # ==========================================================
@@ -82,11 +59,6 @@ class BaseAnalyzer(ABC):
     # ==========================================================
 
     def initialize(self) -> bool:
-        """
-        Optional initialization.
-
-        Override if analyzer requires startup logic.
-        """
         return True
 
     # ==========================================================
@@ -94,13 +66,30 @@ class BaseAnalyzer(ABC):
     # ==========================================================
 
     def health_check(self) -> bool:
-        """
-        Analyzer health check.
-
-        Override if analyzer depends on
-        external resources.
-        """
         return True
+
+    # ==========================================================
+    # COMMON VALIDATION HELPERS
+    # ==========================================================
+
+    @staticmethod
+    def validate_not_none(market_data: Any) -> bool:
+        return market_data is not None
+
+    @staticmethod
+    def validate_not_empty(market_data: Any) -> bool:
+        if market_data is None:
+            return False
+
+        empty = getattr(market_data, "empty", None)
+
+        if empty is not None:
+            return not empty
+
+        try:
+            return len(market_data) > 0
+        except TypeError:
+            return True
 
     # ==========================================================
     # REQUIRED METHODS
@@ -109,7 +98,7 @@ class BaseAnalyzer(ABC):
     @abstractmethod
     def validate(
         self,
-        market_snapshot: Dict[str, Any],
+        market_data: Any,
     ) -> bool:
         """
         Validate input before analysis.
@@ -119,8 +108,8 @@ class BaseAnalyzer(ABC):
     @abstractmethod
     def analyze(
         self,
-        market_snapshot: Dict[str, Any],
-    ) -> Any:
+        market_data: Any,
+    ) -> AnalyzerResult:
         """
         Execute analyzer logic.
         """
@@ -131,9 +120,6 @@ class BaseAnalyzer(ABC):
     # ==========================================================
 
     def metadata(self) -> Dict[str, Any]:
-        """
-        Analyzer metadata.
-        """
         return {
             "name": self.name,
             "version": self.version,
