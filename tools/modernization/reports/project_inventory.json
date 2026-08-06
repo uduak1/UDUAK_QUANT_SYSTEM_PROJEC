@@ -1,0 +1,1233 @@
+{
+    "root": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT",
+    "directories": [
+        {
+            "name": "UDUAK_QUANT_SYSTEM_PROJECT",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT",
+            "parent": "C:\\Users\\UDUAK\\Documents"
+        },
+        {
+            "name": "analysis",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "cache",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\cache",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "config",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "tests",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\tests",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "core",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "scoring",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\scoring",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "data",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "backtests",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\backtests",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "database",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\database",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "historical",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\historical",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "database",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "repositories",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "services",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\services",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "exports",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\exports",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "logs",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\logs",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "models",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\models",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "monitoring",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\monitoring",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "reports",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\reports",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "services",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "tests",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "tools",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\tools",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "tools",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "modernization",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "backups",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\backups",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "cache",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\cache",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "logs",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\logs",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "reports",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\reports",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "scanner",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\scanner",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "temp",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\temp",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "utils",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\utils",
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        }
+    ],
+    "files": [
+        {
+            "name": "balanced_price_range_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\balanced_price_range_analyzer.py",
+            "extension": ".py",
+            "size": 1789,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "bos_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\bos_analyzer.py",
+            "extension": ".py",
+            "size": 2395,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "bos_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\bos_detector.py",
+            "extension": ".py",
+            "size": 5912,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "breaker_block_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\breaker_block_analyzer.py",
+            "extension": ".py",
+            "size": 1731,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "candle_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\candle_analyzer.py",
+            "extension": ".py",
+            "size": 4403,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "candle_patterns.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\candle_patterns.py",
+            "extension": ".py",
+            "size": 10931,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "choch_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\choch_analyzer.py",
+            "extension": ".py",
+            "size": 1677,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "choch_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\choch_detector.py",
+            "extension": ".py",
+            "size": 5412,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "cumulative_delta_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\cumulative_delta_analyzer.py",
+            "extension": ".py",
+            "size": 1865,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "dealing_range_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\dealing_range_analyzer.py",
+            "extension": ".py",
+            "size": 1716,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "delta_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\delta_analyzer.py",
+            "extension": ".py",
+            "size": 1717,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "displacement_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\displacement_analyzer.py",
+            "extension": ".py",
+            "size": 1743,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "equilibrium_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\equilibrium_analyzer.py",
+            "extension": ".py",
+            "size": 1777,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "fair_value_gap_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\fair_value_gap_analyzer.py",
+            "extension": ".py",
+            "size": 1740,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "fvg_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\fvg_analyzer.py",
+            "extension": ".py",
+            "size": 15590,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "fvg_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\fvg_detector.py",
+            "extension": ".py",
+            "size": 9896,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "fvg_filter.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\fvg_filter.py",
+            "extension": ".py",
+            "size": 8197,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "imbalance_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\imbalance_analyzer.py",
+            "extension": ".py",
+            "size": 1889,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "inducement_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\inducement_analyzer.py",
+            "extension": ".py",
+            "size": 1732,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "liquidity_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\liquidity_analyzer.py",
+            "extension": ".py",
+            "size": 13376,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "liquidity_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\liquidity_detector.py",
+            "extension": ".py",
+            "size": 5653,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "liquidity_pool_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\liquidity_pool_analyzer.py",
+            "extension": ".py",
+            "size": 1785,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "liquidity_sweep_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\liquidity_sweep_analyzer.py",
+            "extension": ".py",
+            "size": 1756,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "liquidity_sweep_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\liquidity_sweep_detector.py",
+            "extension": ".py",
+            "size": 6244,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "market_structure.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\market_structure.py",
+            "extension": ".py",
+            "size": 8610,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "market_structure_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\market_structure_analyzer.py",
+            "extension": ".py",
+            "size": 4759,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "mitigation_block_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\mitigation_block_analyzer.py",
+            "extension": ".py",
+            "size": 1776,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "news_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\news_analyzer.py",
+            "extension": ".py",
+            "size": 1722,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "order_block_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\order_block_analyzer.py",
+            "extension": ".py",
+            "size": 1713,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "order_block_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\order_block_detector.py",
+            "extension": ".py",
+            "size": 8885,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "premium_discount_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\premium_discount_analyzer.py",
+            "extension": ".py",
+            "size": 1732,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "session_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\session_analyzer.py",
+            "extension": ".py",
+            "size": 1760,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "swing_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\swing_detector.py",
+            "extension": ".py",
+            "size": 3888,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "trend_alignment_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\trend_alignment_analyzer.py",
+            "extension": ".py",
+            "size": 1785,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "volatility_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\volatility_analyzer.py",
+            "extension": ".py",
+            "size": 1753,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "volume_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis\\volume_analyzer.py",
+            "extension": ".py",
+            "size": 1726,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\analysis"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "logging.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\logging.py",
+            "extension": ".py",
+            "size": 1132,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "mt5.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\mt5.py",
+            "extension": ".py",
+            "size": 2270,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "risk.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\risk.py",
+            "extension": ".py",
+            "size": 7690,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "scoring.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\scoring.py",
+            "extension": ".py",
+            "size": 10583,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "settings.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\settings.py",
+            "extension": ".py",
+            "size": 2088,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "storage.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\storage.py",
+            "extension": ".py",
+            "size": 1817,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "symbols.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\symbols.py",
+            "extension": ".py",
+            "size": 3014,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "test_timeframes.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\tests\\test_timeframes.py",
+            "extension": ".py",
+            "size": 847,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\tests"
+        },
+        {
+            "name": "timeframes.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\timeframes.py",
+            "extension": ".py",
+            "size": 2635,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "trading.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config\\trading.py",
+            "extension": ".py",
+            "size": 5339,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\config"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "analyzer_manager.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\analyzer_manager.py",
+            "extension": ".py",
+            "size": 4505,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "analyzer_registry.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\analyzer_registry.py",
+            "extension": ".py",
+            "size": 7251,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "analyzer_result.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\analyzer_result.py",
+            "extension": ".py",
+            "size": 4098,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "application.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\application.py",
+            "extension": ".py",
+            "size": 2191,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "base_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\base_analyzer.py",
+            "extension": ".py",
+            "size": 3708,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "decision_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\decision_engine.py",
+            "extension": ".py",
+            "size": 5368,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\scoring\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\scoring"
+        },
+        {
+            "name": "scoring_models.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\scoring_models.py",
+            "extension": ".py",
+            "size": 5274,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "service_locator.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\service_locator.py",
+            "extension": ".py",
+            "size": 4902,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "signal_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\signal_engine.py",
+            "extension": ".py",
+            "size": 4628,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "signal_models.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\signal_models.py",
+            "extension": ".py",
+            "size": 2380,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "strategy_registry.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core\\strategy_registry.py",
+            "extension": ".py",
+            "size": 4095,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\core"
+        },
+        {
+            "name": "account_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\account_data.py",
+            "extension": ".py",
+            "size": 3002,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "candle_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\candle_data.py",
+            "extension": ".py",
+            "size": 6052,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "market_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\market_data.py",
+            "extension": ".py",
+            "size": 3530,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "mt5_connection.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\mt5_connection.py",
+            "extension": ".py",
+            "size": 3850,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "symbol_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\symbol_data.py",
+            "extension": ".py",
+            "size": 3196,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "terminal_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data\\terminal_data.py",
+            "extension": ".py",
+            "size": 2637,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\data"
+        },
+        {
+            "name": "backup.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\backup.py",
+            "extension": ".py",
+            "size": 3645,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "database.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\database.py",
+            "extension": ".py",
+            "size": 5949,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "health.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\health.py",
+            "extension": ".py",
+            "size": 5674,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "maintenance.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\maintenance.py",
+            "extension": ".py",
+            "size": 7617,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "migrations.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\migrations.py",
+            "extension": ".py",
+            "size": 5757,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "market_repository.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories\\market_repository.py",
+            "extension": ".py",
+            "size": 8952,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories"
+        },
+        {
+            "name": "performance_repository.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories\\performance_repository.py",
+            "extension": ".py",
+            "size": 7645,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories"
+        },
+        {
+            "name": "position_repository.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories\\position_repository.py",
+            "extension": ".py",
+            "size": 6883,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories"
+        },
+        {
+            "name": "signal_repository.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories\\signal_repository.py",
+            "extension": ".py",
+            "size": 9121,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories"
+        },
+        {
+            "name": "trade_repository.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories\\trade_repository.py",
+            "extension": ".py",
+            "size": 8763,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\repositories"
+        },
+        {
+            "name": "schema.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\schema.py",
+            "extension": ".py",
+            "size": 7320,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database"
+        },
+        {
+            "name": "database_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\services\\database_service.py",
+            "extension": ".py",
+            "size": 7013,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\database\\services"
+        },
+        {
+            "name": "fix_signal_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\fix_signal_engine.py",
+            "extension": ".py",
+            "size": 2284,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "main.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\main.py",
+            "extension": ".py",
+            "size": 920,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "response.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\models\\response.py",
+            "extension": ".py",
+            "size": 663,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\models"
+        },
+        {
+            "name": "signal.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\models\\signal.py",
+            "extension": ".py",
+            "size": 2299,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\models"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\monitoring\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\monitoring"
+        },
+        {
+            "name": "logger.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\monitoring\\logger.py",
+            "extension": ".py",
+            "size": 1661,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\monitoring"
+        },
+        {
+            "name": "rename_project_structure.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\rename_project_structure.py",
+            "extension": ".py",
+            "size": 2821,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT"
+        },
+        {
+            "name": "account_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\account_service.py",
+            "extension": ".py",
+            "size": 5675,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "configuration_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\configuration_service.py",
+            "extension": ".py",
+            "size": 2272,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "database_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\database_service.py",
+            "extension": ".py",
+            "size": 3769,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "maintenance_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\maintenance_service.py",
+            "extension": ".py",
+            "size": 4746,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "market_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\market_service.py",
+            "extension": ".py",
+            "size": 6944,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "performance_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\performance_service.py",
+            "extension": ".py",
+            "size": 9997,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "signal_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\signal_service.py",
+            "extension": ".py",
+            "size": 7319,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "storage_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\storage_service.py",
+            "extension": ".py",
+            "size": 4597,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "trade_service.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services\\trade_service.py",
+            "extension": ".py",
+            "size": 6639,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\services"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_account_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_account_data.py",
+            "extension": ".py",
+            "size": 3315,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_analyzer_registry.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_analyzer_registry.py",
+            "extension": ".py",
+            "size": 5843,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_analyzer_result.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_analyzer_result.py",
+            "extension": ".py",
+            "size": 5994,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_application.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_application.py",
+            "extension": ".py",
+            "size": 3234,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_base_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_base_analyzer.py",
+            "extension": ".py",
+            "size": 4187,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_bos_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_bos_detector.py",
+            "extension": ".py",
+            "size": 5037,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_candle_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_candle_analyzer.py",
+            "extension": ".py",
+            "size": 3158,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_candle_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_candle_data.py",
+            "extension": ".py",
+            "size": 3026,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_candle_patterns.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_candle_patterns.py",
+            "extension": ".py",
+            "size": 12126,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_choch_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_choch_detector.py",
+            "extension": ".py",
+            "size": 4995,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_decision_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_decision_engine.py",
+            "extension": ".py",
+            "size": 5563,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_fvg_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_fvg_analyzer.py",
+            "extension": ".py",
+            "size": 9761,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_fvg_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_fvg_detector.py",
+            "extension": ".py",
+            "size": 6913,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_fvg_filter.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_fvg_filter.py",
+            "extension": ".py",
+            "size": 5033,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_liquidity_analyzer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_liquidity_analyzer.py",
+            "extension": ".py",
+            "size": 22905,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_liquidity_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_liquidity_detector.py",
+            "extension": ".py",
+            "size": 5251,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_liquidity_sweep_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_liquidity_sweep_detector.py",
+            "extension": ".py",
+            "size": 4039,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_logger.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_logger.py",
+            "extension": ".py",
+            "size": 222,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_logging_config.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_logging_config.py",
+            "extension": ".py",
+            "size": 716,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_main.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_main.py",
+            "extension": ".py",
+            "size": 472,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_market_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_market_data.py",
+            "extension": ".py",
+            "size": 3893,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_market_structure.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_market_structure.py",
+            "extension": ".py",
+            "size": 6957,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_mt5_config.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_mt5_config.py",
+            "extension": ".py",
+            "size": 1132,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_mt5_connection.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_mt5_connection.py",
+            "extension": ".py",
+            "size": 4583,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_order_block_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_order_block_detector.py",
+            "extension": ".py",
+            "size": 5456,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_risk.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_risk.py",
+            "extension": ".py",
+            "size": 4260,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_scoring.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_scoring.py",
+            "extension": ".py",
+            "size": 5405,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_scoring_models.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_scoring_models.py",
+            "extension": ".py",
+            "size": 4473,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_settings.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_settings.py",
+            "extension": ".py",
+            "size": 348,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_signal.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_signal.py",
+            "extension": ".py",
+            "size": 3529,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_signal_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_signal_engine.py",
+            "extension": ".py",
+            "size": 3307,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_storage.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_storage.py",
+            "extension": ".py",
+            "size": 684,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_strategy_registry.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_strategy_registry.py",
+            "extension": ".py",
+            "size": 5048,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_swing_detector.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_swing_detector.py",
+            "extension": ".py",
+            "size": 5492,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_symbols.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_symbols.py",
+            "extension": ".py",
+            "size": 829,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_terminal_data.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_terminal_data.py",
+            "extension": ".py",
+            "size": 3666,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_timeframes.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_timeframes.py",
+            "extension": ".py",
+            "size": 847,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "test_trading.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests\\test_trading.py",
+            "extension": ".py",
+            "size": 3843,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tests"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "apply_patch.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\apply_patch.py",
+            "extension": ".py",
+            "size": 801,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "fix_analyzer_registry_phase8.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\fix_analyzer_registry_phase8.py",
+            "extension": ".py",
+            "size": 1118,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "fix_filesystem_scanner_asdict.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\fix_filesystem_scanner_asdict.py",
+            "extension": ".py",
+            "size": 3876,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "fix_storage.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\fix_storage.py",
+            "extension": ".py",
+            "size": 2481,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "inspect_scoring_models.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\inspect_scoring_models.py",
+            "extension": ".py",
+            "size": 1505,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "config.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\config.py",
+            "extension": ".py",
+            "size": 4792,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization"
+        },
+        {
+            "name": "filesystem_scanner.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\scanner\\filesystem_scanner.py",
+            "extension": ".py",
+            "size": 20363,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\modernization\\scanner"
+        },
+        {
+            "name": "patch_analyzer_registry_execute.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_analyzer_registry_execute.py",
+            "extension": ".py",
+            "size": 1962,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_analyzer_registry_option1.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_analyzer_registry_option1.py",
+            "extension": ".py",
+            "size": 3170,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_analyzer_registry_phase1.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_analyzer_registry_phase1.py",
+            "extension": ".py",
+            "size": 5472,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_decision_engine_return.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_decision_engine_return.py",
+            "extension": ".py",
+            "size": 1551,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_scoring_models.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_scoring_models.py",
+            "extension": ".py",
+            "size": 1173,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_signal_engine_phase4.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_signal_engine_phase4.py",
+            "extension": ".py",
+            "size": 3860,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_signal_engine_phase6.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_signal_engine_phase6.py",
+            "extension": ".py",
+            "size": 4096,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_signal_engine_phase7.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_signal_engine_phase7.py",
+            "extension": ".py",
+            "size": 2997,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "patch_test_decision_engine.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\patch_test_decision_engine.py",
+            "extension": ".py",
+            "size": 1972,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "project_organizer.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools\\project_organizer.py",
+            "extension": ".py",
+            "size": 733,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\tools"
+        },
+        {
+            "name": "__init__.py",
+            "path": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\utils\\__init__.py",
+            "extension": ".py",
+            "size": 0,
+            "parent": "C:\\Users\\UDUAK\\Documents\\UDUAK_QUANT_SYSTEM_PROJECT\\utils"
+        }
+    ],
+    "statistics": {
+        "total_directories": 31,
+        "total_files": 152,
+        "python_files": 152,
+        "total_size_bytes": 643526,
+        "ext_.py": 152
+    }
+}
